@@ -11,6 +11,6 @@ all:
 	
 chmod:
 	cd ..
-	chmod 755 public_html
+	chmod 755 -R public_html
 	cd public_html
 

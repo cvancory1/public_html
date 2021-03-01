@@ -2,6 +2,8 @@
 
 <!DOCTYPE html> 
 <html lang = "en"> 
+<link rel="stylesheet" href="dat.css" type="text/css" />
+
     <header> 
 
         <title> Test - Alumni Database Title</title> 

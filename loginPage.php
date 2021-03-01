@@ -1,3 +1,5 @@
+<!-- this was originallly from glasfish DB and i altered it... have to change back or replace -->
+
 <!DOCTYPE html> 
 <html lang = "en"> 
     <header> 

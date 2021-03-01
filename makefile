@@ -10,7 +10,7 @@ all:
 	git push origin main
 	
 chmod:
-	cd ...
+	cd ..
 	chmod 755 public_html
 	cd public_html
 

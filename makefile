@@ -9,8 +9,5 @@ all:
 	git commit -m "same"
 	git push origin main
 	
-chmod:
-	cd ..
-	chmod 755 -R public_html
-	cd public_html
+
 

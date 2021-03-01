@@ -33,7 +33,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     if ($amount != 0) {
 
         $_SESSION['admin'] = 'admin';// valid pasword
-         header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php#" );
+         header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
     }
     else {
 

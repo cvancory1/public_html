@@ -7,14 +7,12 @@
         <title> Test - Alumni Database Title</title> 
 
     </header>
-
-
 <body> 
 
-  <div class="main">
+  <div class="LoginMain">
 	<h3>Login</h3>
 	
-    <form name="add_name" id="add_name" action="loginCheck.php" method="post">  
+    <form name="loginForm" id="loginForm" action="loginCheck.php" method="post">  
 
 	<p> Username </p>
 	<input type="text" id="username" name = "username"> 

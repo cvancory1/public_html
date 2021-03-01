@@ -98,3 +98,11 @@ body {
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
+
+
+/* For LoginPage.php */
+
+.LoginMain{
+    background-color: #8b1515;
+
+}

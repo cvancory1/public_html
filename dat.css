@@ -114,8 +114,9 @@ body {
     padding: 20px; 
     width: 400px;
     height: 300px; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 
-}
+} 
 
 .loginBox{
     /* background-color: #ffffff; */ 
@@ -130,23 +131,24 @@ h1{
 
 } 
 
-.topBar{
-    /* background-color: #bbbfca; 
 
-    /* border-top: 100px solid #bbbfca; 
-    text-align:center; 
+.margin{
+     background-color: #bbbfca; 
+
+     border-top: 40px solid #bbbfca; 
+     text-align:center; 
     font-family: "Lato", sans-serif;
-    font-size: 40px; */
+    font-size: 40px; 
+    text-align:center; 
 
-    background-color: deepskyblue;
+    /* background-color: deepskyblue;
 	border: 15px solid blue;
-	height: 90%;
-	margin: 25px;
-	padding: 75%;
-	width: 90%;
+	height:90%;
+	margin:25px;
+	padding:5px;
+	width: 90%; */
 
-
-
+  
 }
 
 

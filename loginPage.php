@@ -11,7 +11,6 @@
     </header>
 <body> 
 
-<div class="hollowBox"
 
     <div class="LoginMain">
         <h3>Login</h3>
@@ -24,9 +23,8 @@
         <p> Password </p>
         <input type="password" id="password" name = "password" style = "border: 2px solid black; padding: 0.5rem; border-radius: 4px; background-color: #e6e6ff;">
         
-        <input type="submit"  class = "button"/> 
+        <br /><input type="submit"  class = "loginButton"/> 
     </div>
-</div>
 
 </body> 
 

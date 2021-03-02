@@ -23,6 +23,7 @@
 	<input type="password" id="password" name = "password" style = "border: 2px solid black; padding: 0.5rem; border-radius: 4px; background-color: #e6e6ff;">
 	
     <input type="submit"  class = "button"/> 
+</div>
 
 </body> 
 

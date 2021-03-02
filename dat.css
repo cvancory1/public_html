@@ -49,10 +49,10 @@ body {
     background-color: #444;
 }
 
-#main {
+/* #main {
     transition: margin-left .5s;
     padding: 16px;
-}
+} */
 
 /* td { 
     display: table-cell;
@@ -107,4 +107,12 @@ body {
     /* so */
 
 }
+
+.hollowBox {
+    border-radius: 25px;
+    border: 2px solid #e4f1d1;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+  }
 /* For LoginPage.php */

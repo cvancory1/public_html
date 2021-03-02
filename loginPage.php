@@ -11,18 +11,21 @@
     </header>
 <body> 
 
-  <div class="LoginMain">
-	<h3>Login</h3>
-	
-    <form name="loginForm" id="loginForm" action="loginCheck.php" method="post">  
+<div class="hollowBox"
 
-	<p> Username </p>
-	<input type="text" id="username" name = "username"> 
-	
-	<p> Password </p>
-	<input type="password" id="password" name = "password" style = "border: 2px solid black; padding: 0.5rem; border-radius: 4px; background-color: #e6e6ff;">
-	
-    <input type="submit"  class = "button"/> 
+    <div class="LoginMain">
+        <h3>Login</h3>
+        
+        <form name="loginForm" id="loginForm" action="loginCheck.php" method="post">  
+
+        <p> Username </p>
+        <input type="text" id="username" name = "username"> 
+        
+        <p> Password </p>
+        <input type="password" id="password" name = "password" style = "border: 2px solid black; padding: 0.5rem; border-radius: 4px; background-color: #e6e6ff;">
+        
+        <input type="submit"  class = "button"/> 
+    </div>
 </div>
 
 </body> 

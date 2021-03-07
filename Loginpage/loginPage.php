@@ -23,9 +23,9 @@
                 <br /> <input type="submit"  class = "button"/> 
 
                 <br><br><br> <p>
-                            <a href =https://lamp.salisbury.edu/~cvancory1/creatAccount.php >Create Account </a>
+                            <a href =https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.php >Create Account </a>
                             <br>  
-                            <a href =https://lamp.salisbury.edu/~cvancory1/forgotPassword.php >Forgot Password</a>
+                            <a href =https://lamp.salisbury.edu/~cvancory1/Loginpage/forgotPassword.php >Forgot Password</a>
 
                     </p> 
     

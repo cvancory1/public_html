@@ -118,9 +118,10 @@ body {
 
 } 
 
-.loginBox{
+#login{
     /* background-color: #ffffff; */ 
-
+    font-family: "Lato", sans-serif;
+    font-size: 30px; 
 
 }
 
@@ -133,12 +134,12 @@ h1{
 
 
 .margin{
-     background-color: #bbbfca; 
+    background-color: #bbbfca; 
 
-     border-top: 40px solid #bbbfca; 
-     text-align:center; 
+    border-top: 40px solid #bbbfca; 
+    text-align:center; 
     font-family: "Lato", sans-serif;
-    font-size: 40px; 
+    font-size: 50px; 
     text-align:center; 
 
     /* background-color: deepskyblue;
@@ -151,7 +152,11 @@ h1{
   
 }
 
+input {
+    width: 100%;
+  }
 
 
 /* For LoginPage.php */
+
 

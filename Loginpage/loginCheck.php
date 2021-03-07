@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $servername = "localhost";
 $username = "wlucas1";
 $password = "wlucas1";
@@ -37,7 +36,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     }
     else {
 
-         header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/loginPage.php" );
+         header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
     }
     mysqli_close($conn);
 

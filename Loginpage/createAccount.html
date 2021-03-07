@@ -11,22 +11,20 @@
 
             <p class="loginBox" id="login"> Create Your Alumni Account </p>
             
-            <form name="add_name" id="add_name" action="createAccount.php" method="post" ">  
+            <form name="add_name" id="add_name" action="createAccount.php" method="post">  
                 
 
-                <input type="text" id="username"  name = "username" placeholder="SU Email"> 
+                <input type="text" id="username"  name = "username" placeholder="SU Email" required> 
         
                 <br>
-                <input type="password" id="password"  name = "password" placeholder="Password">
-                <input type="password" id="password"  name = "password" placeholder="Confirm Password">
+                <input type="password" id="password"  name = "password" placeholder="Password" required>
+                <input type="password" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" required>
 
                 
                 <br /> <input type="submit"  class = "button"/> 
                 <!-- TODO:  change password links back to login in -->
                 <br> <p>
-                            <a href =https://lamp.salisbury.edu/~cvancory1/LoginPage/createAccount.php >Sign In</a>
-                            <br>  
-                            <a href =https://lamp.salisbury.edu/~cvancory1/Loginpage/forgotPassword.php >Forgot Password</a>
+                            <a href= "loginP.html">Sign In</a>
 
                     </p> 
     

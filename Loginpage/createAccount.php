@@ -1,11 +1,12 @@
 <?php
 session_start();
-
+//TODO: hash password
 $servername = "localhost";
 $username = "wlucas1";
 $password = "wlucas1";
 $dbname = "AlumniDB";
 
+$acceptedDamain = "@salisbury.edu";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
@@ -13,34 +14,54 @@ if (!$conn) {
      die("Connection failed: " . mysqli_connect_error());
 } 
 
-
-if (isset($_POST['username']) and isset($_POST['password'])) {
+if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['confirmPassword'])) {
     
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmPassword'];
     
-    $sql = "select * from Login where username="."'$username'"." and password="."'$password'";
-    //echo $sql;
-    //$r = mysqli_query($conn, $sql);
-    
-    if ($r=mysqli_query($conn, $sql)) {
-        $amount = mysqli_num_rows($r);
-
-   } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-   }
-
-    if ($amount != 0) {
-
-        $_SESSION['admin'] = 'admin';// valid pasword
-         header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
+    //make sure substring of last 14 chars of username is @salisbury.edu
+    $sub = substr($username, -14);
+    if($sub != $acceptedDamain){
+          header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
     }
-    else {
 
-         header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/loginPage.php" );
+    else{
+          //make sure username does not already exist
+          $sql = "select * from Login where username="."'$username'";
+
+          if ($r=mysqli_query($conn, $sql)) {
+               $amount = mysqli_num_rows($r);
+          }
+          else {
+               echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          }
+
+          if ($amount != 0) {
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+          }
+
+          else{
+               //make sure passwords match
+               if($password != $confirmPassword){
+                    header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+               }
+
+               else{
+                    //add new account to Login
+                    $sql = "insert into Login (username, password, privilege) values ('$username', '$password', 1)";
+
+                    if ($r=mysqli_query($conn, $sql)) {
+                         header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+                    }
+                    else {
+                         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    }
+               }
+          }
     }
-    mysqli_close($conn);
-
 }
+
+mysqli_close($conn);
 
 ?>

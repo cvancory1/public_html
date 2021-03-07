@@ -1,0 +1,62 @@
+
+
+/* LOGIN PAGE */
+
+.loginMain{
+    margin:0 auto;
+    align-content:center;
+    text-align:center;
+    margin-top: 10%; /*determines how high/low the main box is on the page */
+
+    /* create the hollow box around  */
+    border-radius: 20px;
+    border: 2px solid #bbbfca;
+    padding: 90px; 
+    width: 400px;
+    height: 300px; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+
+} 
+
+
+#top_header{
+    font-family: "Lato", sans-serif;
+    font-size: 30px; 
+    text-align:left;
+    padding: 10px; 
+    margin-top: -7%; /*determines how high/low the main box is on the page */
+
+}
+
+
+#login{
+    /* background-color: #ffffff; */ 
+    font-family: "Lato", sans-serif;
+    font-size: 20px; 
+    text-align:left;
+    padding: 10px; 
+    margin-top: -10%; /*determines how high/low the main box is on the page */
+
+
+}
+
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin:10px 0; 
+
+    border: 1px solid #bbbfca;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+      /* add top and bottom margin */
+    /* // input elements with type="text" attribute */
+  }
+ 
+  input[type=submit] {
+    margin:10px 0; 
+    padding: 10px;
+    width: 50%;
+  } 
+
+

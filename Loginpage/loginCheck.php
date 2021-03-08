@@ -18,28 +18,29 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     
-    $sql = "select * from Login where username="."'$username'"." and password="."'$password'";
-    //echo $sql;
-    //$r = mysqli_query($conn, $sql);
-    
-    if ($r=mysqli_query($conn, $sql)) {
-        $amount = mysqli_num_rows($r);
+    $sql = "select password from Login where username='$username'";
 
-   } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-   }
+     if ($r=mysqli_query($conn, $sql)) {
+          $amount = mysqli_num_rows($r);
 
-    if ($amount != 0) {
+     } 
+     else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+     }
 
-        $_SESSION['admin'] = 'admin';// valid pasword
-         header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
-    }
-    else {
+    $row=mysqli_fetch_array($r);
 
-         header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
-    }
     mysqli_close($conn);
 
+     if(password_verify($password, $row['password'])) {
+          $_SESSION['admin'] = 'admin';// valid pasword
+          header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
+     }
+     else {
+          header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+     }
+
+     mysqli_close($conn);
 }
 
 ?>

@@ -39,7 +39,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
           }
           
-          // TODO: ASK WILL What is the point of this if statement
+          //make sure username does not already exist
           if ($amount != 0) {
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
           }
@@ -52,7 +52,9 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
 
                else{
                     //add new account to Login
-                    $sql = "insert into Login (username, password, privilege) values ('$username', '$password', 1)";
+                    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+                    $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 1)";
 
                     if ($r=mysqli_query($conn, $sql)) {
                          header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );

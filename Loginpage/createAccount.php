@@ -26,6 +26,8 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
     $sub = substr($username, -14);
     if($sub != $acceptedDamain){
           header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+          $message = "Username Must Be an SU Faculty Email Address";
+          echo "<script type='text/javascript'>alert('$message');</script>";
     }
 
     else{
@@ -42,12 +44,16 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
           //make sure username does not already exist
           if ($amount != 0) {
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+               $message = "Username Already Exists";
+               echo "<script type='text/javascript'>alert('$message');</script>";
           }
 
           else{
                //make sure passwords match... if not links back to the createAccount page
                if($password != $confirmPassword){
                     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+                    $message = "Password and Confirm Password Must Match";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
                }
 
                else{

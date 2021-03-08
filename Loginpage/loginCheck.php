@@ -22,25 +22,34 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
      if ($r=mysqli_query($conn, $sql)) {
           $amount = mysqli_num_rows($r);
-
      } 
      else {
           echo "Error: " . $sql . "<br>" . mysqli_error($conn);
      }
 
-    $row=mysqli_fetch_array($r);
-
-    mysqli_close($conn);
-
-     if(password_verify($password, $row['password'])) {
-          $_SESSION['admin'] = 'admin';// valid pasword
-          header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
-     }
-     else {
+     //check if username exists
+     if($amount == 0){
           header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+          $message = "Incorrect Username";
+          echo "<script type='text/javascript'>alert('$message');</script>";
      }
+     else{
+          $row=mysqli_fetch_array($r);
 
-     mysqli_close($conn);
+          if(password_verify($password, $row['password'])) {
+               //TODO: different session variable for each permission level run another sql statement which queries select * from where username =username and then
+               // read in permissionlevel and store it . then set rights based on the number
+               $_SESSION['admin'] = 'admin';// valid pasword
+               header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
+          }
+          else {
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+               $message = "Incorrect Password";
+               echo "<script type='text/javascript'>alert('$message');</script>";
+          }
+     }
 }
+
+mysqli_close($conn);
 
 ?>

@@ -1,6 +1,8 @@
 <?php
 session_start();
-//TODO: hash password
+//TODO: hash password, 
+//TODO: if unable to create account ECHO print why to the screen
+
 $servername = "localhost";
 $username = "wlucas1";
 $password = "wlucas1";
@@ -36,13 +38,14 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
           else {
                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
           }
-
+          
+          // TODO: ASK WILL What is the point of this if statement
           if ($amount != 0) {
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
           }
 
           else{
-               //make sure passwords match
+               //make sure passwords match... if not links back to the createAccount page
                if($password != $confirmPassword){
                     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
                }

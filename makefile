@@ -9,8 +9,8 @@ all:
 	git commit -m "same"
 	git push origin main
 
-chmod:
-	chmod 755 *.html *.php *.css
+ch:
+	chmod 755 -R Homepage/ Loginpage/
 	
 
 

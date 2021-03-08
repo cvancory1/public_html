@@ -17,10 +17,10 @@
                 <input type="text" id="username"  name = "username" placeholder="SU Email" required> 
         
                 <br>
-                <input type="password" id="password"  name = "password" placeholder="Password" required>
-                <input type="password" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" required>
+                <input type="password" Class="createPassword" id="password"  name = "password" placeholder="Password" required>
+                <input type="password" Class="createPassword" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" required>
 
-                
+                <input type="checkbox" onclick="showPassword()">Show Password 
                 <br /> <input type="submit"  class = "button"/> 
                 <!-- TODO:  change password links back to login in -->
                 <br> <p>
@@ -32,7 +32,25 @@
     
     
     </body> 
-
-    
+  
 
 </html>
+<script>  
+
+function showPassword() {
+    var x = document.getElementById("password");
+    var y = document.getElementById("confirmPassword");
+    
+    if (x.type === "password" && y.type === "password" ) {
+      x.type = "text";
+      y.type = "text";
+
+    } else {
+      x.type = "password";
+      y.type = "password";
+
+    }
+  }
+
+ </script>  
+

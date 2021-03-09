@@ -216,7 +216,6 @@
                 document.getElementById("main").style.marginLeft = "250px";
 
                 document.getElementById("tableTest").style.marginLeft = "250px";
-                document.getElementById("inputTable").style.marginLeft = "250px";
 
 
             }

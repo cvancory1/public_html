@@ -12,9 +12,7 @@ body {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
-    padding: 10px;
-
+    padding-top: 600px;
 }
 
 /* .sidebar a {

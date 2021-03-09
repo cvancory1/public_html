@@ -81,8 +81,12 @@ body {
 
 .styled-table thead tr {
     background-color: #009879;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #9c0000;
+
     text-align: left;
+
+
     padding-right: 50%;
 }
 

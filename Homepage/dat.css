@@ -65,8 +65,6 @@ body {
 
 #main {
     transition: margin-left .5s;
-    transition: margin-right .5s;
-
     padding: 16px;
 
      /* <--TODO: WILL NEED APPROVAL This is what i changed padding --> */
@@ -77,9 +75,9 @@ body {
 }
 
 /*Table Styling*/
-.styled-table {
+/* .styled-table {
     border-collapse: collapse;
-} 
+}  */
  .styled-table {
     border-collapse: collapse;
     margin-left: auto;

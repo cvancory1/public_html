@@ -57,6 +57,9 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
                // }
 
+                    $_SESSION['admin'] = 'admin';// valid pasword
+
+
                header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
           }
           else {

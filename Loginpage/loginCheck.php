@@ -43,7 +43,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                // since password is already verfied and username exists
                $sql = "select admin from Login where username='$username'";
                echo $sql;
-               $row=mysqli_fetch_array($r);
+              // $row=mysqli_fetch_array($r);
                
 
                // if($row['privilege'] ==1){

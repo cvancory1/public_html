@@ -49,19 +49,19 @@ body {
     background-color: #444;
 }
 
-/* #main {
+#main {
     transition: margin-left .5s;
     padding: 16px;
-} */
+}
 
-/* td { 
+td { 
     display: table-cell;
     vertical-align: inherit;
     text-align: inherit; 
     padding: 1px;
-    /* background-color: #111;
+     background-color: #111;
 
-   }  */
+   } 
 
 /*Table Styling*/
 .styled-table {

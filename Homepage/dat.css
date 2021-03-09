@@ -6,13 +6,13 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 9;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 90px;
+    padding-top: 60px;
 }
 
 .sidebar a {
@@ -36,16 +36,30 @@ body {
     margin-left: 50px;
 }
 
-.openbtn {
+.menu {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+
+.menu button {
     font-size: 20px;
     cursor: pointer;
     background-color: #111;
-    color: white;
-    padding: 10px 15px;
+    color: #818181;
+    padding: 10px 25px;
     border: none;
+    display: block;
 }
 
-.openbtn:hover {
+.menu button:hover {
+    color: #f1f1f1;
     background-color: #444;
 }
 
@@ -54,41 +68,25 @@ body {
     padding: 16px;
 }
 
-td { 
-    display: table-cell;
-    vertical-align: inherit;
-    text-align: inherit; 
-    padding: 1px;
-     background-color: #111;
-
-   } 
-
 /*Table Styling*/
 .styled-table {
     border-collapse: collapse;
 } 
  .styled-table {
     border-collapse: collapse;
-    margin: 25px 0;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-    padding-top: 90px;
-
 }
 
- .styled-table thead tr {
-    background-color: #d7fff5;
-    color: #ffffff; 
-    color: #9c0000;
-
+.styled-table thead tr {
+    background-color: #7E7E7E;
+    color: #ffffff;
     text-align: left;
-
-
-    padding-right: 50%;
-} 
+}
 
 .styled-table th,
 .styled-table td {
@@ -96,7 +94,7 @@ td {
 }
 
 .styled-table tbody tr {
-    border-bottom: 1px solid #4d0101;
+    border-bottom: 1px solid #dddddd;
 }
 
 .styled-table tbody tr:nth-of-type(even) {
@@ -104,6 +102,5 @@ td {
 }
 
 .styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #7E7E7E;
 }
-

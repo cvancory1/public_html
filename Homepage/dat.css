@@ -65,11 +65,15 @@ body {
 
 #main {
     transition: margin-left .5s;
+    transition: margin-right .5s;
+
     padding: 16px;
+
+     /* <--TODO: WILL NEED APPROVAL This is what i changed padding --> */
+
     padding-left: 10%;
     padding-right: 10%;
 
-     /* <--TODO: WILL NEED APPROVAL This is what i changed padding --> */
 }
 
 /*Table Styling*/

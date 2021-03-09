@@ -79,16 +79,16 @@ body {
 
 }
 
-.styled-table thead tr {
+/* .styled-table thead tr {
     background-color: #009879;
     /* color: #ffffff; */
-    color: #9c0000;
+    /* color: #9c0000; */
 
-    text-align: left;
+    /* text-align: left;
 
 
     padding-right: 50%;
-}
+} */ 
 
 .styled-table th,
 .styled-table td {
@@ -96,7 +96,7 @@ body {
 }
 
 .styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #4d0101;
 }
 
 .styled-table tbody tr:nth-of-type(even) {

@@ -66,6 +66,7 @@ body {
 #main {
     transition: margin-left .5s;
     padding: 16px;
+    padding-left: 60%;
 }
 
 /*Table Styling*/
@@ -86,7 +87,7 @@ body {
     background-color: #7E7E7E;
     color: #ffffff;
     text-align: center;
-    padding-left: 60%;
+   
 }
 
 .styled-table th,

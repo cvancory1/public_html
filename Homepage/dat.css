@@ -95,9 +95,9 @@ body {
     padding: 12px 15px;
 }
 
-/* .styled-table tbody tr {
+.styled-table tbody tr {
     border-bottom: 1px solid #4d0101;
-} */
+}
 
 .styled-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;

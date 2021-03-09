@@ -112,7 +112,7 @@
                     <option value="zipcode" data-show=".zipcode">Zipcode</option>
                 </select>
                 
-                <div class="tableSelect">
+                <div class="tableSelect" id = tableTest>
                     <div class="alumniID hide"><input type="text" id="alumniIDInput" class="box" onkeyup="filterTable(this);" name="alumniID" placeholder="Search for Alumni ID..."></div>
                     <div class="birthdate hide"><input type="text" id="birthdateInput" class="box" onkeyup="filterTable(this);" name="birthdate" placeholder="Search for Birthdate..."></div>
                     <div class="status hide"><input type="text" id="statusInput" class="box" onkeyup="filterTable(this);" name="status" placeholder="Search for Status..."></div>
@@ -214,11 +214,16 @@
             function openNav() {
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("tableTest").style.marginLeft = "250px";
+
+
             }
 
             function closeNav() {
                 document.getElementById("mySidebar").style.width = "0";
                 document.getElementById("main").style.marginLeft= "0";
+                document.getElementById("tableTest").style.marginLeft = "0px";
+
             }
         </script>
 

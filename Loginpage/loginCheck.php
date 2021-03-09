@@ -60,10 +60,10 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                     // $_SESSION['admin'] = 'admin';// valid pasword
 
 
-               header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
           }
           else {
-               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
                $message = "Incorrect Password";
                echo "<script type='text/javascript'>alert('$message');</script>";
           }

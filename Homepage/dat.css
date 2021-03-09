@@ -104,3 +104,7 @@ body {
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #7E7E7E;
 }
+
+.chloe{
+    padding-right: 50;
+}

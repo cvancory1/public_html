@@ -95,7 +95,7 @@
                 }
             </script>
 
-            <div align="center">
+            <div align="center" class= "chloe">
                 <select class="inputTable" data-target=".tableSelect"  name="inputTable">
                     <option value="alumniID" data-show=".alumniID">Alumni ID</option>
                     <option value="birthdate" data-show=".birthdate">Birthdate</option>
@@ -215,7 +215,7 @@
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
 
-                document.getElementById("tableTest").style.marginLeft = "250px";
+                document.getElementById("chloe").style.marginLeft = "250px";
 
 
             }

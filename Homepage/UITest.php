@@ -95,7 +95,7 @@
                 }
             </script>
 
-            <div align="center" id= "test">
+            <div align="center" >
                 <select class="inputTable" data-target=".tableSelect"  name="inputTable">
                     <option value="alumniID" data-show=".alumniID">Alumni ID</option>
                     <option value="birthdate" data-show=".birthdate">Birthdate</option>
@@ -221,7 +221,7 @@
 
             function closeNav() {
                 document.getElementById("mySidebar").style.width = "0";
-                document.getElementById("main").style.marginLeft= "0";
+                document.getElementById("main").style.marginLeft= "20";
 
             }
         </script>

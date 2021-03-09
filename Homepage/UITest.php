@@ -219,7 +219,6 @@
                 document.getElementById("inputTable").style.marginLeft = "250px";
 
 
-
             }
 
             function closeNav() {

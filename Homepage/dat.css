@@ -12,7 +12,7 @@ body {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 600px;
+    padding-top: 90px;
 }
 
 /* .sidebar a {
@@ -74,6 +74,9 @@ body {
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+    padding-top: 9000px;
+
 }
 
 .styled-table thead tr {

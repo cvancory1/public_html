@@ -43,19 +43,19 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                // since password is already verfied and username exists
                $sql = "select admin from Login where username='$username'";
                echo $sql;
-              // $row=mysqli_fetch_array($r);
+              $row=mysqli_fetch_array($r);
                
 
-               // if($row['privilege'] ==1){
-               //      $_SESSION['viewOnly'] = 'viewOnly';// valid pasword
+               if($row['privilege'] ==1){
+                    $_SESSION['privilege'] = 'viewOnly';// valid pasword
 
-               // }else if($row['privilege'] ==2){
-               //      $_SESSION['editOnly'] = 'editOnly';// valid pasword
+               }else if($row['privilege'] ==2){
+                    $_SESSION['privilege'] = 'editOnly';// valid pasword
 
-               // }else if($row['privilege'] ==3){
-               //      $_SESSION['superuser'] = 'superuser';// valid pasword
+               }else if($row['privilege'] ==3){
+                    $_SESSION['privilege'] = 'superuser';// valid pasword
 
-               // }
+               }
 
                     // $_SESSION['admin'] = 'admin';// valid pasword
 

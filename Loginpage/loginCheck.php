@@ -46,16 +46,16 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                $row=mysqli_fetch_array($r);
                
 
-               if($row['privilege'] ==1){
-                    $_SESSION['viewOnly'] = 'viewOnly';// valid pasword
+               // if($row['privilege'] ==1){
+               //      $_SESSION['viewOnly'] = 'viewOnly';// valid pasword
 
-               }else if($row['privilege'] ==2){
-                    $_SESSION['editOnly'] = 'editOnly';// valid pasword
+               // }else if($row['privilege'] ==2){
+               //      $_SESSION['editOnly'] = 'editOnly';// valid pasword
 
-               }else if($row['privilege'] ==3){
-                    $_SESSION['superuser'] = 'superuser';// valid pasword
+               // }else if($row['privilege'] ==3){
+               //      $_SESSION['superuser'] = 'superuser';// valid pasword
 
-               }
+               // }
 
                header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
           }

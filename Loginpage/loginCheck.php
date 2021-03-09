@@ -63,7 +63,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                header( "refresh:1;url=https://lamp.salisbury.edu/~wlucas1/UITest.php" );
           }
           else {
-               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
                $message = "Incorrect Password";
                echo "<script type='text/javascript'>alert('$message');</script>";
           }

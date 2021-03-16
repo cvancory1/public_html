@@ -9,7 +9,7 @@
         <a href='animalsUpdate1.php'>Update</a>
         <a href='animalsAdd.php'>Add</a>
         </div>";
-        }
+    }
 
 ?>
 
@@ -46,6 +46,20 @@
             <button class="placeholder">X</button>
             <button class="placeholder">X</button>
         </div>
+
+
+        <?php   
+         echo "                        ".$_SESSION['privilege'];
+         if ($_SESSION["privilege"] == "superUser") {
+         
+             echo "<div class='btn-group'>
+             <a href='logout.php'>Log Out</a>
+             <a href='animalsRemove.php'>Remove</a>
+             <a href='animalsUpdate1.php'>Update</a>
+             <a href='animalsAdd.php'>Add</a>
+             </div>";
+         }
+        ?>
 
         
 <!--  area between top and table main -->

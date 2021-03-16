@@ -14,9 +14,10 @@
     <body>
 
         <?php
-            if ($_SESSION["privilege"] == "superUser") {
-                
-                echo "<p here i am /p>";
+           if ($_SESSION["admin"] == "admin") {
+    
+            echo "<div <p here i am /p>
+            </div>";
             }
         ?>
         <div id="mySidebar" class="sidebar">

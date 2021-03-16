@@ -46,20 +46,20 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                echo $row;
 
                
-               if($row['privilege'] == 'viewUser'){
-                    $_SESSION['privilege'] = 'viewUser';// valid pasword
+               // if($row['privilege'] == 'viewUser'){
+               //      $_SESSION['privilege'] = 'viewUser';// valid pasword
 
 
-               }else if($row['privilege'] == 'editUser'){
-                    $_SESSION['privilege'] = 'editUser';// valid pasword
+               // }else if($row['privilege'] == 'editUser'){
+               //      $_SESSION['privilege'] = 'editUser';// valid pasword
 
 
-               }else if($row['privilege'] == 'superUser'){
-                    $_SESSION['privilege'] = 'superUser';// valid pasword
+               // }else if($row['privilege'] == 'superUser'){
+               //      $_SESSION['privilege'] = 'superUser';// valid pasword
 
 
-               }
-               print_r($_SESSION);
+               // }
+               // print_r($_SESSION);
 
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
 

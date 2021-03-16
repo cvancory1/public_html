@@ -38,9 +38,7 @@
         </div>
 
 
-        <div id="profile">
-            <button class="button"></button>
-        </div>
+        <button class="button" id="profile"> </button>
 
         
 <!--  area between top and table main -->
@@ -120,7 +118,6 @@
                 if ($_SESSION["privilege"] == "superUser") {
                 
                     echo "<div class='crud >
-                    <a href='logout.php'>Log Out</a>
                     <a href='animalsRemove.php'>Remove</a>
                     <a href='animalsUpdate1.php'>Update</a>
                     <a href='animalsAdd.php'>Add</a>

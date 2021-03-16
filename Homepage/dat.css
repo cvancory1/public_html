@@ -115,7 +115,7 @@ body {
 .profile{
     background-color: f3f3f3;
     border: none;
-    color: white;
+    color: rgb(231, 163, 163);
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -127,7 +127,7 @@ body {
     border-radius: 50%;
     position:absolute;
     top:20px;
-    right:31px;
+    right:30px;
 
     
 } 

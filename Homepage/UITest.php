@@ -16,8 +16,8 @@
         <?php
             if ($_SESSION["privilege"] == "superUser") {
                 
-            echo "<p here i am /p>";
-            
+                echo "<p here i am /p>";
+            }
         ?>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>

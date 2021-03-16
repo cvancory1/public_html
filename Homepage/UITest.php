@@ -39,7 +39,9 @@
 
         <!-- Top right profile button -->
         <div class="profile">
-            <button class="button">  </button>
+            <!-- <button class="button">  </button> -->
+             <a href='logout.php'>Log Out</a>
+
         </div>
 
         

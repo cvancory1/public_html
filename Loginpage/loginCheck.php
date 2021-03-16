@@ -42,11 +42,10 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
                // since password is already verfied and username exists
                $sql = "select admin from Login where username='$username'";
-               echo $sql;
 
               $row=mysqli_fetch_array($r);
-               echo $row;
-
+              echo $_SESSION['privilege'];
+               
                
                if($row['privilege'] == 'viewUser'){
                     $_SESSION['privilege'] = 'viewUser';// valid pasword
@@ -61,7 +60,6 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
 
                }
-               echo $_SESSION['privilege'];
 
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
 

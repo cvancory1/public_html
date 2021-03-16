@@ -60,7 +60,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                     //add new account to Login
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-                    $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 1)";
+                    $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 'viewUser')";
 
                     if ($r=mysqli_query($conn, $sql)) {
                          header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );

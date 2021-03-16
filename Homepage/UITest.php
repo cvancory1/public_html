@@ -16,7 +16,7 @@
         <?php
             if ($_SESSION["privilege"] == "superUser") {
                 
-            echo "i am here ";
+            echo "<p here i am /p>";
             
         ?>
         <div id="mySidebar" class="sidebar">

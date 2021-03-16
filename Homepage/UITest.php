@@ -38,18 +38,9 @@
         </div>
 
 
-        <?php   
-         echo "                        ".$_SESSION['privilege'];
-         if ($_SESSION["privilege"] == "superUser") {
-         
-             echo "<div class='crud >
-             <a href='logout.php'>Log Out</a>
-             <a href='animalsRemove.php'>Remove</a>
-             <a href='animalsUpdate1.php'>Update</a>
-             <a href='animalsAdd.php'>Add</a>
-             </div>";
-         }
-        ?>
+        <div id="profile">
+            <button class="button"></button>
+        </div>
 
         
 <!--  area between top and table main -->
@@ -124,6 +115,23 @@
 
             <!-- selector -->
             <div align="center" >
+                <?php   
+                echo "                        ".$_SESSION['privilege'];
+                if ($_SESSION["privilege"] == "superUser") {
+                
+                    echo "<div class='crud >
+                    <a href='logout.php'>Log Out</a>
+                    <a href='animalsRemove.php'>Remove</a>
+                    <a href='animalsUpdate1.php'>Update</a>
+                    <a href='animalsAdd.php'>Add</a>
+                    </div>";
+                }
+                ?>
+
+
+
+
+
                 <select class="inputTable" data-target=".tableSelect"  name="inputTable">
                     <option value="alumniID" data-show=".alumniID">Alumni ID</option>
                     <option value="birthdate" data-show=".birthdate">Birthdate</option>

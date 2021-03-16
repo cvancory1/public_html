@@ -37,6 +37,7 @@
             <button class="placeholder">X</button>
         </div>
 
+        <!-- Top right profile button -->
         <div class="profile">
             <button class="button">  </button>
         </div>
@@ -113,6 +114,7 @@
             </script>
 
 
+            <!-- the operations  -->
             <?php   
             if ($_SESSION["privilege"] == "superUser") {
             

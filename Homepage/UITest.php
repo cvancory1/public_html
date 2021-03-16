@@ -114,7 +114,7 @@
             </script>
 
 
-            <!-- the operations  -->
+            <!-- the operations for superUser and Edit Users -->
             <?php   
             if ($_SESSION["privilege"] == "superUser") {
             

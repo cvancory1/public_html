@@ -112,7 +112,25 @@ body {
     border-bottom: 2px solid #7E7E7E;
 }
 
-.profile,   
+.profile{
+    background-color: f3f3f3;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px;
+    cursor: pointer;
+
+    border-radius: 50%;
+    position:absolute;
+    top:20px;
+    right:31px;
+
+    
+} 
 .crud {
     background-color: f3f3f3;
     border: none;

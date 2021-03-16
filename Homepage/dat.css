@@ -115,7 +115,7 @@ body {
 .profile{
     background-color: f3f3f3;
     border: none;
-    color: white;
+    color: rgb(223, 0, 0);
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -134,7 +134,7 @@ body {
 .crud {
     background-color: f3f3f3;
     border: none;
-    color: white;
+    color: rgb(94, 6, 6);
     padding: 20px;
     text-align: center;
     text-decoration: none;

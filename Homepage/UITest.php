@@ -37,8 +37,9 @@
             <button class="placeholder">X</button>
         </div>
 
-
-        <button class="button" id="profile"> </button>
+        <div class="profile">
+            <button class="button"> </button>
+        </div>
 
         
 <!--  area between top and table main -->

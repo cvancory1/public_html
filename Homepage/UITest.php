@@ -114,7 +114,6 @@
             <!-- selector -->
             <div align="center" >
                 <?php   
-                echo "                        ".$_SESSION['privilege'];
                 if ($_SESSION["privilege"] == "superUser") {
                 
                     echo "<div class='crud >

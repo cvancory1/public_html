@@ -16,9 +16,12 @@
         <?php
            if ($_SESSION["admin"] == "admin") {
     
-            echo "<div <p here i am /p>
+            echo "<div   <a href='#'>Address</a>
             </div>";
             }
+
+
+            
         ?>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>

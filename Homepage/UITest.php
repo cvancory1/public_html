@@ -13,11 +13,11 @@
 
     <body>
 
-        <!-- <?php
+        <?php
             print_r($_SESSION);
 
             
-        ?> -->
+        ?>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="#">Address</a>

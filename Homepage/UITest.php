@@ -42,7 +42,7 @@
          echo "                        ".$_SESSION['privilege'];
          if ($_SESSION["privilege"] == "superUser") {
          
-             echo "<div class='Crud >
+             echo "<div class='crud >
              <a href='logout.php'>Log Out</a>
              <a href='animalsRemove.php'>Remove</a>
              <a href='animalsUpdate1.php'>Update</a>

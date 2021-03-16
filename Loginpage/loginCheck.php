@@ -47,6 +47,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
               $row=mysqli_fetch_array($r);
                echo $row;
 
+               $_SESSION['privilege'] = 'superUser';// valid pasword
                
                // if($row['privilege'] == 'viewUser'){
                //      $_SESSION['privilege'] = 'viewUser';// valid pasword

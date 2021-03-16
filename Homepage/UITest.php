@@ -119,7 +119,7 @@
             if ($_SESSION["privilege"] == "superUser") {
             
                 echo "<div class='crud >
-                <a href='animalsRemove.php'>Remove</a>
+                <a href='animalsRemove.php'>Delete</a>
                 <a href='animalsUpdate1.php'>Update</a>
                 <a href='animalsAdd.php'>Add</a>
                 </div>";

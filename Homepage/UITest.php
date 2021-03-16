@@ -14,12 +14,7 @@
     <body>
 
         <?php
-           if ($_SESSION["privilege"] == "superUser") {
-    
-                
-                echo "hi";
-            }
-
+            print_r($_SESSION);
 
             
         ?>

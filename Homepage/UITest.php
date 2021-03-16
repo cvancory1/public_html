@@ -14,7 +14,8 @@
     <body>
 
         <?php
-            print_r($_SESSION);
+            echo $_SESSION['privilege'];
+
 
             
         ?>

@@ -53,8 +53,8 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                     $_SESSION['privilege'] = 'editUser';// valid pasword
 
 
-               }else if($row['privilege'] == 'superuser'){
-                    $_SESSION['privilege'] = 'superuser';// valid pasword
+               }else if($row['privilege'] == 'superUser'){
+                    $_SESSION['privilege'] = 'superUser';// valid pasword
 
 
                }

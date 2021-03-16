@@ -40,7 +40,7 @@
         <!-- Top right profile button -->
         <div class="profile">
             <!-- <button class="button">  </button> -->
-             <a href='logout.php'>Log Out</a>
+             <a href='logout.php'>Logs Out</a>
 
         </div>
 

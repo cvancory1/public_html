@@ -62,7 +62,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
 
                // }
-               print_r($_SESSION);
+               echo $_SESSION['privilege'];
 
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
 

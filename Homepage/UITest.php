@@ -111,22 +111,20 @@
                 }
             </script>
 
+
+            <?php   
+            if ($_SESSION["privilege"] == "superUser") {
+            
+                echo "<div class='crud >
+                <a href='animalsRemove.php'>Remove</a>
+                <a href='animalsUpdate1.php'>Update</a>
+                <a href='animalsAdd.php'>Add</a>
+                </div>";
+            }
+            ?>
+
             <!-- selector -->
             <div align="center" >
-                <?php   
-                if ($_SESSION["privilege"] == "superUser") {
-                
-                    echo "<div class='crud >
-                    <a href='animalsRemove.php'>Remove</a>
-                    <a href='animalsUpdate1.php'>Update</a>
-                    <a href='animalsAdd.php'>Add</a>
-                    </div>";
-                }
-                ?>
-
-
-
-
 
                 <select class="inputTable" data-target=".tableSelect"  name="inputTable">
                     <option value="alumniID" data-show=".alumniID">Alumni ID</option>

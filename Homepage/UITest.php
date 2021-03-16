@@ -1,6 +1,15 @@
 <?php
     session_start();
-    echo $_SESSION['privilege'];
+    echo "                        ".$_SESSION['privilege'];
+    if ($_SESSION["privilege"] == "superUser") {
+    
+        echo "<div class='btn-group'>
+        <a href='logout.php'>Log Out</a>
+        <a href='animalsRemove.php'>Remove</a>
+        <a href='animalsUpdate1.php'>Update</a>
+        <a href='animalsAdd.php'>Add</a>
+        </div>";
+        }
 
 ?>
 

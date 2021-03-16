@@ -45,22 +45,23 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                echo $sql;
               $row=mysqli_fetch_array($r);
                
+               if($row['privilege'] == 'viewUsers'){
+                    $_SESSION['privilege'] = 'viewUsers';// valid pasword
+                    echo "viewuser";
 
-               if($row['privilege'] ==1){
-                    $_SESSION['privilege'] = 'viewOnly';// valid pasword
 
-               }else if($row['privilege'] ==2){
-                    $_SESSION['privilege'] = 'editOnly';// valid pasword
+               }else if($row['privilege'] == 'editUser'){
+                    $_SESSION['privilege'] = 'editUser';// valid pasword
+                    echo "edit";
 
-               }else if($row['privilege'] ==3){
+
+               }else if($row['privilege'] == 'superuser'){
                     $_SESSION['privilege'] = 'superuser';// valid pasword
+                    echo "super";
 
                }
-
-                    // $_SESSION['admin'] = 'admin';// valid pasword
-
-
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
+
           }
           else {
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
@@ -73,3 +74,4 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 mysqli_close($conn);
 
 ?>
+

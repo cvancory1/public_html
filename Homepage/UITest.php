@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <!-- TODO : padding because it interferes with tables -->
 <html lang = "en">
@@ -8,6 +12,19 @@
     </header>
 
     <body>
+
+        <?php
+            session_start();
+            if ($_SESSION["privilege"] == "superUser") {
+                
+            echo "<div class='btn-group'>
+            <a href='logout.php'>Log Out</a>
+            <a href='animalsRemove.php'>Remove</a>
+            <a href='animalsUpdate1.php'>Update</a>
+            <a href='animalsAdd.php'>Add</a>
+            </div>";
+            }
+        ?>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="#">Address</a>
@@ -22,14 +39,21 @@
             <a href="#">Works At</a>
         </div>
 
+        <!-- features : email  -->
         <div class="menu">
             <button class="openbtn" onclick="openNav()">☰</button>
-            <button class="placeholder">X</button> // email 
+            <button class="placeholder">X</button> 
             <button class="placeholder">X</button>
             <button class="placeholder">X</button>
             <button class="placeholder">X</button>
         </div>
 
+        
+<!--  area between top and table main -->
+        <br>
+        <br>
+        <br>
+        <br>
         <div id="main">
             <script type="text/javascript">
                 function filterTable(ele) {
@@ -95,6 +119,7 @@
                 }
             </script>
 
+            <!-- selector -->
             <div align="center" >
                 <select class="inputTable" data-target=".tableSelect"  name="inputTable">
                     <option value="alumniID" data-show=".alumniID">Alumni ID</option>
@@ -112,6 +137,7 @@
                     <option value="zipcode" data-show=".zipcode">Zipcode</option>
                 </select>
                 
+                <!-- search bar -->
                 <div class="tableSelect" id = tableTest>
                     <div class="alumniID hide"><input type="text" id="alumniIDInput" class="box" onkeyup="filterTable(this);" name="alumniID" placeholder="Search for Alumni ID..."></div>
                     <div class="birthdate hide"><input type="text" id="birthdateInput" class="box" onkeyup="filterTable(this);" name="birthdate" placeholder="Search for Birthdate..."></div>
@@ -214,9 +240,6 @@
             function openNav() {
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
-
-
-                document.getElementById("mySidebar").style.marginRight="100px";
 
 
 

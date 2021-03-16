@@ -14,10 +14,10 @@
     <body>
 
         <?php
-           if ($_SESSION["admin"] == "admin") {
+           if ($_SESSION["privilege"] == "superUser") {
     
-                echo "<div   <a href='#'>Address</a>
-                </div>";
+                
+                echo "hi";
             }
 
 

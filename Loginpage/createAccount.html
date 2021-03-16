@@ -12,14 +12,16 @@
     
       function checkForm(form)
       {
-        if(form.username.value == "") {
-          alert("Error: Username cannot be blank!");
-          form.username.focus();
-          return false;
-        }
-        re = /^\w+$/;
+        // if(form.username.value == "") {
+        //   alert("Error: Username cannot be blank!");
+        //   form.username.focus();
+        //   return false;
+        // }
+        // re = /^\w+$/;
+        re = /@salisbury.edu$/;
+
         if(!re.test(form.username.value)) {
-          alert("Error: Username must contain only letters, numbers and underscores!");
+          alert("Error: Username must use SU Email!");
           form.username.focus();
           return false;
         }

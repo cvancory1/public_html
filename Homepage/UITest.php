@@ -1,5 +1,7 @@
 <?php
     session_start();
+    echo $_SESSION['privilege'];
+
 ?>
 
 <!DOCTYPE html>
@@ -13,12 +15,6 @@
 
     <body>
 
-        <?php
-            echo $_SESSION['privilege'];
-
-
-            
-        ?>
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="#">Address</a>

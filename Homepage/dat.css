@@ -114,7 +114,8 @@ body {
 
 
 
-.btn-group{
+.crud{
+    font-family: sans-serif;
     text-align: center;
     top:20px;
     right:30px;

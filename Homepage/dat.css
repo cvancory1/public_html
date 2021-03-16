@@ -112,7 +112,7 @@ body {
     border-bottom: 2px solid #7E7E7E;
 }
 
-.button {
+.profile{
     background-color: f3f3f3;
     border: none;
     color: white;
@@ -123,21 +123,18 @@ body {
     font-size: 16px;
     margin: 10px 10px;
     cursor: pointer;
-    text-align: right;
-
 
     border-radius: 50%;
     position:absolute;
     top:20px;
-    right:30px;
+    right:31px;
 
-  }
-
-
+    
+} 
 .crud {
     background-color: f3f3f3;
     border: none;
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -150,6 +147,7 @@ body {
     position:absolute;
     top:80px;
     right:70px;
+
 
 
 }

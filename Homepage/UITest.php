@@ -14,7 +14,6 @@
     <body>
 
         <?php
-            session_start();
             if ($_SESSION["privilege"] == "superUser") {
                 
             echo "i am here ";

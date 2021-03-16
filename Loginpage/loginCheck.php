@@ -47,20 +47,19 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                
                if($row['privilege'] == 'viewUsers'){
                     $_SESSION['privilege'] = 'viewUsers';// valid pasword
-                    echo "viewuser";
 
 
                }else if($row['privilege'] == 'editUser'){
                     $_SESSION['privilege'] = 'editUser';// valid pasword
-                    echo "edit";
 
 
                }else if($row['privilege'] == 'superuser'){
                     $_SESSION['privilege'] = 'superuser';// valid pasword
-                    echo "super";
 
 
                }
+               print_r($_SESSION);
+
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
 
 

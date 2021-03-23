@@ -24,8 +24,8 @@
     font-size: 30px; 
     text-align:left;
     padding: 10px; 
-    margin-top: -7%; /*determines how high/low the main box is on the page */
-
+    margin-top: -16%; /*determines how high/low the main box is on the page */
+    margin-left: -25px;
 }
 
 
@@ -36,6 +36,7 @@
     text-align:left;
     padding: 10px; 
     margin-top: -10%; /*determines how high/low the main box is on the page */
+    margin-left: -25px;
 
 
 }
@@ -46,6 +47,8 @@ input[type=password] {
     width: 100%;
     padding: 10px;
     margin:10px 0; 
+    font-size:15px; 
+
 
     border: 1px solid #bbbfca;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -53,10 +56,18 @@ input[type=password] {
     /* // input elements with type="text" attribute */
   }
  
-  input[type=submit] {
-    margin:10px 0; 
-    padding: 10px;
-    width: 50%;
-  } 
+input[type=submit] {
+  margin:10px 0; 
+  padding: 10px;
+  width: 55%;
+} 
+
+.descriptiveText{
+  
+  font-family: "Lato", sans-serif;
+  color:rgb(182, 181, 181);
+  /* text-align: left; */
+  margin-top: 0mm;
+}
 
 

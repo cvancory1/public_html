@@ -141,7 +141,7 @@
                 }
 
                 //Query to return contents of table Alumni
-                $query="SELECT * FROM Alumni group by firstName";
+                $query="SELECT * FROM Alumni";
                 $r=mysqli_query($connection, $query);
                     echo "<table id='alumniTable' class='styled-table'>
                         <thead>
@@ -182,7 +182,7 @@
 
                         // name, email, phoneNumber ,addressLine , birthday, status
 
-                        
+
                         echo "<td>" . $row['alumniID'] . "</td>";
                         echo "<td>" . $row['firstName'] . "</td>";
                         echo "<td>" . $row['middleName'] . "</td>";

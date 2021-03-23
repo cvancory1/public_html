@@ -162,29 +162,13 @@
                     while($row=mysqli_fetch_array($r)){
                         echo "<tr>";
 
-                        // echo "<td>" . $row['alumniID'] . "</td>";
-                        // echo "<td>" . $row['birthdate'] . "</td>";
-                        // echo "<td>" . $row['status'] . "</td>";
-                        // echo "<td>" . $row['email'] . "</td>";
-                        // echo "<td>" . $row['phoneNumber'] . "</td>";
-                        // echo "<td>" . $row['firstName'] . "</td>";
-                        // echo "<td>" . $row['middleName'] . "</td>";
-                        // echo "<td>" . $row['lastName'] . "</td>";
-                        // echo "<td>" . $row['streetName'] . "</td>";
-                        // echo "<td>" . $row['city'] . "</td>";
-                        // echo "<td>" . $row['state'] . "</td>";
-                        // echo "<td>" . $row['countryRegion'] . "</td>";
-                        // echo "<td>" . $row['zipcode'] . "</td>";
-
-
-
-                        echo "<td>" . $row['firstName'] .$row['middleName'] .$row['lastName'] ."</td>";
+                        echo "<td>" . $row['firstName'] ." ".$row['middleName']  ." " .$row['lastName'] ."</td>";
                         echo "<td>" . $row['email'] . "</td>";
                         echo "<td>" . $row['phoneNumber'] . "</td>";
-                        echo "<td>" . $row['streetName'] . $row['city'] . $row['state'] . $row['countryRegion'] . $row['zipcode'] ."</td>";
+                        echo "<td>" . $row['streetName'] ." " .$row['city'] ." " .$row['state']  ." " .$row['countryRegion'] ." " .$row['zipcode'] ."</td>";
                         echo "<td>" . $row['birthdate'] . "</td>";
                         echo "<td>" . $row['status'] . "</td>";
-
+                        echo "<td>" . $row['alumniID'] . "</td>";
 
                         // name, email, phoneNumber ,addressLine , birthday, status
                         

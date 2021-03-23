@@ -1,6 +1,5 @@
 <?php
 session_start();
-//TODO: destroy the session variable eventually 
 //TODO: if unable to create account ECHO print why to the screen
 
 $servername = "localhost";

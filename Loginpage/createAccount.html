@@ -9,7 +9,7 @@
         // at least one number, one lowercase and one uppercase letter
         // at least 8 characters
         // var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-        var re = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?~_+-=|\]).{8}$/;
+        var re = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8}$/;
         return re.test(str);
       }
     
@@ -54,11 +54,11 @@
                 <br>
                 <input type="password" Class="createPassword" id="password"  name = "password" placeholder="Password" minlength = "8" required>
                 <input type="password" Class="createPassword" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" minength = "8" required>
-
-                <input type="checkbox" onclick="showPassword()">Show Password 
+                <p class = "descriptiveText">Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
+                <input id = "showPassword" type="checkbox" onclick="showPassword()">Show Password 
                 <br /> <input type="submit"  class = "button"/> 
                 <br> <p>
-                            <a href= "loginP.html">Sign In</a>
+                            <a href= "loginP.html">Back To Sign In</a>
 
                     </p> 
     

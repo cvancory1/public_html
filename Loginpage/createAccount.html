@@ -8,7 +8,8 @@
       {
         // at least one number, one lowercase and one uppercase letter
         // at least 8 characters
-        var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        // var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        var re = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$/;
         return re.test(str);
       }
     
@@ -51,8 +52,8 @@
                 <input type="text" id="username"  name = "username" placeholder="SU Email" required> 
         
                 <br>
-                <input type="password" Class="createPassword" id="password"  name = "password" placeholder="Password" minlength = '8' required>
-                <input type="password" Class="createPassword" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" minlength = '8'required>
+                <input type="password" Class="createPassword" id="password"  name = "password" placeholder="Password" minlength = "8" required>
+                <input type="password" Class="createPassword" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" minength = "8" required>
 
                 <input type="checkbox" onclick="showPassword()">Show Password 
                 <br /> <input type="submit"  class = "button"/> 

@@ -5,57 +5,13 @@
    
     <body> 
 
-
-        <div class="loginMain">
-             <p class="topBar"  id="top_header"> Alumni Database </p>
-
-            <p class="loginBox" id="login"> Create Your Alumni Account </p>
-            
-            <!-- <form name="add_name" id="add_name" action="createAccount.php" method="post"  onsubmit="return checkForm(this);">   -->
-            <form name="add_name" id="add_name"action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"> 
-                <input type="text" id="username"  name = "username" placeholder="SU Email" required> 
-        
-                <br>
-                <input type="password" Class="createPassword" id="password"  name = "password" placeholder="Password" minlength = "8" required>
-                <input type="password" Class="createPassword" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" minength = "8" required>
-                <p class = "descriptiveText">Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
-                <input type="checkbox" onclick="showPassword()">Show Password
-                <br /> <input type="submit"  class = "button" /> 
-                <br> <p>
-                            <a href= "loginP.html">Back To Sign In</a>
-
-                    </p> 
-    
-        </div>
-    
-    
-    </body> 
-  
-
-</html>
-<script>  
-
-function showPassword() {
-    var x = document.getElementById("password");
-    var y = document.getElementById("confirmPassword");
-    
-    if (x.type === "password" && y.type === "password" ) {
-      x.type = "text";
-      y.type = "text";
-
-    } else {
-      x.type = "password";
-      y.type = "password";
-
-    }
-  }
-
- </script>  
+<!-- TODO: see if you can have two submits one that runs the functions and one that sumbits from the funciton correcrlt  -->
+       
 
 
 
 <?php
-session_start();
+// session_start(); TODO ERROR POSSIBLY SESSION
 //TODO: if unable to create account ECHO print why to the screen
 
 $servername = "localhost";

@@ -7,7 +7,7 @@
 
 
 <?php
-// session_start(); TODO ERROR POSSIBLY SESSION
+session_start();
 //TODO: if unable to create account ECHO print why to the screen
 
 $servername = "localhost";
@@ -40,7 +40,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
     else{
           //make sure username does not already exist
           $sql = "select * from Login where username="."'$username'";
-
+          echo $sql;
           if ($r=mysqli_query($conn, $sql)) {
                $amount = mysqli_num_rows($r);
           }

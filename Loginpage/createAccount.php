@@ -23,11 +23,11 @@ if (!$conn) {
      die("Connection failed: " . mysqli_connect_error());
 } 
 
-if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['confirmPassword'])) {
+if (isset($_POST['username']) and isset($_POST['pwd1']) and isset($_POST['pwd2'])) {
     
     $username = $_POST['username'];
-    $password = $_POST['password'];
-    $confirmPassword = $_POST['confirmPassword'];
+    $password = $_POST['pwd1'];
+    $confirmPassword = $_POST['pwd1'];
     
     //make sure substring of last 14 chars of username is @salisbury.edu
     $sub = substr($username, -14);

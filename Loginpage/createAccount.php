@@ -40,7 +40,6 @@ if (isset($_POST['username']) and isset($_POST['pwd1']) and isset($_POST['pwd2']
     else{
           //make sure username does not already exist
           $sql = "select * from Login where username="."'$username'";
-          echo $sql;
           if ($r=mysqli_query($conn, $sql)) {
                $amount = mysqli_num_rows($r);
           }
@@ -65,6 +64,8 @@ if (isset($_POST['username']) and isset($_POST['pwd1']) and isset($_POST['pwd2']
 
                else{
                     //add new account to Login
+                    echo $pwd1;
+
                     $hashed_password = password_hash($pwd1, PASSWORD_DEFAULT);
 
                     $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 'viewUser')";

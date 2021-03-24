@@ -23,11 +23,11 @@ if (!$conn) {
      die("Connection failed: " . mysqli_connect_error());
 } 
 
-if (isset($_POST['username']) and isset($_POST['pwd1']) and isset($_POST['pwd2'])) {
+if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['confirmPassword'])) {
     
     $username = $_POST['username'];
-    $password = $_POST['pwd1'];
-    $confirmPassword = $_POST['pwd1'];
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmPassword'];
     
     //make sure substring of last 14 chars of username is @salisbury.edu
     $sub = substr($username, -14);
@@ -56,7 +56,7 @@ if (isset($_POST['username']) and isset($_POST['pwd1']) and isset($_POST['pwd2']
 
           else{
                //make sure passwords match... if not links back to the createAccount page
-               if($pwd1 != $pwd2){
+               if($password != $confirmPassword){
                     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
                     $message = "Password and Confirm Password Must Match";
                     echo "<script type='text/javascript'>alert('$message');</script>";
@@ -64,9 +64,9 @@ if (isset($_POST['username']) and isset($_POST['pwd1']) and isset($_POST['pwd2']
 
                else{
                     //add new account to Login
-                    echo $pwd1;
+                    echo $password;
 
-                    $hashed_password = password_hash($pwd1, PASSWORD_DEFAULT);
+                    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                     $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 'viewUser')";
 

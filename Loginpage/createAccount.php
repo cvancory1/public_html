@@ -57,7 +57,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
 
           else{
                //make sure passwords match... if not links back to the createAccount page
-               if($password != $confirmPassword){
+               if($pwd1 != $pwd2){
                     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
                     $message = "Password and Confirm Password Must Match";
                     echo "<script type='text/javascript'>alert('$message');</script>";
@@ -65,7 +65,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
 
                else{
                     //add new account to Login
-                    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+                    $hashed_password = password_hash($pwd1, PASSWORD_DEFAULT);
 
                     $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 'viewUser')";
 

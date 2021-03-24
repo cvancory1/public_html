@@ -6,8 +6,6 @@
     <body> 
 
 <!-- TODO: see if you can have two submits one that runs the functions and one that sumbits from the funciton correcrlt  -->
-       
-
 
 
 <?php

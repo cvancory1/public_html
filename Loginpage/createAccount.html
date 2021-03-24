@@ -34,7 +34,8 @@
           form.pwd1.focus();
           return false;
         }
-        return true;
+
+       
       }
     
     </script>
@@ -52,8 +53,8 @@
                 <input type="text" id="username"  name = "username" placeholder="SU Email" required> 
         
                 <br>
-                <input type="password" Class="createPassword" id="password"  name = "password" placeholder="Password" minlength = "8" required>
-                <input type="password" Class="createPassword" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" minength = "8" required>
+                <input type="password" Class="createPassword" id="password"  name = "pwd1" placeholder="Password" minlength = "8" required>
+                <input type="password" Class="createPassword" id="confirmPassword"  name = "pwd2" placeholder="Confirm Password" minength = "8" required>
                 <p class = "descriptiveText">Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
                 <input type="checkbox" onclick="showPassword()">Show Password
                 <br /> <input type="submit"  class = "button" /> 

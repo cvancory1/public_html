@@ -14,6 +14,10 @@
             <a href='animalsAdd.php'>Add</a>
             </div>";
         }else if ($_SESSION["privilege"] == "editUser"){
+            echo "editUser";
+
+        }else if ($_SESSION["privilege"] == "viewUser"){
+            echo "viewUser";
 
         }
         ?>

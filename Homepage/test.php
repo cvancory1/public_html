@@ -3,12 +3,12 @@
 
 <?php
     session_start();
-    // print_r($_SESSION['privilege']);
+    print_r($_SESSION['privilege']);
     
     if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
 
         echo "<div id= 'mySidebar' class= 'sidebar'>
-            <a href='javascript:void(0)" class='closebtn' onclick="closeNav()'>×</a>
+            <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>×</a>
             <a href='#'>Address</a>
             <a href='#'>Alumni</a>
             <a href='#'>Donated</a>
@@ -19,7 +19,7 @@
             <a href='#'>Program</a>
             <a href='#'>School</a>
             <a href='#'>Works At</a>
-        </div>"
+        </div>";
     }
 
     // if ($_SESSION["privilege"] == "superUser") {

@@ -61,7 +61,7 @@
             print '<p>ERROR: connecting to MySQL.</p>';
         }
 
-        //Query to return contents of table Alumni
+        //Query to return contents of table Alumni here 
         $query="SELECT * FROM Alumni";
         $r=mysqli_query($connection, $query);
             echo "<table id='alumniTable' class='styled-table'>

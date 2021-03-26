@@ -2,8 +2,93 @@
 <html lang = "en"> 
 
     <link rel="stylesheet" href="login.css" type="text/css" />
-   
-<!-- TODO: see if you can have two submits one that runs the functions and one that sumbits from the funciton correcrlt  -->
+     
+     <!-- TODO: see if you can have two submits one that runs the functions and one that sumbits from the funciton correcrlt  -->
+<script type="text/javascript">
+
+     function checkPassword(str){
+          // at least one number, one lowercase and one uppercase letter
+          // at least 8 characters
+          var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/;
+
+          return re.test(str);
+     }
+
+     function checkForm(form){
+
+          re = /@salisbury.edu$/;
+
+          if(!re.test(form.username.value)) {
+               alert("Error: Username must use SU Email!");
+               form.username.focus();
+               return false;
+          }
+          if(form.password.value != "" && form.password.value == form.confirmPassword.value) {
+               if(!checkPassword(form.password.value)) {
+                    alert("The password you have entered is not valid!");
+                    form.password.focus();
+                    return false;
+               }
+          } else {
+               alert("Error: Please check that you've entered and confirmed your password!");
+               form.password.focus();
+               return false;
+          }
+
+     
+     }
+
+
+     function showPassword() {
+          var x = document.getElementById("password");
+          var y = document.getElementById("confirmPassword");
+
+          if (x.type === "password" && y.type === "password" ) {
+               x.type = "text";
+               y.type = "text";
+
+          } else {
+               x.type = "password";
+               y.type = "password";
+
+          }
+     }
+
+</script>
+
+<body> 
+
+
+     <div class="loginMain">
+          <p class="topBar"  id="top_header"> Alumni Database </p>
+
+          <p class="loginBox" id="login"> Create Your Alumni Account </p>
+          
+          <form name="add_name" id="add_name" action="createAccount.php" method="post"  onsubmit="return checkForm(this);">  
+
+               <input type="text" id="username"  name = "username" placeholder="SU Email" required> 
+     
+               <br>
+               <input type="password" Class="createPassword" id="password"  name = "password" placeholder="Password" minlength = "8" required>
+               <input type="password" Class="createPassword" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" minength = "8" required>
+               <p class = "descriptiveText">Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
+               <input type="checkbox" onclick="showPassword()">Show Password
+               <br /> <input type="submit"  class = "button" /> 
+               <br> <p>
+                         <a href= "loginP.html">Back To Sign In</a>
+
+               </p> 
+
+     </div>
+
+
+</body> 
+
+
+</html>
+
+
+
 
 
 <?php

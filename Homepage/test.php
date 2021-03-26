@@ -1,10 +1,11 @@
 <html>
 <?php
     session_start();
-    echo $_SESSION["privilege"];
+    // echo $_SESSION["privilege"];
+    print_r($_SESSION['privilege']);
 
 
-// ?>
+?>
 
 <body> 
         <!-- the operations for superUser and Edit Users -->

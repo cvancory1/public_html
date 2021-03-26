@@ -1,5 +1,7 @@
 <?php
     session_start();
+ echo $_SESSION;
+
 
 ?>
 
@@ -25,6 +27,8 @@
             <!-- <button class="button">  </button> -->
              <a href='logout.php'>Log Out</a>
 
+
  </div>
+
            
 </html>

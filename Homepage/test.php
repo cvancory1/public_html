@@ -1,5 +1,10 @@
 <html>
+<!DOCTYPE html>
+<html lang = "en">
+
+
 <body> 
+    <link rel="stylesheet" href="dat.css" type="text/css" />
 
 <?php
     session_start();

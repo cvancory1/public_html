@@ -3,7 +3,6 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 <!-- TODO: add alert that they created their accont sucessfully -->
 <!-- TODO nest everything in the php tag -->
 
-<?php
 
 
 <!DOCTYPE html> 
@@ -97,8 +96,9 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
 
 
+<?php
 
-// session_start();
+session_start();
 //TODO: if unable to create account ECHO print why to the screen
 
 $servername = "localhost";

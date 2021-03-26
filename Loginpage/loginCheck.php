@@ -37,8 +37,6 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
           $row=mysqli_fetch_array($r);
 
           if(password_verify($password, $row['password'])) {
-               //TODO: different session variable for each permission level run another sql statement which queries select * from where username =username and then
-               // read in permissionlevel and store it . then set rights based on the number
 
                // since password is already verfied and username exists
                $sql = "select privilege from Login where username='$username'";
@@ -61,7 +59,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
                }
 
-               // TODO: UNCOMMENT
+               // TODO: UNCOMMENT when finished twith the table views or change names
                // header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 

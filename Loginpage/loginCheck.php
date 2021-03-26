@@ -41,9 +41,10 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                // read in permissionlevel and store it . then set rights based on the number
 
                // since password is already verfied and username exists
-               $sql = "select admin from Login where username='$username'";
+               $sql = "select privilege from Login where username='$username'";
 
               $row=mysqli_fetch_array($r);
+          
           //     echo $_SESSION['privilege'];
                
            //    $_SESSION['admin'] = 'admin';

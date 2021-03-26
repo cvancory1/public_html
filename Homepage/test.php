@@ -7,7 +7,8 @@
     
     if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
 
-        echo "<div id= 'mySidebar' class= 'sidebar'>
+        echo "
+            <div id= 'mySidebar' class= 'sidebar'>
             <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>×</a>
             <a href='#'>Address</a>
             <a href='#'>Alumni</a>
@@ -19,7 +20,29 @@
             <a href='#'>Program</a>
             <a href='#'>School</a>
             <a href='#'>Works At</a>
-        </div>";
+            </div>
+        
+            <div class='menu'>
+            <button class='openbtn' onclick='openNav()'>☰</button>
+            <button class='placeholder'>X</button> 
+            <button class='placeholder'>X</button>
+            <button class='placeholder'>X</button>
+            <button class='placeholder'>X</button>
+            </div>
+
+            //  Top right profile button 
+            <div class='profile'>
+                <!-- <button class='button'>  </button> -->
+                 <a href='logout.php'>Log Out</a>
+    
+            </div>
+
+            <br> <br> <br> <br>
+           
+
+
+        
+        ";
     }
 
     // if ($_SESSION["privilege"] == "superUser") {

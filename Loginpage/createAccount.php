@@ -3,6 +3,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 <!-- TODO: add alert that they created their accont sucessfully -->
 <!-- TODO nest everything in the php tag -->
 
+<?php
 
 
 <!DOCTYPE html> 
@@ -96,7 +97,6 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
 
 
-<?php
 
 // session_start();
 //TODO: if unable to create account ECHO print why to the screen
@@ -140,7 +140,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
           
           //make sure username does not already exist
           if ($amount != 0) {
-               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.php" );
                $message = "Username Already Exists";
                echo "<script type='text/javascript'>alert('$message');</script>";
           }

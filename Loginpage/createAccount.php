@@ -98,7 +98,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
 <?php
 
-// session_start();
+session_start();
 //TODO: if unable to create account ECHO print why to the screen
 
 $servername = "localhost";

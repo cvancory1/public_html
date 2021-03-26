@@ -21,6 +21,10 @@
 
         }
         ?>
+ <div class="profile">
+            <!-- <button class="button">  </button> -->
+             <a href='logout.php'>Log Out</a>
 
+ </div>
            
 </html>

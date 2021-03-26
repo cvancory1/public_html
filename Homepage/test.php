@@ -100,7 +100,6 @@
             echo "</table>";
 
             mysqli_close($connection);
-    ?>
 
     }
 

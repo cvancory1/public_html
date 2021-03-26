@@ -5,7 +5,7 @@
 
 <body> 
     <link rel="stylesheet" href="dat.css" type="text/css" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
 <?php
     session_start();

@@ -121,7 +121,6 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
           $message = "Username Must Be an SU Faculty Email Address";
           echo "<script type='text/javascript'>alert('$message');</script>";
     }
-
     else{
           //make sure username does not already exist
           $sql = "select * from Login where username="."'$username'";
@@ -138,7 +137,6 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                $message = "Username Already Exists";
                echo "<script type='text/javascript'>alert('$message');</script>";
           }
-
           else{
                //make sure passwords match... if not links back to the createAccount page
                if($password != $confirmPassword){
@@ -149,14 +147,16 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
 
                else{
                     //add new account to Login
-                    echo $password;
 
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                     $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 'viewUser')";
 
                     if ($r=mysqli_query($conn, $sql)) {
+                         $message = "Account was sucessfully created! Redirecting to Login";
+                         echo "<script type='text/javascript'>alert('$message');</script>";
                          header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+                    
                     }
                     else {
                          echo "Error: " . $sql . "<br>" . mysqli_error($conn);

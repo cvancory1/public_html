@@ -98,7 +98,6 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
 <?php
 
-
 session_start();
 //TODO: if unable to create account ECHO print why to the screen
 
@@ -167,7 +166,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                     }
                     else {
                          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-//                     }
+                    }
 //                }
 //           }
 //     }

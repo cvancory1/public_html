@@ -3,9 +3,13 @@
 <html lang = "en">
 
 
+    <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="dat.css" type="text/css" />
+    </header>
+
+
 <body> 
-    <link rel="stylesheet" href="dat.css" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
 <?php
     session_start();
@@ -49,7 +53,7 @@
         ";
     }
 
-    if ($_SESSION["privilege"] == "viewUser"){
+    // if ($_SESSION["privilege"] == "viewUser"){
         if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
             ;
         }
@@ -101,7 +105,7 @@
 
             mysqli_close($connection);
 
-    }
+    // }
 
     
     // this is apart of the search bar 
@@ -165,8 +169,8 @@
 
      
  <div class="profile">
-            <!-- <button class="button">  </button> -->
-             <a href='logout.php'>Log Out</a>
+    <!-- <button class="button">  </button> -->
+    <a href='logout.php'>Log Out</a>
 
 
  </div>

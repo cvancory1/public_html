@@ -1,6 +1,5 @@
 <!-- TODO: the last error check is the account is already valid but we dont want to go to a new page n 
 sucessfull inputs so we need to handle the sucessful inputs so have all the php needed there  -->
-<!-- TODO: add alert that they created their accont sucessfully -->
 <!-- TODO nest everything in the php tag -->
 
 
@@ -99,7 +98,6 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 <?php
 
 session_start();
-//TODO: if unable to create account ECHO print why to the screen
 
 $servername = "localhost";
 $username = "wlucas1";

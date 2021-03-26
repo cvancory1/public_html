@@ -4,7 +4,6 @@
 ?>
 
 <!DOCTYPE html>
-<!-- TODO : padding because it interferes with tables -->
 <html lang = "en">
     <header>
         <title> Test UI </title>

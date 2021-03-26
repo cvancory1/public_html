@@ -45,7 +45,8 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
               $row=mysqli_fetch_array($r);
           
-          //     echo $_SESSION['privilege'];
+               echo $row['privilege'];
+               echo"here i am";
                
            //    $_SESSION['admin'] = 'admin';
                

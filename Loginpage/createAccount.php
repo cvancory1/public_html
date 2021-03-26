@@ -1,3 +1,10 @@
+<!-- TODO: the last error check is the account is already valid but we dont want to go to a new page n 
+sucessfull inputs so we need to handle the sucessful inputs so have all the php needed there  -->
+<!-- TODO: add alert that they created their accont sucessfully -->
+<!-- TODO nest everything in the php tag -->
+
+
+
 <!DOCTYPE html> 
 <html lang = "en"> 
 
@@ -89,10 +96,10 @@
 
 
 
-
-
 <?php
-session_start();
+
+
+// session_start();
 //TODO: if unable to create account ECHO print why to the screen
 
 $servername = "localhost";
@@ -115,37 +122,37 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
     $confirmPassword = $_POST['confirmPassword'];
     
     //make sure substring of last 14 chars of username is @salisbury.edu
-    $sub = substr($username, -14);
-    if($sub != $acceptedDamain){
-          header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
-          $message = "Username Must Be an SU Faculty Email Address";
-          echo "<script type='text/javascript'>alert('$message');</script>";
-    }
-    else{
-          //make sure username does not already exist
-          $sql = "select * from Login where username="."'$username'";
-          if ($r=mysqli_query($conn, $sql)) {
-               $amount = mysqli_num_rows($r);
-          }
-          else {
-               echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-          }
+//     $sub = substr($username, -14);
+//     if($sub != $acceptedDamain){
+//           header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+//           $message = "Username Must Be an SU Faculty Email Address";
+//           echo "<script type='text/javascript'>alert('$message');</script>";
+//     }
+//     else{
+//           // //make sure username does not already exist
+//           // $sql = "select * from Login where username="."'$username'";
+//           // if ($r=mysqli_query($conn, $sql)) {
+//           //      $amount = mysqli_num_rows($r);
+//           // }
+//           // else {
+//           //      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+//           // }
           
-          //make sure username does not already exist
-          if ($amount != 0) {
-               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
-               $message = "Username Already Exists";
-               echo "<script type='text/javascript'>alert('$message');</script>";
-          }
-          else{
-               //make sure passwords match... if not links back to the createAccount page
-               if($password != $confirmPassword){
-                    header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
-                    $message = "Password and Confirm Password Must Match";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
-               }
+//           // //make sure username does not already exist
+//           // if ($amount != 0) {
+//           //      header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+//           //      $message = "Username Already Exists";
+//           //      echo "<script type='text/javascript'>alert('$message');</script>";
+//           // }
+//           // else{
+//           //      //make sure passwords match... if not links back to the createAccount page
+//           //      if($password != $confirmPassword){
+//           //           header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+//           //           $message = "Password and Confirm Password Must Match";
+//           //           echo "<script type='text/javascript'>alert('$message');</script>";
+//           //      }
 
-               else{
+//           //      else{
                     //add new account to Login
 
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -160,10 +167,10 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                     }
                     else {
                          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                    }
-               }
-          }
-    }
+//                     }
+//                }
+//           }
+//     }
 }
 
 mysqli_close($conn);

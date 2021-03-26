@@ -7,6 +7,7 @@
     print_r($_SESSION['privilege']);
     print_r($_SESSION["privilege"]);
     echo"<p> here</p>";
+    echo"<p> here</p>";
 
     if ($_SESSION["privilege"] == "superUser") {
         

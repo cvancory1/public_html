@@ -44,20 +44,24 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
                $sql = "select admin from Login where username='$username'";
 
               $row=mysqli_fetch_array($r);
-              echo $_SESSION['privilege'];
+          //     echo $_SESSION['privilege'];
                
+           //    $_SESSION['admin'] = 'admin';
                
                if($row['privilege'] == 'viewUser'){
                     $_SESSION['privilege'] = 'viewUser';// valid pasword
+                    echo "viewUser";
 
 
                }else if($row['privilege'] == 'editUser'){
                     $_SESSION['privilege'] = 'editUser';// valid pasword
 
+                    echo "edit";
 
                }else if($row['privilege'] == 'superUser'){
                     $_SESSION['privilege'] = 'superUser';// valid pasword
 
+                    echo "super";
 
                }
 

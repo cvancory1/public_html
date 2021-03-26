@@ -61,7 +61,9 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
                }
 
-               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
+               // TODO: UNCOMMENT
+               // header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 
 
           }

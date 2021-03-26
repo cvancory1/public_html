@@ -128,31 +128,32 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
 //           echo "<script type='text/javascript'>alert('$message');</script>";
 //     }
 //     else{
-//           // //make sure username does not already exist
-//           // $sql = "select * from Login where username="."'$username'";
-//           // if ($r=mysqli_query($conn, $sql)) {
-//           //      $amount = mysqli_num_rows($r);
-//           // }
-//           // else {
-//           //      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-//           // }
-          
-//           // //make sure username does not already exist
-//           // if ($amount != 0) {
-//           //      header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
-//           //      $message = "Username Already Exists";
-//           //      echo "<script type='text/javascript'>alert('$message');</script>";
-//           // }
-//           // else{
-//           //      //make sure passwords match... if not links back to the createAccount page
-//           //      if($password != $confirmPassword){
-//           //           header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
-//           //           $message = "Password and Confirm Password Must Match";
-//           //           echo "<script type='text/javascript'>alert('$message');</script>";
-//           //      }
 
-//           //      else{
-                    //add new account to Login
+          // //make sure username does not already exist
+          $sql = "select * from Login where username="."'$username'";
+          if ($r=mysqli_query($conn, $sql)) {
+               $amount = mysqli_num_rows($r);
+          }
+          else {
+               echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          }
+          
+          //make sure username does not already exist
+          if ($amount != 0) {
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+               $message = "Username Already Exists";
+               echo "<script type='text/javascript'>alert('$message');</script>";
+          }
+          // else{
+               //make sure passwords match... if not links back to the createAccount page
+               // if($password != $confirmPassword){
+               //      header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
+               //      $message = "Password and Confirm Password Must Match";
+               //      echo "<script type='text/javascript'>alert('$message');</script>";
+               // }
+
+               else{
+                    // add new account to Login
 
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -169,7 +170,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                     }
 //                }
 //           }
-//     }
+           }
 }
 
 mysqli_close($conn);

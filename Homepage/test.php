@@ -3,11 +3,8 @@
 
 <?php
     session_start();
-    // echo $_SESSION["privilege"];
     print_r($_SESSION['privilege']);
-    print_r($_SESSION["privilege"]);
-    echo"<p> here</p>";
-    echo"<p> here</p>";
+    
 
     if ($_SESSION["privilege"] == "superUser") {
         
@@ -27,8 +24,6 @@
 
 ?>
 
-<p> hello</p>
-        <!-- the operations for superUser and Edit Users -->
      
  <div class="profile">
             <!-- <button class="button">  </button> -->

@@ -8,7 +8,7 @@ all:
 	git commit -m "testing functionality on the server"
 	git push origin main
 
-ch:
+c:
 	chmod 755 -R Homepage/ Loginpage/
 	
 

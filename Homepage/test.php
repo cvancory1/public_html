@@ -12,100 +12,104 @@
 <body> 
 
 <?php
-    session_start();
-    print_r($_SESSION['privilege']);
-    
-    if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
 
-        echo "
-            <div id= 'mySidebar' class= 'sidebar'>
-            <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>×</a>
-            <a href='#'>Address</a>
-            <a href='#'>Alumni</a>
-            <a href='#'>Donated</a>
-            <a href='#'>Donation</a>
-            <a href='#'>Employer</a>
-            <a href='#'>Majored In</a>
-            <a href='#'>Minored In</a>
-            <a href='#'>Program</a>
-            <a href='#'>School</a>
-            <a href='#'>Works At</a>
-            </div>
+    echo "<div id='main'>";
+
+        session_start();
+        print_r($_SESSION['privilege']);
         
-            <div class='menu'>
-            <button class='openbtn' onclick='openNav()'>☰</button>
-            <button class='placeholder'>X</button> 
-            <button class='placeholder'>X</button>
-            <button class='placeholder'>X</button>
-            <button class='placeholder'>X</button>
-            </div>
+        if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
 
-           <---  Top right profile button -->
-            <div class='profile'>
-                <!-- <button class='button'>  </button> -->
-                 <a href='logout.php'>Log Out</a>
-    
-            </div>
+            echo "
+                <div id= 'mySidebar' class= 'sidebar'>
+                <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>×</a>
+                <a href='#'>Address</a>
+                <a href='#'>Alumni</a>
+                <a href='#'>Donated</a>
+                <a href='#'>Donation</a>
+                <a href='#'>Employer</a>
+                <a href='#'>Majored In</a>
+                <a href='#'>Minored In</a>
+                <a href='#'>Program</a>
+                <a href='#'>School</a>
+                <a href='#'>Works At</a>
+                </div>
+            
+                <div class='menu'>
+                <button class='openbtn' onclick='openNav()'>☰</button>
+                <button class='placeholder'>X</button> 
+                <button class='placeholder'>X</button>
+                <button class='placeholder'>X</button>
+                <button class='placeholder'>X</button>
+                </div>
 
-            <br> <br> <br> <br>
-           
+            <---  Top right profile button -->
+                <div class='profile'>
+                    <!-- <button class='button'>  </button> -->
+                    <a href='logout.php'>Log Out</a>
         
-        ";
-    }
+                </div>
 
-    // if ($_SESSION["privilege"] == "viewUser"){
-        if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
-            ;
-        }
-        else{
-            print '<p>ERROR: connecting to MySQL.</p>';
+                <br> <br> <br> <br>
+            
+            
+            ";
         }
 
-        //Query to return contents of table Alumni here 
-        $query="SELECT * FROM Alumni";
-        $r=mysqli_query($connection, $query);
-            echo "<table id='alumniTable' class='styled-table'>
-                <thead>
-                    <tr>
-                        <th> Alumni ID </th>
-                        <th> Birthdate </th>
-                        <th> Status </th>
-                        <th> Email </th>
-                        <th> Phone Number </th>
-                        <th> First Name </th>
-                        <th> Middle Name </th>
-                        <th> Last Name </th>
-                        <th> Street Name </th>
-                        <th> City </th>
-                        <th> State </th>
-                        <th> Country/Region </th>
-                        <th> Zipcode </th>
-                    </tr>
-                </thead>";
-
-            while($row=mysqli_fetch_array($r)){
-                echo "<tr>";
-                echo "<td>" . $row['alumniID'] . "</td>";
-                echo "<td>" . $row['birthdate'] . "</td>";
-                echo "<td>" . $row['status'] . "</td>";
-                echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['phoneNumber'] . "</td>";
-                echo "<td>" . $row['firstName'] . "</td>";
-                echo "<td>" . $row['middleName'] . "</td>";
-                echo "<td>" . $row['lastName'] . "</td>";
-                echo "<td>" . $row['streetName'] . "</td>";
-                echo "<td>" . $row['city'] . "</td>";
-                echo "<td>" . $row['state'] . "</td>";
-                echo "<td>" . $row['countryRegion'] . "</td>";
-                echo "<td>" . $row['zipcode'] . "</td>";
-                echo "</tr>";
+        // if ($_SESSION["privilege"] == "viewUser"){
+            if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
+                ;
+            }
+            else{
+                print '<p>ERROR: connecting to MySQL.</p>';
             }
 
-            echo "</table>";
+            //Query to return contents of table Alumni here 
+            $query="SELECT * FROM Alumni";
+            $r=mysqli_query($connection, $query);
+                echo "<table id='alumniTable' class='styled-table'>
+                    <thead>
+                        <tr>
+                            <th> Alumni ID </th>
+                            <th> Birthdate </th>
+                            <th> Status </th>
+                            <th> Email </th>
+                            <th> Phone Number </th>
+                            <th> First Name </th>
+                            <th> Middle Name </th>
+                            <th> Last Name </th>
+                            <th> Street Name </th>
+                            <th> City </th>
+                            <th> State </th>
+                            <th> Country/Region </th>
+                            <th> Zipcode </th>
+                        </tr>
+                    </thead>";
 
-            mysqli_close($connection);
+                while($row=mysqli_fetch_array($r)){
+                    echo "<tr>";
+                    echo "<td>" . $row['alumniID'] . "</td>";
+                    echo "<td>" . $row['birthdate'] . "</td>";
+                    echo "<td>" . $row['status'] . "</td>";
+                    echo "<td>" . $row['email'] . "</td>";
+                    echo "<td>" . $row['phoneNumber'] . "</td>";
+                    echo "<td>" . $row['firstName'] . "</td>";
+                    echo "<td>" . $row['middleName'] . "</td>";
+                    echo "<td>" . $row['lastName'] . "</td>";
+                    echo "<td>" . $row['streetName'] . "</td>";
+                    echo "<td>" . $row['city'] . "</td>";
+                    echo "<td>" . $row['state'] . "</td>";
+                    echo "<td>" . $row['countryRegion'] . "</td>";
+                    echo "<td>" . $row['zipcode'] . "</td>";
+                    echo "</tr>";
+                }
 
-    // }
+                echo "</table>";
+
+                mysqli_close($connection);
+    echo "</div>";
+
+        // }
 
     
     // this is apart of the search bar 

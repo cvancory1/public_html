@@ -18,6 +18,7 @@
         
                 <br>
                 <input type="password" id="password"  name = "password" placeholder="Password" required>
+               <input type="checkbox" onclick="showPassword()">Show Password
                 
                 <br /> <input type="submit"  class = "button"/> 
 
@@ -36,3 +37,18 @@
 
 </html> 
 
+<script>
+
+function showPassword() {
+    var x = document.getElementById("password");
+
+    if (x.type === "password" ) {
+         x.type = "text";
+
+    } else {
+         x.type = "password";
+
+    }
+}
+
+</script>

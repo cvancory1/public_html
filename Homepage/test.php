@@ -16,10 +16,10 @@
 // checks if the user has logged in and should time out
 if(isset($_SESSION["privilege"])) 
 {
-    if(time()-$_SESSION["login_time_stamp"] >5)  {
+    if(time()-$_SESSION["login_time_stamp"] >30)  {
         session_unset();
         session_destroy();
-        header("Location:login.php");
+        header("Location:loginP.html");
     }
 }else{
     header("Location:loginP.html");

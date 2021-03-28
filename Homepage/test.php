@@ -23,7 +23,6 @@ if(isset($_SESSION["privilege"])) {
 }else{
     header("Location:loginP.html");
 }
-?>
 
     echo "<div id='main'>";
 

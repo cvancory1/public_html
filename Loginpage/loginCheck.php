@@ -58,6 +58,9 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
 
                }
+               $_SESSION["login_time_stamp"] = time(); // Login time is stored in a session variable
+
+
 
                // TODO: UNCOMMENT when finished twith the table views or change names
                // header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );

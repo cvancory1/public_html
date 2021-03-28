@@ -18,10 +18,12 @@ if(isset($_SESSION["privilege"])) {
     if(time()-$_SESSION["login_time_stamp"] >60)  {
         session_unset();
         session_destroy();
-        header("Location:Loginpage/loginP.html");
+        header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+
     }
 }else{
-    header("Location:Loginpage/loginP.html");
+    header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+
 }
 
     echo "<div id='main'>";

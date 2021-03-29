@@ -48,7 +48,8 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 } 
 
 if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration) ){// on minute before hand warn the user
-    echo "<script> test();</script>";
+    echo "<script type='text/javascript'>test();</script>";
+
 
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;
@@ -226,6 +227,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < (
     function test(){
         // var x = document.getElementById("myDIV");
         var x = document.getElementByClass("warning");
+        x.style.display = "block";
 
         if (x.style.display === "none") {
             x.style.display = "block";

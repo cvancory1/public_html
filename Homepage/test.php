@@ -52,6 +52,7 @@ $hello=2;
    if($hello == '2'){
     echo "<script type='text/javascript'>var x = document.getElementByClass('warning');
     x.style.display = 'block'; </script>";
+    echo"hhhhhhhhhhhhhhhhhhhhhhhhhhhh";
 
 
 }

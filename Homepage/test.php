@@ -18,7 +18,7 @@ session_start();
 if(isset($_SESSION["privilege"])) {
    
 
-    if(time()-$_SESSION["login_time_stamp"] >10)  {
+    if(time()-$_SESSION["login_time_stamp"] >5)  {
         $message = " here1";
         echo "<script type='text/javascript'>alert('$message');</script>";
 
@@ -33,6 +33,14 @@ if(isset($_SESSION["privilege"])) {
 
 }
 
+    // logout button
+     echo "<div class='profile'>
+        <!-- <button class='button'>  </button> -->
+        <a href='logout.php'>Log Out</a>
+        </div>";
+
+
+    // table area
     echo "<div id='main'>";
 
         print_r($_SESSION['privilege']);
@@ -190,12 +198,7 @@ if(isset($_SESSION["privilege"])) {
 ?>
 
      
- <div class="profile">
-    <!-- <button class="button">  </button> -->
-    <a href='logout.php'>Log Out</a>
 
-
- </div>
 
     </body> 
 

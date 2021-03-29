@@ -220,19 +220,31 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 <script>
 
+    // function timeoutWarning(){
+    //     var x = document.getElementById("warning");
+    //     if (x.style.display === "none") {
+    //         x.style.display = "block";
+    //     } else {
+    //         x.style.display = "none";
+    //     }
+
+    // }
+
+    // function stillHere(){
+    //     location.reload(); // TODO:reloades the page and resets the session?
+    // }
+
     function timeoutWarning(){
         var x = document.getElementById("warning");
         if (x.style.display === "none") {
-            x.style.display = "block";
+          x.style.display = "block";
+          location.reload();
         } else {
-            x.style.display = "none";
+          x.style.display = "none";
+
         }
-
-    }
-
-    function stillHere(){
-        location.reload(); // TODO:reloades the page and resets the session?
-    }
+      
+      }
         
 
     function openNav() {

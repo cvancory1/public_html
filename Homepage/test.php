@@ -236,17 +236,18 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     function timeoutWarning(){
         var x = document.getElementById("warning");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-          location.reload();
-        } else {
-          x.style.display = "none";
+        // if (x.style.display === "none") {
+        //   x.style.display = "block";
+        //   location.reload();
+        // } else {
+        //   x.style.display = "none";
 
-        }
+        // }
+
+        $("div#warning").addClass("hidden");
+
       
       }
-        
-
 
 
     $(document).ready(function() {

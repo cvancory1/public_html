@@ -15,7 +15,7 @@
 
 // checks if the user has logged in and should time out
 if(isset($_SESSION["privilege"])) {
-    if(time()-$_SESSION["login_time_stamp"] >600)  {
+    if(time()-$_SESSION["login_time_stamp"] >6000)  {
         session_unset();
         session_destroy();
         header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );

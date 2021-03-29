@@ -61,13 +61,11 @@ $timeout_duration = 60; // 10 sec
         <a href='logout.php'>Log Out</a>
         </div>";
 
-    echo "<div id='warning style='display:none;'>";
-    echo" 
+    echo" <div id='warning' style='display:none;'>
             <p >Are you still there? </p>
             <p >Click 'Still Here' to stay logged in</p>
-            <button class='button'  onclick='stillHere()' >Still Here </button>";
-
-    echo "</div>";
+            <button class='button'  onclick='stillHere()' >Still Here </button>
+            </div>";
 
     // table area
     echo "<div id='main'>";
@@ -226,40 +224,17 @@ $timeout_duration = 60; // 10 sec
 
 <script type="text/javascript">
 
-function show()[
-    if(document.getElementById('warning').style.display=='none') { 
-            document.getElementById('warning').style.display='inline'; // show
-        } 
-]
+    function test(){
+        // var x = document.getElementById("myDIV");
+        var x = document.getElementByClass("warning");
 
-function hide()[
-    if(document.getElementById('warning').style.display=='block') { 
-            document.getElementById('warning').style.display='none'; 
-        } 
-]
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
 
-
-    // function stillHere(){
-    //     location.reload(); // TODO:reloades the page and resets the session?
-    // //       document.getElementById("warning").style.display='none';// shows the div
-
-
-    // }
-
-    // function timeoutWarning(){
-        
-    //     document.getElementById("warning").style.display='inline'; // shows the div
-        
-    // }
- 
-    //   document.getElementById("warning").style.display='block';
-      
-    //   }
-    // function hideWarning(){
-    //     document.getElementById("warning").style.display='none';//hides div
-    //     // document.getElementById("main").style.display='none';
-
-    // };
+    }
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";

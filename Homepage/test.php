@@ -22,7 +22,7 @@ if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
     // $_SESSION['LAST_ACTIVITY'] = time();// TODO: deelte 
 }
-echo "<script> timeoutWarning(); </script>";
+echo "<script> hide(); </script>";
 
 
 $time = time();

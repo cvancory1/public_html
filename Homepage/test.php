@@ -50,7 +50,7 @@ $timeout_duration = 60; // 10 sec
 // // } 
 
 if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration)-50 ){// on minute before hand warn the user
-    echo " <script> test()</script>";
+    echo " <script> test();</script>";
 
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;

@@ -47,7 +47,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
 } 
 $hello=2;
-if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration) ){// on minute before hand warn the user
+if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration) -10 ){// on minute before hand warn the user
    
 //    if($hello == '2'){
     echo "<script type='text/javascript'>var x = document.getElementByClass('warning');

@@ -56,7 +56,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     //     <a href='logout.php'>Log Out</a>
     //     </div>";
 
-    echo" <div id='warning'>
+    echo" <div id='warning' class='hidden'>
             <p >Are you still there? </p>
             <p >Click 'Still Here' to stay logged in</p>
             <button class='button'  onclick='stillHere()' >Still Here </button>
@@ -246,6 +246,12 @@ $_SESSION['LAST_ACTIVITY'] = $time;
       
       }
         
+
+
+
+    $(document).ready(function() {
+        $("div#warning").removeClass("hidden");
+    });
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";

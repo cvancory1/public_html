@@ -37,7 +37,10 @@ $timeout_duration = 60; // 10 sec
 if (isset($_SESSION['LAST_ACTIVITY']) && 
    ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
     $message = " Timing out";
-     echo "<script type='text/javascript'>alert('$message');</script>";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+    timeoutWarning();
+    sleep(2);
+
     session_unset();
     session_destroy();
     session_start();
@@ -45,9 +48,9 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
 } 
 
-if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY'])+59 < ($timeout_duration) ){// on minute before hand warn the user
-    timeoutWarning();
-}
+// if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY'])+59 < ($timeout_duration) ){// on minute before hand warn the user
+//     timeoutWarning();
+// }
 // $_SESSION['LAST_ACTIVITY'] = $time;
 
 

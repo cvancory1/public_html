@@ -46,9 +46,12 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
 } 
-
-if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration) ){// on minute before hand warn the user
-    echo "<script type='text/javascript'>test();</script>";
+$hello=2;
+// if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration) ){// on minute before hand warn the user
+   
+   if($hello == '2'){
+    echo "<script type='text/javascript'>var x = document.getElementByClass('warning');
+    x.style.display = 'block'; </script>";
 
 
 }

@@ -16,12 +16,13 @@
 
 <?php
 session_start();
-// timeoutWarning();
+
 // checks if the user has logged in else directly redirect
 if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
     // $_SESSION['LAST_ACTIVITY'] = time();// TODO: deelte 
 }
+echo "<script> openNav(); </script>";
 
 
 $time = time();
@@ -33,23 +34,20 @@ $timeout_duration = 60; // 10 sec
 * Here we look for the user's LAST_ACTIVITY timestamp. If
 * it's set and indicates our $timeout_duration has passed,
 * blow away any previous $_SESSION data and start a new one.
-*/
+ */
 // if (isset($_SESSION['LAST_ACTIVITY']) && 
 //    ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
 //     $message = " Timing out";
 //     echo "<script type='text/javascript'>alert('$message');</script>";
-//     // timeoutWarning();
-//     // sleep(2);
 
 //     session_unset();
 //     session_destroy();
 //     session_start();
 //     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
-// } 
+// // } 
 
 // if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration)-50 ){// on minute before hand warn the user
-//     timeoutWarning();
 // }
 // $_SESSION['LAST_ACTIVITY'] = $time;
 

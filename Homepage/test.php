@@ -26,7 +26,7 @@ if (! isset($_SESSION['privilege'])){
 
 $time = time();
 // $timeout_duration = 30*60; // 30 min
-$timeout_duration = 120; // 10 sec
+$timeout_duration = 60; // 10 sec
 
 
 /**
@@ -45,7 +45,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
 } 
 
-if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration) ){// on minute before hand warn the user
+if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY'])+59 < ($timeout_duration) ){// on minute before hand warn the user
     timeoutWarning();
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;

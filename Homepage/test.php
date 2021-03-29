@@ -22,7 +22,7 @@ if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
     // $_SESSION['LAST_ACTIVITY'] = time();// TODO: deelte 
 }
-echo "<script> openNav(); </script>";
+echo "<script> timeoutWarning(); </script>";
 
 
 $time = time();
@@ -236,14 +236,14 @@ $timeout_duration = 60; // 10 sec
     //     document.getElementById("warning").style.display='inline'; // shows the div
         
     // }
-    // function timeoutWarning(){
-    //     var x = document.getElementById("warning");
-    //     if (x.style.display === "none") {
-    //       x.style.display = "inline";
-    //     } else{
-    //         x.style.display = "none";
-    //     }
-    // //   document.getElementById("warning").style.display='block';
+    function timeoutWarning(){
+        var x = document.getElementById("warning");
+        if (x.style.display === "none") {
+          x.style.display = "inline";
+        } else{
+            x.style.display = "none";
+        }
+    //   document.getElementById("warning").style.display='block';
       
     //   }
     // function hideWarning(){

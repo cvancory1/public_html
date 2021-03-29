@@ -44,7 +44,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
 }else if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < $timeout_duration- (110)){// on minute before hand warn the user
-    // timeoutWarning();
+    timeoutWarning();
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;
 
@@ -236,6 +236,8 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
     function timeoutWarning(){
         var x = document.getElementById("warning");
+        $("div#warning").removeClass("hidden");
+
         // if (x.style.display === "none") {
         //   x.style.display = "block";
         //   location.reload();
@@ -243,7 +245,6 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
         //   x.style.display = "none";
 
         // }
-        $("div#warning").removeClass("hidden");
     }
 
     window.onload = function(){

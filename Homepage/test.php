@@ -22,8 +22,7 @@ if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
     // $_SESSION['LAST_ACTIVITY'] = time();// TODO: deelte 
 }
-// echo "<script> hide(); </script>";
-// echo "<script> show(); </script>";
+
 
 
 
@@ -47,7 +46,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     session_start();
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
-// } 
+} 
 
 if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration)-50 ){// on minute before hand warn the user
     echo "<script> test();</script>";

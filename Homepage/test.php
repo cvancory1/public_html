@@ -61,12 +61,13 @@ $timeout_duration = 60; // 10 sec
         <a href='logout.php'>Log Out</a>
         </div>";
 
-    echo" <div id='warning style='display:none;'>
+    echo "<div id='warning style='display:none;'>";
+    echo" 
             <p >Are you still there? </p>
             <p >Click 'Still Here' to stay logged in</p>
-            <button class='button'  onclick='stillHere()' >Still Here </button>
+            <button class='button'  onclick='stillHere()' >Still Here </button>";
 
-    </div>";
+    echo "</div>";
 
     // table area
     echo "<div id='main'>";

@@ -37,6 +37,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                }
           } else {
                // alert("Error: Please check that you've entered and confirmed your password!");
+
                form.password.focus();
                return false;
           }
@@ -78,7 +79,12 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                <br>
                <input type='password' Class='createPassword' id='password'  name = 'password' placeholder='Password' minlength = '8' required>
                <input type='password' Class='createPassword' id='confirmPassword'  name = 'confirmPassword' placeholder='Confirm Password' minength = '8' required>
-               <p class = 'descriptiveText'>Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
+               <p class = 'descriptiveText'> Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
+               <p class = 'errorUsername' style='display:block;'> Error: Username must use SU Email!</p>
+               <p class = 'errorPwd' style='display:block;'> Error:The password you have entered is not valid!</p>
+               <p class = 'errorMatch' style='display:block;'> Error: Please check that you've entered and confirmed your password!</p>
+
+
                <input type='checkbox' onclick='showPassword()'>Show Password
                <br /> <input type='submit'  class = 'button' /> 
                <br> <p>
@@ -88,6 +94,8 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
     echo" </div>";
 
+
+   
 
 
 

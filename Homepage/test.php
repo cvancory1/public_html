@@ -23,7 +23,7 @@ if (! isset($_SESSION['privilege'])){
 
 $time = time();
 // $timeout_duration = 30*60; // 30 min
-$timeout_duration = 10; // 30 min
+$timeout_duration = 10; // 10 sec
 
 
 /**
@@ -38,6 +38,8 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     session_unset();
     session_destroy();
     session_start();
+    header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+
 }
 $_SESSION['LAST_ACTIVITY'] = $time;
     // logout button

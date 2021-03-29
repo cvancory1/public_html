@@ -62,7 +62,7 @@ input[type=submit] {
   width: 55%;
 } 
 
-.descriptiveText{
+#descriptiveText{
   
   font-family: "Lato", sans-serif;
   color:rgb(182, 181, 181);
@@ -70,5 +70,18 @@ input[type=submit] {
   /* text-align: left; */
   margin-top: 0mm;
 }
+
+#errorUsername,
+#errorPwd,
+#errorMatch{
+  font-family: "Lato", sans-serif;
+  color:rgb(246, 58, 58);
+  font-size: 15px; 
+  /* text-align: left; */
+  margin-top: 0mm;
+
+}
+
+
 
 

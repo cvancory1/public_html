@@ -239,11 +239,11 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY'])+59 
         
     }
 
-    function hideWarning(){
-        document.getElementById("warning").style.display='none';//hides div
-        // document.getElementById("main").style.display='none';
+    // function hideWarning(){
+    //     document.getElementById("warning").style.display='none';//hides div
+    //     // document.getElementById("main").style.display='none';
 
-    };
+    // };
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";

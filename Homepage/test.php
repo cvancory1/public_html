@@ -223,6 +223,18 @@ $timeout_duration = 60; // 10 sec
 
 <script type="text/javascript">
 
+function show()[
+    if(document.getElementById('warning').style.display=='none') { 
+            document.getElementById('warning').style.display='inline'; // show
+        } 
+]
+
+function hide()[
+    if(document.getElementById('warning').style.display=='block') { 
+            document.getElementById('warning').style.display='none'; 
+        } 
+]
+
 
     // function stillHere(){
     //     location.reload(); // TODO:reloades the page and resets the session?
@@ -236,14 +248,7 @@ $timeout_duration = 60; // 10 sec
     //     document.getElementById("warning").style.display='inline'; // shows the div
         
     // }
-    function timeoutWarning(){
-        var x = document.getElementById("warning");
-        if (x.style.display === "none") {
-          x.style.display = "inline";
-        } else{
-            x.style.display = "none";
-        }
-    }
+ 
     //   document.getElementById("warning").style.display='block';
       
     //   }

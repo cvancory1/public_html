@@ -25,6 +25,8 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
           if(!re.test(form.username.value)) {
                // alert("Error: Username must use SU Email!");
+               var x = document.getElementById('errorUsername');
+               x.style.display = 'block';
 
                form.username.focus();
                return false;
@@ -32,15 +34,15 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
           if(form.password.value != "" && form.password.value == form.confirmPassword.value) {
                if(!checkPassword(form.password.value)) {
                     // alert("The password you have entered is not valid!");
-                    var x = document.getElementById('errorUsername');
-                    x.style.display = 'none';
+                    var x = document.getElementById('errorPwd');
+                    x.style.display = 'block';
                     form.password.focus();
                     return false;
                }
           } else {
                // alert("Error: Please check that you've entered and confirmed your password!");
                var x = document.getElementById('errorMatch');
-               x.style.display = 'none';
+               x.style.display = 'block';
 
                form.password.focus();
                return false;

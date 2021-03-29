@@ -46,12 +46,13 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
 } 
-$hello=2;
 if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration) -10 ){// on minute before hand warn the user
    
     echo "<script type='text/javascript'>var x = document.getElementByClass('warning');
     x.style.display = 'block'; </script>";
   
+    echo "<script type='text/javascript'>var x = document.getElementById('main');
+    x.style.display = 'none'; </script>";
 
     // echo" <div id='warning' style='display:block;'>
     // <p >Are you still there? </p>

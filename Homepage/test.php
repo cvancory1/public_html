@@ -50,7 +50,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
    
-    logout button TODO move into the session variable if stmt
+    // logout button TODO move into the session variable if stmt
      echo "<div class='profile'>
         <!-- <button class='button'>  </button> -->
         <a href='logout.php'>Log Out</a>

@@ -162,7 +162,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                     if ($r=mysqli_query($conn, $sql)) {
                          $time = $_SERVER['REQUEST_TIME'];
                          $token = sha1(uniqid($username, true));
-                         $sql = "insert into Pending_Users(token, username, tstamp) values('$username', '$token', '$time')";
+                         $sql = "insert into Pending_Users(token, username, tstamp) values('$token', '$username', '$time')";
                          
                          if($r=mysqli_query($conn, $sql)){
                               ;

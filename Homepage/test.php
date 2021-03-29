@@ -41,7 +41,6 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     $message = " Timing out";
     echo "<script type='text/javascript'>alert('$message');</script>";
     echo "<script> test();</script>";
-    echo"hi";
     session_unset();
     session_destroy();
     session_start();

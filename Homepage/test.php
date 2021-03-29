@@ -231,7 +231,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     // }
 
     function stillHere(){
-        location.reload(); // TODO:reloades the page and resets the session?
+        // location.reload(); // TODO:reloades the page and resets the session?
         var x = document.getElementById("warning");
           x.style.display = "none";
 

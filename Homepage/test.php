@@ -232,7 +232,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < (
 
     function timeoutWarning(){
         
-        document.getElementById("warning").style.display='block'; // shows the div
+        document.getElementById("warning").style.display='inline'; // shows the div
         
     }
 

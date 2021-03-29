@@ -251,7 +251,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
 
     $(document).ready(function() {
-        $("div#warning").addClass("hidden");
+        $("#warning").addClass("hidden");
 
     });
 

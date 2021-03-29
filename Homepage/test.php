@@ -22,7 +22,9 @@ if (! isset($_SESSION['privilege'])){
 
 
 $time = time();
-$timeout_duration = 30*60; // 30 min
+// $timeout_duration = 30*60; // 30 min
+$timeout_duration = 10; // 30 min
+
 
 /**
 * Here we look for the user's LAST_ACTIVITY timestamp. If

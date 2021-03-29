@@ -247,6 +247,14 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
 
     }
 
+    function stillHere(){
+        var x = document.getElementByClass("warning");
+        x.style.display = "none";
+
+        location.reload(); // TODO:reloades the page and resets the session?
+
+      }
+
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";

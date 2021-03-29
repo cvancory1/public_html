@@ -16,7 +16,7 @@
 
 <?php
 session_start();
-
+hideWarning();
 // checks if the user has logged in else directly redirect
 if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
@@ -239,7 +239,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY'])+59 
         
     }
 
-    window.onload = function(){
+    function hideWarning(){
         document.getElementById("warning").style.display='none';//hides div
         // document.getElementById("main").style.display='none';
 

@@ -18,14 +18,15 @@ session_start();
 if(isset($_SESSION["privilege"])) {
    
 
-    if(time()-$_SESSION["login_time_stamp"] >5)  {
+    if($_SESSION["login_time_stamp"] >  $_SESSION['expire'])  {
         $message = " here1";
         echo "<script type='text/javascript'>alert('$message');</script>";
 
         session_unset();
         session_destroy();
         header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
-
+        
+       
     }
 
 }else{

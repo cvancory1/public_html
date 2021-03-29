@@ -243,16 +243,17 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         //   x.style.display = "none";
 
         // }
+        $("div#warning").removeClass("hidden");
 
-        $("div#warning").addClass("hidden");
 
       
       }
 
 
-    $(document).ready(function() {
-        $("div#warning").removeClass("hidden");
-    });
+    // $(document).ready(function() {
+    //     $("div#warning").addClass("hidden");
+
+    // });
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";

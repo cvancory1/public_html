@@ -26,7 +26,7 @@ if (! isset($_SESSION['privilege'])){
 
 $time = time();
 // $timeout_duration = 30*60; // 30 min
-$timeout_duration = 120; // 10 sec
+$timeout_duration = 100; // 10 sec
 
 
 /**
@@ -93,12 +93,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <button class='placeholder'>X</button>
                 </div>
 
-            <---  Top right profile button -->
-                <div class='profile'>
-                    <!-- <button class='button'>  </button> -->
-                    <a href='logout.php'>Log Out</a>
-        
-                </div>
 
                 <br> <br> <br> <br>
             

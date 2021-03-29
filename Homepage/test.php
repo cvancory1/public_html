@@ -46,7 +46,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 }else if(($time - $_SESSION['LAST_ACTIVITY']) < $timeout_duration- (110)){// on minute before hand warn the user
     timeoutWarning();
 }
-$_SESSION['LAST_ACTIVITY'] = $time;
+// $_SESSION['LAST_ACTIVITY'] = $time;
 
 
    

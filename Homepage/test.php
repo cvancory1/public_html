@@ -54,11 +54,11 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
     echo "<script type='text/javascript'>var x = document.getElementById('main');
     x.style.display = 'none'; </script>";
 
-    // echo" <div id='warning' style='display:block;'>
-    // <p >Are you still there? </p>
-    // <p >Click 'Still Here' to stay logged in</p>
-    // <button class='button'  onclick='stillHere()' >Still Here </button>
-    // </div>";
+    echo" <div id='warning' style='display:block;'>
+    <p >Are you still there? </p>
+    <p >Click 'Still Here' to stay logged in</p>
+    <button class='button'  onclick='stillHere()' >Still Here </button>
+    </div>";
 
 
 }
@@ -72,11 +72,11 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
         <a href='logout.php'>Log Out</a>
         </div>";
 
-    echo" <div id='warning' style='display:none;'>
-            <p >Are you still there? </p>
-            <p >Click 'Still Here' to stay logged in</p>
-            <button class='button'  onclick='stillHere()' >Still Here </button>
-            </div>";
+    // echo" <div id='warning' style='display:none;'>
+    //         <p >Are you still there? </p>
+    //         <p >Click 'Still Here' to stay logged in</p>
+    //         <button class='button'  onclick='stillHere()' >Still Here </button>
+    //         </div>";
     // table area
     echo "<div id='main'>";
 

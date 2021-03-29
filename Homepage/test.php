@@ -221,7 +221,7 @@ $timeout_duration = 60; // 10 sec
 
 ?>
 
-<script>
+<script type="text/javascript">
 
 
     // function stillHere(){
@@ -243,6 +243,7 @@ $timeout_duration = 60; // 10 sec
         } else{
             x.style.display = "none";
         }
+    }
     //   document.getElementById("warning").style.display='block';
       
     //   }

@@ -18,7 +18,7 @@ if(isset($_SESSION["privilege"])) {
     $message = " here1";
     echo "<script type='text/javascript'>alert('$message');</script>";
 
-    if(time()-$_SESSION["login_time_stamp"] >6000)  {
+    if(time()-$_SESSION["login_time_stamp"] >18000)  {
     echo"here12";
 
         session_unset();

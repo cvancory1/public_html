@@ -14,26 +14,30 @@
 <?php
 session_start();
 
-// checks if the user has logged in and should time out
-if(isset($_SESSION["privilege"])) {
-   
-
-    if($_SESSION["login_time_stamp"] >  $_SESSION['expire'])  {
-        $message = " here1";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-
-        session_unset();
-        session_destroy();
-        header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
-        
-       
-    }
-
-}else{
+// checks if the user has logged in else directly redirect
+if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
 }
 
+
+$time = time();
+$timeout_duration = 30*60; // 30 min
+
+/**
+* Here we look for the user's LAST_ACTIVITY timestamp. If
+* it's set and indicates our $timeout_duration has passed,
+* blow away any previous $_SESSION data and start a new one.
+*/
+if (isset($_SESSION['LAST_ACTIVITY']) && 
+   ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
+    $message = " Timing out";
+     echo "<script type='text/javascript'>alert('$message');</script>";
+    session_unset();
+    session_destroy();
+    session_start();
+}
+$_SESSION['LAST_ACTIVITY'] = $time;
     // logout button
      echo "<div class='profile'>
         <!-- <button class='button'>  </button> -->

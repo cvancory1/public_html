@@ -58,9 +58,6 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
 
                }
-               $_SESSION["login_time_stamp"] = time(); // Login time is stored in a session variable
-               $_SESSION['expire'] = $_SESSION['login_time_stamp'] + ( 60); // 40 min 40*60
-               // TODO: make 40 min
 
 
                // TODO: UNCOMMENT when finished twith the table views or change names

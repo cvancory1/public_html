@@ -232,29 +232,20 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
     function stillHere(){
         // location.reload(); // TODO:reloades the page and resets the session?
-        var x = document.getElementById("warning");
-          x.style.display = "none";
+          document.getElementById("warning").style.display='block';// shows the div
 
-
+        
     }
 
     function timeoutWarning(){
-        // var x = document.getElementById("warning");
-        // $("div#warning").removeClass("hidden");
-
-        // if (x.style.display === "none") {
-        //   x.style.display = "block";
-        //   location.reload();
-        // } else {
-        //   x.style.display = "none";
-
-        // }
-        document.getElementById("warning").style.display='none';
+        
+        document.getElementById("warning").style.display='block'; // shows the div
         
     }
 
     window.onload = function(){
-        document.getElementById("warning").style.display='block';
+        document.getElementById("warning").style.display='none';//hides div
+
     };
 
     function openNav() {

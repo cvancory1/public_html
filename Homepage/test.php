@@ -27,7 +27,6 @@ if (! isset($_SESSION['privilege'])){
 $time = time();
 // $timeout_duration = 30*60; // 30 min
 $timeout_duration = 120; // 10 sec
-echo $time;
 
 
 /**
@@ -44,7 +43,9 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     session_start();
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
-}else if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration- (118)) ){// on minute before hand warn the user
+} 
+
+if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration- (118)) ){// on minute before hand warn the user
     timeoutWarning();
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;
@@ -221,19 +222,10 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
 <script>
 
-    // function timeoutWarning(){
-    //     var x = document.getElementById("warning");
-    //     if (x.style.display === "none") {
-    //         x.style.display = "block";
-    //     } else {
-    //         x.style.display = "none";
-    //     }
-
-    // }
 
     function stillHere(){
         // location.reload(); // TODO:reloades the page and resets the session?
-          document.getElementById("warning").style.display='block';// shows the div
+          document.getElementById("warning").style.display='none';// shows the div
 
 
     }

@@ -22,7 +22,9 @@ if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
     // $_SESSION['LAST_ACTIVITY'] = time();// TODO: deelte 
 }
-echo "<script> hide(); </script>";
+// echo "<script> hide(); </script>";
+// echo "<script> show(); </script>";
+
 
 
 $time = time();
@@ -59,7 +61,7 @@ $timeout_duration = 60; // 10 sec
         <a href='logout.php'>Log Out</a>
         </div>";
 
-    echo" <div id='warning' >
+    echo" <div id='warning style='display:none'>
             <p >Are you still there? </p>
             <p >Click 'Still Here' to stay logged in</p>
             <button class='button'  onclick='stillHere()' >Still Here </button>

@@ -249,11 +249,9 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
       
       }
 
-
-    $(document).ready(function() {
-        $("#warning").addClass("hidden");
-
-    });
+    window.onload = function(){
+    document.getElementById("warning").style.display='none';
+    };
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";

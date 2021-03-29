@@ -59,7 +59,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
                }
 
-
+               $_SESSION['LAST_ACTIVITY'] = time();
                // TODO: UNCOMMENT when finished twith the table views or change names
                // header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/UITest.php" );
                header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );

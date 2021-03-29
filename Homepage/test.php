@@ -20,13 +20,14 @@ session_start();
 // checks if the user has logged in else directly redirect
 if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
-    $_SESSION['LAST_ACTIVITY'] = $time;// TODO: deelte 
+    // $_SESSION['LAST_ACTIVITY'] = time();// TODO: deelte 
 }
 
 
 $time = time();
 // $timeout_duration = 30*60; // 30 min
 $timeout_duration = 120; // 10 sec
+echo $time;
 
 
 /**
@@ -43,7 +44,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     session_start();
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
-}else if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration- (110)) ){// on minute before hand warn the user
+}else if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration- (118)) ){// on minute before hand warn the user
     timeoutWarning();
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;

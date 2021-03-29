@@ -56,7 +56,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
         <a href='logout.php'>Log Out</a>
         </div>";
 
-    echo" <div id='warning' class='hidden'>
+    echo" <div id='warning' >
             <p >Are you still there? </p>
             <p >Click 'Still Here' to stay logged in</p>
             <button class='button'  onclick='stillHere()' >Still Here </button>
@@ -244,16 +244,16 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
         // }
         $("div#warning").removeClass("hidden");
-
+            echo "here";
 
       
       }
 
 
-    // $(document).ready(function() {
-    //     $("div#warning").addClass("hidden");
+    $(document).ready(function() {
+        $("div#warning").addClass("hidden");
 
-    // });
+    });
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";

@@ -49,8 +49,10 @@ $timeout_duration = 60; // 10 sec
 
 // // } 
 
-// if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration)-50 ){// on minute before hand warn the user
-// }
+if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration)-50 ){// on minute before hand warn the user
+    echo " <script> test()</script>";
+
+}
 // $_SESSION['LAST_ACTIVITY'] = $time;
 
 
@@ -66,7 +68,6 @@ $timeout_duration = 60; // 10 sec
             <p >Click 'Still Here' to stay logged in</p>
             <button class='button'  onclick='stillHere()' >Still Here </button>
             </div>";
-    echo " <script> test() </script>";
     // table area
     echo "<div id='main'>";
 

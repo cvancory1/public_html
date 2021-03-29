@@ -12,23 +12,23 @@
 <body> 
 
 <?php
-    session_start();
+session_start();
 
 // checks if the user has logged in and should time out
 if(isset($_SESSION["privilege"])) {
-    $message = " here1";
-    echo "<script type='text/javascript'>alert('$message');</script>";
+   
 
-    if(time()-$_SESSION["login_time_stamp"] >18000)  {
-    echo"here12";
+    if(time()-$_SESSION["login_time_stamp"] >10)  {
+        $message = " here1";
+        echo "<script type='text/javascript'>alert('$message');</script>";
 
         session_unset();
         session_destroy();
         header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
     }
+
 }else{
-    echo"here";
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
 }
@@ -73,9 +73,8 @@ if(isset($_SESSION["privilege"])) {
             
             
             ";
-        }
 
-        // if ($_SESSION["privilege"] == "viewUser"){
+            // if ($_SESSION["privilege"] == "viewUser"){
             if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;
             }
@@ -129,7 +128,7 @@ if(isset($_SESSION["privilege"])) {
     echo "</div>";
 
         // }
-
+            }//end "if" privlege
     
     // this is apart of the search bar 
     // if ($_SESSION["privilege"] == "viewUser"){

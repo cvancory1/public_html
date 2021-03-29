@@ -38,8 +38,8 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
    ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
     $message = " Timing out";
     echo "<script type='text/javascript'>alert('$message');</script>";
-    timeoutWarning();
-    sleep(2);
+    // timeoutWarning();
+    // sleep(2);
 
     session_unset();
     session_destroy();
@@ -48,9 +48,9 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
 } 
 
-// if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY'])+59 < ($timeout_duration) ){// on minute before hand warn the user
-//     timeoutWarning();
-// }
+if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY'])+59 < ($timeout_duration) ){// on minute before hand warn the user
+    timeoutWarning();
+}
 // $_SESSION['LAST_ACTIVITY'] = $time;
 
 
@@ -239,11 +239,11 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
         
     }
 
-    // window.onload = function(){
-    //     // document.getElementById("warning").style.display='none';//hides div
-    //     // document.getElementById("main").style.display='none';
+    window.onload = function(){
+        document.getElementById("warning").style.display='none';//hides div
+        // document.getElementById("main").style.display='none';
 
-    // };
+    };
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";

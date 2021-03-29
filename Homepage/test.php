@@ -26,7 +26,7 @@ if (! isset($_SESSION['privilege'])){
 
 $time = time();
 // $timeout_duration = 30*60; // 30 min
-$timeout_duration = 10; // 10 sec
+$timeout_duration = 100; // 10 sec
 
 
 /**

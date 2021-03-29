@@ -235,8 +235,8 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     }
 
     function timeoutWarning(){
-        var x = document.getElementById("warning");
-        $("div#warning").removeClass("hidden");
+        // var x = document.getElementById("warning");
+        // $("div#warning").removeClass("hidden");
 
         // if (x.style.display === "none") {
         //   x.style.display = "block";
@@ -245,6 +245,8 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
         //   x.style.display = "none";
 
         // }
+        document.getElementById("warning").style.display='block';
+        
     }
 
     window.onload = function(){

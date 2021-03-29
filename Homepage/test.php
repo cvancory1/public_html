@@ -248,7 +248,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
     }
 
     function stillHere(){
-        var x = document.getElementByClass("warning");
+        var x = document.getElementById("warning");
         x.style.display = "none";
 
         location.reload(); // TODO:reloades the page and resets the session?

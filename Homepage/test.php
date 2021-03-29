@@ -245,12 +245,12 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
         //   x.style.display = "none";
 
         // }
-        document.getElementById("warning").style.display='block';
+        document.getElementById("warning").style.display='none';
         
     }
 
     window.onload = function(){
-        document.getElementById("warning").style.display='none';
+        document.getElementById("warning").style.display='block';
     };
 
     function openNav() {

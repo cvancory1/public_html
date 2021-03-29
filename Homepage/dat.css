@@ -166,7 +166,8 @@ body {
 
 
 
-.warning{
+#warning{
+    font-family: "Lato", sans-serif;
     margin:0 auto;
     align-content:center;
     text-align:center;
@@ -174,7 +175,7 @@ body {
 
     /* create the hollow box around  */
     border-radius: 20px;
-    border: 2px solid #bbbfca;
+    border: 2px solid #000000;
     padding: 90px; 
     width: 400px;
     height: 300px; 

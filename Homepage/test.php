@@ -16,8 +16,7 @@
 
 <?php
 session_start();
-sleep(1);
-timeoutWarning();
+// timeoutWarning();
 // checks if the user has logged in else directly redirect
 if (! isset($_SESSION['privilege'])){
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
@@ -67,7 +66,7 @@ $timeout_duration = 60; // 10 sec
             <p >Click 'Still Here' to stay logged in</p>
             <button class='button'  onclick='stillHere()' >Still Here </button>
 
-        </div>";
+    </div>";
 
     // table area
     echo "<div id='main'>";
@@ -239,16 +238,16 @@ $timeout_duration = 60; // 10 sec
     //     document.getElementById("warning").style.display='inline'; // shows the div
         
     // }
-    function timeoutWarning(){
-        var x = document.getElementById("warning");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else{
-            x.style.display = "none";
-        }
-    //   document.getElementById("warning").style.display='block';
+    // function timeoutWarning(){
+    //     var x = document.getElementById("warning");
+    //     if (x.style.display === "none") {
+    //       x.style.display = "inline";
+    //     } else{
+    //         x.style.display = "none";
+    //     }
+    // //   document.getElementById("warning").style.display='block';
       
-      }
+    //   }
     // function hideWarning(){
     //     document.getElementById("warning").style.display='none';//hides div
     //     // document.getElementById("main").style.display='none';

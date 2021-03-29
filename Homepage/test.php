@@ -54,6 +54,12 @@ $hello=2;
     x.style.display = 'block'; </script>";
     echo"hhhhhhhhhhhhhhhhhhhhhhhhhhhh";
 
+    echo" <div id='warning' style='display:block;'>
+    <p >Are you still there? </p>
+    <p >Click 'Still Here' to stay logged in</p>
+    <button class='button'  onclick='stillHere()' >Still Here </button>
+    </div>";
+
 
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;

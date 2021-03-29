@@ -66,7 +66,7 @@ $timeout_duration = 60; // 10 sec
             <p >Click 'Still Here' to stay logged in</p>
             <button class='button'  onclick='stillHere()' >Still Here </button>
             </div>";
-
+    echo " <script> test() </script>";
     // table area
     echo "<div id='main'>";
 

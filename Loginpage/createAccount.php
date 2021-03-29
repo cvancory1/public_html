@@ -27,6 +27,11 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                // alert("Error: Username must use SU Email!");
                var x = document.getElementById('errorUsername');
                x.style.display = 'block';
+               var y = document.getElementById('errorPwd');
+               var z = document.getElementById('errorMatch');
+               y.style.display = 'none';
+               z.style.display = 'none';
+               
 
                form.username.focus();
                return false;
@@ -36,6 +41,12 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                     // alert("The password you have entered is not valid!");
                     var x = document.getElementById('errorPwd');
                     x.style.display = 'block';
+
+                    var y = document.getElementById('errorUsername');
+                    var z = document.getElementById('errorMatch');
+                    y.style.display = 'none';
+                    z.style.display = 'none';
+
                     form.password.focus();
                     return false;
                }
@@ -43,6 +54,12 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                // alert("Error: Please check that you've entered and confirmed your password!");
                var x = document.getElementById('errorMatch');
                x.style.display = 'block';
+
+               var y = document.getElementById('errorPwd');
+               var z = document.getElementById('errorUsername');
+               y.style.display = 'none';
+               z.style.display = 'none';
+
 
                form.password.focus();
                return false;

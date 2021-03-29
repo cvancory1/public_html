@@ -38,7 +38,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
    ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
     // $message = " Timing out";
     // echo "<script type='text/javascript'>alert('$message');</script>";
-    echo "<script type='text/javascript'>test();</script>";
+    // echo "<script type='text/javascript'>test();</script>";
 
     session_unset();
     session_destroy();
@@ -49,16 +49,15 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 $hello=2;
 if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration) -10 ){// on minute before hand warn the user
    
-//    if($hello == '2'){
     echo "<script type='text/javascript'>var x = document.getElementByClass('warning');
     x.style.display = 'block'; </script>";
-    echo"hhhhhhhhhhhhhhhhhhhhhhhhhhhh";
+  
 
-    echo" <div id='warning' style='display:block;'>
-    <p >Are you still there? </p>
-    <p >Click 'Still Here' to stay logged in</p>
-    <button class='button'  onclick='stillHere()' >Still Here </button>
-    </div>";
+    // echo" <div id='warning' style='display:block;'>
+    // <p >Are you still there? </p>
+    // <p >Click 'Still Here' to stay logged in</p>
+    // <button class='button'  onclick='stillHere()' >Still Here </button>
+    // </div>";
 
 
 }

@@ -12,8 +12,8 @@
 <body> 
 
 <?php
-$message = " here1";
-echo "<script type='text/javascript'>alert('$message');</script>";
+    session_start();
+
 // checks if the user has logged in and should time out
 if(isset($_SESSION["privilege"])) {
     $message = " here1";
@@ -35,7 +35,6 @@ if(isset($_SESSION["privilege"])) {
 
     echo "<div id='main'>";
 
-        session_start();
         print_r($_SESSION['privilege']);
         
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {

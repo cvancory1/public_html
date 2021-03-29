@@ -167,7 +167,14 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     echo "</div>";
 
 
-
+    if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
+            echo "here";
+            echo "<div class='crud >
+            <a href='animalsRemove.php'>Delete</a>
+            <a href='animalsUpdate1.php'>Update</a>
+            <a href='animalsAdd.php'>Add</a>
+            </div>";
+    }
     
 
         // }

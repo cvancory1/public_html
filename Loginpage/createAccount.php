@@ -9,7 +9,6 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
     <link rel="stylesheet" href="login.css" type="text/css" />
      
-     <!-- TODO: see if you can have two submits one that runs the functions and one that sumbits from the funciton correcrlt  -->
 <script type="text/javascript">
 
      function checkPassword(str){
@@ -25,18 +24,19 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
           re = /@salisbury.edu$/;
 
           if(!re.test(form.username.value)) {
-               alert("Error: Username must use SU Email!");
+               // alert("Error: Username must use SU Email!");
+
                form.username.focus();
                return false;
           }
           if(form.password.value != "" && form.password.value == form.confirmPassword.value) {
                if(!checkPassword(form.password.value)) {
-                    alert("The password you have entered is not valid!");
+                    // alert("The password you have entered is not valid!");
                     form.password.focus();
                     return false;
                }
           } else {
-               alert("Error: Please check that you've entered and confirmed your password!");
+               // alert("Error: Please check that you've entered and confirmed your password!");
                form.password.focus();
                return false;
           }
@@ -63,39 +63,41 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 </script>
 
 <body> 
+<?php
 
 
-     <div class="loginMain">
-          <p class="topBar"  id="top_header"> Alumni Database </p>
+     echo" <div class='loginMain'>";
+          echo" <p class='topBar'  id='top_header'> Alumni Database </p>";
 
-          <p class="loginBox" id="login"> Create Your Alumni Account </p>
+          echo"<p class='loginBox' id='login'> Create Your Alumni Account </p>";
           
-          <form name="add_name" id="add_name" action="createAccount.php" method="post"  onsubmit="return checkForm(this);">  
+          echo"<form name='add_name' id='add_name' action='createAccount.php' method='post'  onsubmit='return checkForm(this);'>  
 
-               <input type="text" id="username"  name = "username" placeholder="SU Email" required> 
+               <input type='text' id='username'  name = 'username' placeholder='SU Email' required> 
      
                <br>
-               <input type="password" Class="createPassword" id="password"  name = "password" placeholder="Password" minlength = "8" required>
-               <input type="password" Class="createPassword" id="confirmPassword"  name = "confirmPassword" placeholder="Confirm Password" minength = "8" required>
-               <p class = "descriptiveText">Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
-               <input type="checkbox" onclick="showPassword()">Show Password
-               <br /> <input type="submit"  class = "button" /> 
+               <input type='password' Class='createPassword' id='password'  name = 'password' placeholder='Password' minlength = '8' required>
+               <input type='password' Class='createPassword' id='confirmPassword'  name = 'confirmPassword' placeholder='Confirm Password' minength = '8' required>
+               <p class = 'descriptiveText'>Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
+               <input type='checkbox' onclick='showPassword()'>Show Password
+               <br /> <input type='submit'  class = 'button' /> 
                <br> <p>
-                         <a href= "loginP.html">Back To Sign In</a>
+                         <a href= 'loginP.html'>Back To Sign In</a>
 
-               </p> 
+               </p> ";
 
-     </div>
-
-
-</body> 
-
-
-</html>
+    echo" </div>";
 
 
 
-<?php
+
+echo"</body> ";
+
+
+echo"</html>";
+
+
+
 
 session_start();
 
@@ -156,12 +158,21 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                     $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 'viewUser')";
-
+               
                     if ($r=mysqli_query($conn, $sql)) {
+                         $time = $_SERVER['REQUEST_TIME'];
+                         $token = sha1(uniqid($username, true));
+                         $sql = "insert into Pending_Users(token, username, tstamp) values('$username', '$token', '$time')";
+                         if($r=mysqli_query($conn, $sql)){
+                              ;
+                         }else{
+                              echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+
+                         }
                          $message = "Account was sucessfully created! Redirecting to Login";
                          echo "<script type='text/javascript'>alert('$message');</script>";
                          header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
-                    
+                         
                     }
                     else {
                          echo "Error: " . $sql . "<br>" . mysqli_error($conn);

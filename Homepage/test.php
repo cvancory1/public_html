@@ -62,7 +62,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
 
 
 }
-// $_SESSION['LAST_ACTIVITY'] = $time;
+$_SESSION['LAST_ACTIVITY'] = $time;
 
 
    
@@ -236,7 +236,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
 
     function test(){
         // var x = document.getElementById("myDIV");
-        var x = document.getElementByClass("warning");
+        var x = document.getElementById("warning");
         x.style.display = "block";
 
         if (x.style.display === "none") {

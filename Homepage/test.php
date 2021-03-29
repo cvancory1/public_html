@@ -37,20 +37,20 @@ $timeout_duration = 60; // 10 sec
 * it's set and indicates our $timeout_duration has passed,
 * blow away any previous $_SESSION data and start a new one.
  */
-// if (isset($_SESSION['LAST_ACTIVITY']) && 
-//    ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
-//     $message = " Timing out";
-//     echo "<script type='text/javascript'>alert('$message');</script>";
+if (isset($_SESSION['LAST_ACTIVITY']) && 
+   ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
+    $message = " Timing out";
+    echo "<script type='text/javascript'>alert('$message');</script>";
 
-//     session_unset();
-//     session_destroy();
-//     session_start();
-//     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+    session_unset();
+    session_destroy();
+    session_start();
+    header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
-// // } 
+// } 
 
 if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > ($timeout_duration)-50 ){// on minute before hand warn the user
-    echo " <script> test();</script>";
+    echo "<script> test();</script>";
 
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;

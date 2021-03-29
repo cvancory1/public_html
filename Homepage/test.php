@@ -43,7 +43,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     session_start();
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
-}else if(($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration- (60)){// on minute before hand warn the user
+}else if(($time - $_SESSION['LAST_ACTIVITY']) < $timeout_duration- (60)){// on minute before hand warn the user
     timeoutWarning();
 }
 $_SESSION['LAST_ACTIVITY'] = $time;

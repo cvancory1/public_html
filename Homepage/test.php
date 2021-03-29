@@ -15,7 +15,8 @@
 
 // checks if the user has logged in and should time out
 if(isset($_SESSION["privilege"])) {
-    echo"here1";
+    $message = " here1";
+    echo "<script type='text/javascript'>alert('$message');</script>";
 
     if(time()-$_SESSION["login_time_stamp"] >6000)  {
     echo"here12";

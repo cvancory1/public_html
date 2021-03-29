@@ -26,7 +26,7 @@ if (! isset($_SESSION['privilege'])){
 
 $time = time();
 // $timeout_duration = 30*60; // 30 min
-$timeout_duration = 100; // 10 sec
+$timeout_duration = 120; // 10 sec
 
 
 /**
@@ -44,17 +44,17 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
 }else if(($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration- (60)){// on minute before hand warn the user
-    timeoutWarning();
+    // timeoutWarning();
 }
 $_SESSION['LAST_ACTIVITY'] = $time;
 
 
    
     // logout button TODO move into the session variable if stmt
-     echo "<div class='profile'>
-        <!-- <button class='button'>  </button> -->
-        <a href='logout.php'>Log Out</a>
-        </div>";
+    //  echo "<div class='profile'>
+    //     <!-- <button class='button'>  </button> -->
+    //     <a href='logout.php'>Log Out</a>
+    //     </div>";
 
     echo" <div id='warning'>
             <p >Are you still there? </p>

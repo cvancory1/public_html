@@ -226,18 +226,18 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY'])+59 
 <script>
 
 
-    function stillHere(){
-        // location.reload(); // TODO:reloades the page and resets the session?
-          document.getElementById("warning").style.display='none';// shows the div
+    // function stillHere(){
+    //     location.reload(); // TODO:reloades the page and resets the session?
+    // //       document.getElementById("warning").style.display='none';// shows the div
 
 
-    }
+    // }
 
-    function timeoutWarning(){
+    // function timeoutWarning(){
         
-        document.getElementById("warning").style.display='inline'; // shows the div
+    //     document.getElementById("warning").style.display='inline'; // shows the div
         
-    }
+    // }
 
     // function hideWarning(){
     //     document.getElementById("warning").style.display='none';//hides div

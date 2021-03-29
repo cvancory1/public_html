@@ -12,7 +12,8 @@
 <body> 
 
 <?php
-
+$message = " here1";
+echo "<script type='text/javascript'>alert('$message');</script>";
 // checks if the user has logged in and should time out
 if(isset($_SESSION["privilege"])) {
     $message = " here1";

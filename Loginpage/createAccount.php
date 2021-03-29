@@ -27,8 +27,11 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                // alert("Error: Username must use SU Email!");
                var x = document.getElementById('errorUsername');
                x.style.display = 'block';
+               
+               var w = document.getElementById('descriptiveText');
                var y = document.getElementById('errorPwd');
                var z = document.getElementById('errorMatch');
+               w.style.display = 'none';
                y.style.display = 'none';
                z.style.display = 'none';
                
@@ -42,8 +45,10 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                     var x = document.getElementById('errorPwd');
                     x.style.display = 'block';
 
+                    var w = document.getElementById('descriptiveText');
                     var y = document.getElementById('errorUsername');
                     var z = document.getElementById('errorMatch');
+                    w.style.display = 'none';
                     y.style.display = 'none';
                     z.style.display = 'none';
 
@@ -55,8 +60,10 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                var x = document.getElementById('errorMatch');
                x.style.display = 'block';
 
+               var w = document.getElementById('descriptiveText');
                var y = document.getElementById('errorPwd');
                var z = document.getElementById('errorUsername');
+               w.style.display = 'none';
                y.style.display = 'none';
                z.style.display = 'none';
 
@@ -102,7 +109,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                <br>
                <input type='password' Class='createPassword' id='password'  name = 'password' placeholder='Password' minlength = '8' required>
                <input type='password' Class='createPassword' id='confirmPassword'  name = 'confirmPassword' placeholder='Confirm Password' minength = '8' required>
-               <p class = 'descriptiveText'> Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
+               <p id = 'descriptiveText'> Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
                               
                <p id = 'errorUsername' style='display:none;'> Error: Username must use SU Email!</p>
                <p id = 'errorPwd' style='display:none;'> Error:The password you have entered is not valid!</p>

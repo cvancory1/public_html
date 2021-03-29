@@ -11,6 +11,9 @@
 
 <body> 
 
+
+
+
 <?php
 session_start();
 
@@ -40,14 +43,25 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     session_start();
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
+}else if(($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration- (60)){// on minute before hand warn the user
+    timeoutWarning();
 }
 $_SESSION['LAST_ACTIVITY'] = $time;
-    // logout button
+
+
+   
+    // logout button TODO move into the session variable if stmt
      echo "<div class='profile'>
         <!-- <button class='button'>  </button> -->
         <a href='logout.php'>Log Out</a>
         </div>";
 
+    echo" <div id='warning'>
+            <p >Are you still there? </p>
+            <p >Click 'Still Here' to stay logged in</p>
+            <button class='button'  onclick='stillHere()' >Still Here </button>
+
+        </div>";
 
     // table area
     echo "<div id='main'>";
@@ -144,6 +158,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 mysqli_close($connection);
     echo "</div>";
 
+
+
+    
+
         // }
             }//end "if" privlege
     
@@ -206,24 +224,39 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 ?>
 
+<script>
+
+    function timeoutWarning(){
+        var x = document.getElementById("warning");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+    }
+
+    function stillHere(){
+        location.reload(); // TODO:reloades the page and resets the session?
+    }
+        
+
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+
+    }
+</script>
      
 
 
     </body> 
 
 
-    <script>
-            function openNav() {
-                document.getElementById("mySidebar").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-
-            }
-
-            function closeNav() {
-                document.getElementById("mySidebar").style.width = "0";
-                document.getElementById("main").style.marginLeft= "0";
-
-            }
-        </script>
-           
 </html>

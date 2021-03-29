@@ -163,3 +163,21 @@ body {
 
 
 }
+
+
+
+.warning{
+    margin:0 auto;
+    align-content:center;
+    text-align:center;
+    margin-top: 10%; /*determines how high/low the main box is on the page */
+
+    /* create the hollow box around  */
+    border-radius: 20px;
+    border: 2px solid #bbbfca;
+    padding: 90px; 
+    width: 400px;
+    height: 300px; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+
+} 

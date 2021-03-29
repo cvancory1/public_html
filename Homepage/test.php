@@ -43,7 +43,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     session_start();
     header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
 
-}else if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < $timeout_duration- (110)){// on minute before hand warn the user
+}else if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration- (110)) ){// on minute before hand warn the user
     timeoutWarning();
 }
 // $_SESSION['LAST_ACTIVITY'] = $time;
@@ -234,7 +234,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
         // location.reload(); // TODO:reloades the page and resets the session?
           document.getElementById("warning").style.display='block';// shows the div
 
-        
+
     }
 
     function timeoutWarning(){

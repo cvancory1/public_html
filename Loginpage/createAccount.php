@@ -163,7 +163,6 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                          $time = $_SERVER['REQUEST_TIME'];
                          $token = sha1(uniqid($username, true));
                          $sql = "insert into Pending_Users(token, username, tstamp) values('$token', '$username', '$time')";
-                         
                          if($r=mysqli_query($conn, $sql)){
                               ;
                          }else{
@@ -172,7 +171,7 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
                          }
                          $message = "Account was sucessfully created! Redirecting to Login";
                          echo "<script type='text/javascript'>alert('$message');</script>";
-                         // header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+                         header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
                          
                     }
                     else {

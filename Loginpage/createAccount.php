@@ -72,13 +72,13 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 <body> 
 <?php
 
-
+// action='createAccount.php'
      echo" <div class='loginMain'>";
           echo" <p class='topBar'  id='top_header'> Alumni Database </p>";
 
           echo"<p class='loginBox' id='login'> Create Your Alumni Account </p>";
           
-          echo"<form name='add_name' id='add_name' action='createAccount.php' method='post'  onsubmit='return checkForm(this);'>  
+          echo"<form name='add_name' id='add_name'  method='post'  onsubmit='return checkForm(this);'>  
 
                <input type='text' id='username'  name = 'username' placeholder='SU Email' required> 
      

@@ -47,14 +47,14 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
 
 } 
 $hello=2;
-// if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration) ){// on minute before hand warn the user
+if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) < ($timeout_duration) ){// on minute before hand warn the user
    
-   if($hello == '2'){
+//    if($hello == '2'){
     echo "<script type='text/javascript'>var x = document.getElementByClass('warning');
     x.style.display = 'block'; </script>";
     echo"hhhhhhhhhhhhhhhhhhhhhhhhhhhh";
 
-    echo" <div id='warning' style='display:inline;'>
+    echo" <div id='warning' style='display:block;'>
     <p >Are you still there? </p>
     <p >Click 'Still Here' to stay logged in</p>
     <button class='button'  onclick='stillHere()' >Still Here </button>

@@ -151,6 +151,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
                 while($row=mysqli_fetch_array($r)){
                     echo "<tr>";
+                    echo '<td><input type="checkbox" name="checkbox" value="" id="checkbox"></td>';
                     echo "<td>" . $row['alumniID'] . "</td>";
                     echo "<td>" . $row['birthdate'] . "</td>";
                     echo "<td>" . $row['status'] . "</td>";

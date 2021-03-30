@@ -164,6 +164,14 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 echo "</table>";
 
                 mysqli_close($connection);
+
+                if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
+                    echo "<div class='crud_button' >
+                    <a href='animalsRemove.php' id = remove  >Delete</a>
+                    <a href='animalsUpdate1.php' id= update>Update</a>
+                    <a href='animalsAdd.php' id= add>Add</a>
+                    </div>";
+                }
     echo "</div>";
 
 
@@ -172,13 +180,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         // }
     }//end "if" privlege
 
-    if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
-            echo "<div class='crud_button' >
-            <a href='animalsRemove.php' id = remove  >Delete</a>
-            <a href='animalsUpdate1.php' id= update>Update</a>
-            <a href='animalsAdd.php' id= add>Add</a>
-            </div>";
-    }
+ 
     
     
     // this is apart of the search bar 

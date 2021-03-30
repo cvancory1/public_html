@@ -134,6 +134,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     <thead>
                         <tr>
                             <th> Select </th>
+                            <th> Select </th>
+
                             <th> Alumni ID </th>
                             <th> Birthdate </th>
                             <th> Status </th>

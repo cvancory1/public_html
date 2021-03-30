@@ -143,8 +143,8 @@ body {
     right:30px;
     
 } 
-.crud {
-    background-color: f3f3f3;
+.crud_button {
+    /* background-color: f3f3f3; */
     border: none;
     color: rgb(0, 0, 0);
     padding: 20px;
@@ -155,11 +155,10 @@ body {
     margin: 10px 10px;
     cursor: pointer;
 
-    border-radius: 50%;
-    position:absolute;
-    top:80px;
+    /* border-radius: 50%; */
+    /* position:absolute; */
+    top:-80;
     right:70px;
-
 
 
 }

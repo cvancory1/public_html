@@ -172,15 +172,14 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         // }
     }//end "if" privlege
 
-        if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
-                echo "here";
-                echo "<div class='crud >
-                <a href='animalsRemove.php'>Delete</a>
-                <a href='animalsUpdate1.php'>Update</a>
-                <a href='animalsAdd.php'>Add</a>
-                </div>";
-        }
-        
+    if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
+            echo "<div class='crud_button' >
+            <a href='animalsRemove.php' id = remove  >Delete</a>
+            <a href='animalsUpdate1.php' id= update>Update</a>
+            <a href='animalsAdd.php' id= add>Add</a>
+            </div>";
+    }
+    
     
     // this is apart of the search bar 
     // if ($_SESSION["privilege"] == "viewUser"){

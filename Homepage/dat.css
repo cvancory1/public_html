@@ -144,9 +144,9 @@ body {
     right:30px;
     
 } 
-.crud_button {
+/* .crud_button { */
     /* background-color: f3f3f3; */
-    border: none;
+    /* border: none;
     color: rgb(0, 0, 0);
     padding: 20px;
     text-align: center;
@@ -154,7 +154,7 @@ body {
     display: inline-block;
     font-size: 16px;
     margin: 10px 10px;
-    cursor: pointer;
+    cursor: pointer; */
 
     /* border-radius: 50%; */
     /* position:absolute; */
@@ -163,7 +163,7 @@ body {
     
 
 
-}
+/* } */
 
 
 

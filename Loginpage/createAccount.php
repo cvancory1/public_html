@@ -118,7 +118,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
 
                <input type='checkbox' onclick='showPassword()'>Show Password
-               <br /> <input type='submit'  class = 'button' /> 
+               <br /> <input type='Sign Up'  class = 'button' /> 
                <br> <p>
                          <a href= 'loginP.html'>Back To Sign In</a>
 

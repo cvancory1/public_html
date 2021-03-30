@@ -150,8 +150,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     </thead>";
 
                 while($row=mysqli_fetch_array($r)){
+                    echo '<td><input type="checkbox" name="checkbox" value="" id="checkbox" style="display:block;"></td>';
+
                     echo "<tr>";
-                    echo '<td><input type="checkbox" name="checkbox" value="" id="checkbox"></td>';
                     echo "<td>" . $row['alumniID'] . "</td>";
                     echo "<td>" . $row['birthdate'] . "</td>";
                     echo "<td>" . $row['status'] . "</td>";

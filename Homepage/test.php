@@ -85,9 +85,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
                 echo "<div class='crud_button' >
-                <a href='animalsRemove.php' id = remove  >Delete</a>
+                <a href='animalsRemove.php' id = add  >add</a>
                 <a href='animalsUpdate1.php' id= update>Update</a>
-                <a href='animalsAdd.php' id= add>Add</a>
+                <a href='animalsAdd.php' id= delete>delete</a>
                 </div>";
             }
             echo "

@@ -102,6 +102,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
           echo"<p class='loginBox' id='login'> Create Your Alumni Account </p>";
           
+          //When the user clicks Create Account the javascript function checks if it is a valid username and password then submits the form and runs the php
           echo"<form name='add_name' id='add_name'  method='post'  onsubmit='return checkForm(this);'>  
 
                <input type='text' id='username'  name = 'username' placeholder='SU Email' required> 
@@ -158,66 +159,49 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
     
-    //make sure substring of last 14 chars of username is @salisbury.edu
-//     $sub = substr($username, -14);
-//     if($sub != $acceptedDamain){
-//           header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
-//           $message = "Username Must Be an SU Faculty Email Address";
-//           echo "<script type='text/javascript'>alert('$message');</script>";
-//     }
-//     else{
 
-          // //make sure username does not already exist
-          $sql = "select * from Login where username="."'$username'";
+     // //make sure username does not already exist
+     $sql = "select * from Login where username="."'$username'";
+     if ($r=mysqli_query($conn, $sql)) {
+          $amount = mysqli_num_rows($r);
+     }
+     else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+     }
+     
+     //make sure username does not already exist
+     if ($amount != 0) {
+          header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.php" );
+          $message = "Username Already Exists";
+          echo "<script type='text/javascript'>alert('$message');</script>";
+     }
+
+     else{
+          // add new account to Login
+
+          $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+          $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 'viewUser')";
+     
           if ($r=mysqli_query($conn, $sql)) {
-               $amount = mysqli_num_rows($r);
+               $time = $_SERVER['REQUEST_TIME'];
+               $token = sha1(uniqid($username, true));
+               $sql = "insert into Pending_Users(token, username, tstamp) values('$token', '$username', '$time')";
+               if($r=mysqli_query($conn, $sql)){
+                    ;
+               }else{
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+
+               }
+               $message = "Account was sucessfully created! Redirecting to Login";
+               echo "<script type='text/javascript'>alert('$message');</script>";
+               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
+               
           }
           else {
                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
           }
-          
-          //make sure username does not already exist
-          if ($amount != 0) {
-               header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.php" );
-               $message = "Username Already Exists";
-               echo "<script type='text/javascript'>alert('$message');</script>";
-          }
-          // else{
-               //make sure passwords match... if not links back to the createAccount page
-               // if($password != $confirmPassword){
-               //      header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/createAccount.html" );
-               //      $message = "Password and Confirm Password Must Match";
-               //      echo "<script type='text/javascript'>alert('$message');</script>";
-               // }
-
-               else{
-                    // add new account to Login
-
-                    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-                    $sql = "insert into Login (username, password, privilege) values ('$username', '$hashed_password', 'viewUser')";
-               
-                    if ($r=mysqli_query($conn, $sql)) {
-                         $time = $_SERVER['REQUEST_TIME'];
-                         $token = sha1(uniqid($username, true));
-                         $sql = "insert into Pending_Users(token, username, tstamp) values('$token', '$username', '$time')";
-                         if($r=mysqli_query($conn, $sql)){
-                              ;
-                         }else{
-                              echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-
-                         }
-                         $message = "Account was sucessfully created! Redirecting to Login";
-                         echo "<script type='text/javascript'>alert('$message');</script>";
-                         header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Loginpage/loginP.html" );
-                         
-                    }
-                    else {
-                         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                    }
-//                }
-//           }
-           }
+     }
 }
 
 mysqli_close($conn);

@@ -133,7 +133,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 echo "<table id='alumniTable' class='styled-table'>
                     <thead>
                         <tr>
-                            <th> Select  style='display:none;'</th>
                             <th> Alumni ID </th>
                             <th> Birthdate </th>
                             <th> Status </th>
@@ -152,7 +151,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
                 while($row=mysqli_fetch_array($r)){
                     echo "<tr>";
-                    echo '<td><input type="checkbox" name="checkbox" value="" id="checkbox" style="display:none;"></td>';
                     echo "<td>" . $row['alumniID'] . "</td>";
                     echo "<td>" . $row['birthdate'] . "</td>";
                     echo "<td>" . $row['status'] . "</td>";

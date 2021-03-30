@@ -83,7 +83,13 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         print_r($_SESSION['privilege']);
         
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
-
+            if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
+                echo "<div class='crud_button' >
+                <a href='animalsRemove.php' id = remove  >Delete</a>
+                <a href='animalsUpdate1.php' id= update>Update</a>
+                <a href='animalsAdd.php' id= add>Add</a>
+                </div>";
+            }
             echo "
                 <div id= 'mySidebar' class= 'sidebar'>
                 <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>×</a>
@@ -165,13 +171,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
                 mysqli_close($connection);
 
-                if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
-                    echo "<div class='crud_button' >
-                    <a href='animalsRemove.php' id = remove  >Delete</a>
-                    <a href='animalsUpdate1.php' id= update>Update</a>
-                    <a href='animalsAdd.php' id= add>Add</a>
-                    </div>";
-                }
+              
     echo "</div>";
 
 

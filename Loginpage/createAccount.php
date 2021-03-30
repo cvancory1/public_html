@@ -112,7 +112,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
                <p id = 'descriptiveText'> Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachter</p>
                               
                <p id = 'errorUsername' style='display:none;'> Error: Username must use SU Email!</p>
-               <p id = 'errorPwd' style='display:none;'> Error: The password you have entered is not valid!</p>
+               <p id = 'errorPwd' style='display:none;'> Error: The password you have entered is not valid!  Use 8 or more charachters with at least 1 digit, 1 uppercase and 1 special charachte</p>
                <p id = 'errorMatch' style='display:none;'> Error: Please check that you've entered and confirmed your password!</p>
 
 

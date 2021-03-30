@@ -102,7 +102,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
           echo"<p class='loginBox' id='login'> Create Your Alumni Account </p>";
           
-          //When the user clicks Create Account the javascript function checks if it is a valid username and password then submits the form and runs the php
+          //When the user clicks Create Account the javascript function checks if it is a valid username and password then submits the form and runs the
           echo"<form name='add_name' id='add_name'  method='post'  onsubmit='return checkForm(this);'>  
 
                <input type='text' id='username'  name = 'username' placeholder='SU Email' required> 
@@ -119,7 +119,7 @@ sucessfull inputs so we need to handle the sucessful inputs so have all the php 
 
 
                <input type='checkbox' onclick='showPassword()'>Show Password
-               <br /> <input type='Sign Up'  class = 'button' > 
+               <br /> <input type='submit'  class = 'button' value='Create Account'/>
                <br> <p>
                          <a href= 'loginP.html'>Back To Sign In</a>
 

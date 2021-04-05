@@ -169,8 +169,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("mainTable").style.marginLeft= "0";
-        document.getElementById("deleteTable").style.marginLeft= "0";
+        document.getElementById("mainTable").style.marginLeft= "250";
+        document.getElementById("deleteTable").style.marginLeft= "250";
 
     }
 

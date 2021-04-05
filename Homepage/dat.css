@@ -66,14 +66,18 @@ body {
 #WebPage,
 #deleteTable,
 #mainTable {
-    margin: auto;
+    /* margin: auto;
     width: 500px;
-    /* transition: margin-left 50s; */
+    transition: margin-left 50s;
     padding: 10px;
 
     padding-left: 400%;
     padding-right: 10%;
-    padding-top: -5%;
+    padding-top: -5%; */
+
+    width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
 
 
 }

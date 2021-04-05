@@ -1,13 +1,24 @@
+
+<html>
+<!DOCTYPE html>
+<html lang = "en">
+
+    <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="dat.css" type="text/css" />
+    </header>
+
+</html>
 <?php
 
 session_start();
 
 
-    // echo "<link rel='stylesheet' href='dat.css' type='text/css' />";
+//     // echo "<link rel='stylesheet' href='dat.css' type='text/css' />";
 
-    echo "<style>";
-     include 'dat.css';
-   echo" </style>";
+//     echo "<style>";
+//      include 'dat.css';
+//    echo" </style>";
 
 if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;

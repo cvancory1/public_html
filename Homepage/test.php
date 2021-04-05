@@ -241,8 +241,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var y = document.getElementById("deleteTable");
 
 
-        x.style.display = "block";
-
         if (x.style.display === "none") {
             x.style.display = "block";
             y.style.display = "none";

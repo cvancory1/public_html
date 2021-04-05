@@ -65,7 +65,7 @@ body {
 
 #DeleteTable,
 #mainTable {
-    transition: margin-left .5s;
+    transition: margin-left 50px;
     /* padding: 10px; */
 
     padding-left: 400%;

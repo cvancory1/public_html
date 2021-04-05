@@ -63,7 +63,7 @@ body {
     background-color: #444;
 }
 
-#main {
+#mainTable {
     transition: margin-left .5s;
     /* padding: 10px; */
 
@@ -172,7 +172,7 @@ body {
     margin:0 auto;
     align-content:center;
     text-align:center;
-    margin-top: 10%; /*determines how high/low the main box is on the page */
+    margin-top: 10%; /*determines how high/low the mainTable box is on the page */
 
     /* create the hollow box around  */
     border-radius: 20px;

@@ -63,7 +63,8 @@ body {
     background-color: #444;
 }
 
-#DeleteTable,
+#WebPage
+#deleteTable,
 #mainTable {
     transition: margin-left 50px;
     /* padding: 10px; */

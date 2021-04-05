@@ -13,7 +13,7 @@
 echo "<div id='mainTable'>";
 
 
-if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
+        if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;
             }
             else{

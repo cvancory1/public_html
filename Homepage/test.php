@@ -123,8 +123,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             echo "</div>"; // end of mainTable 
 
 
-            echo "<div id='deleteTable style='display:block;'>";
-                include 'AlumniDelete.php';
+            echo "<div id='deleteTable> style='display:block;'>";
+                // include 'AlumniDelete.php';
+                echo "<p> hiii </p>";
 
             echo "</div>"; // end of table shown for deleting  class
             
@@ -178,7 +179,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     }
 
     function showDeleteTable() {
-        // var x = document.getElementById("myDIV");
         var x = document.getElementById("mainTable");
         var y = document.getElementById("deleteTable");
         // var z = document.getElementById("mySidebar")
@@ -193,8 +193,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             y.style.display = "block";
             // z.style.display = "none";
 
-
         }
+
+
 
     }
 

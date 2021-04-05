@@ -3,9 +3,11 @@
 session_start();
 
 
-    echo "<link rel='stylesheet' href='dat.css' type='text/css' />";
+    // echo "<link rel='stylesheet' href='dat.css' type='text/css' />";
 
-
+    echo "<style>";
+     include 'CSS/dat.css';
+   echo" </style>";
 
 if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;

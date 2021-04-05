@@ -125,7 +125,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             echo "</div>"; // end of mainTable 
 
 
-            echo "<div id='deleteTable style='display:block;''>";
+            echo "<div id='deleteTable style='display:block;'>";
             include 'AlumniDelete.php';
             
             echo "</div>"; // end of table shown for deleting  class
@@ -225,13 +225,13 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("WebPage").style.marginLeft = "250px";
+        document.getElementById("mainTable").style.marginLeft = "250px";
 
     }
 
     function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("WebPage").style.marginLeft= "0";
+        document.getElementById("mainTable").style.marginLeft= "0";
 
     }
 

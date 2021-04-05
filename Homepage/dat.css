@@ -63,11 +63,9 @@ body {
     background-color: #444;
 }
 
-#WebPage {
+#mainTable {
     transition: margin-left .5s;
     /* padding: 10px; */
-
-     /* <--TODO: WILL NEED APPROVAL This is what i changed padding --> */
 
     padding-left: 10%;
     padding-right: 10%;
@@ -135,28 +133,6 @@ body {
     right:30px;
     
 } 
-/* .crud_button { */
-    /* background-color: f3f3f3; */
-    /* border: none;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 10px;
-    cursor: pointer; */
-
-    /* border-radius: 50%; */
-    /* position:absolute; */
-    /* top:20;
-    left:70px; */
-    
-
-
-/* } */
-
-
 
 #warning{
     font-family: "Lato", sans-serif;

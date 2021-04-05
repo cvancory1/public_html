@@ -78,7 +78,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
            
-            echo "<div id='WebPage'>";
+            // echo "<div id='WebPage'>";
            
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
                 echo "<div class='crud_button' >
@@ -131,7 +131,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             
 
 
-    echo "</div>"; // end of webpage class
+    // echo "</div>"; // end of webpage class
 
 
         // }

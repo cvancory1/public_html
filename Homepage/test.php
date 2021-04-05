@@ -85,9 +85,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
                 echo "<div class='crud_button' >
-                <a href='animalsRemove.php' id = add  >add</a>
+                <a href='delete.php' id = add  >add</a>
                 <a href='animalsUpdate1.php' id= update>Update</a>
-                <a href='animalsAdd.php' id= delete>delete</a>
+                <button class='button'  onclick='showDeleteTable()' > Delete </button>
                 </div>";
             }
             echo "
@@ -276,6 +276,20 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         document.getElementById("main").style.marginLeft= "0";
 
     }
+
+    function showDeleteTable() {
+        // var x = document.getElementById("myDIV");
+        var x = document.getElementById("main");
+        x.style.display = "block";
+
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+    }
+
 </script>
      
 

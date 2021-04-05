@@ -1,6 +1,3 @@
-<!-- TODO: the last error check is the account is already valid but we dont want to go to a new page n 
-sucessfull inputs so we need to handle the sucessful inputs so have all the php needed there  -->
-<!-- TODO nest everything in the php tag -->
 
 
 

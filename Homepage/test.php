@@ -241,14 +241,18 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         // var x = document.getElementById("myDIV");
         var x = document.getElementById("mainTable");
         var y = document.getElementById("deleteTable");
+        var z = document.getElementById("mySidebar")
 
 
         if (x.style.display === "none") {
             x.style.display = "block";
             y.style.display = "none";
+            z.style.display = "block";
         } else {
             x.style.display = "none";
             y.style.display = "block";
+            z.style.display = "none";
+
 
         }
 

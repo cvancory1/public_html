@@ -67,6 +67,7 @@ body {
 #deleteTable,
 #mainTable {
     margin: auto;
+    width: 500px;
     /* transition: margin-left 50s; */
     padding: 10px;
 

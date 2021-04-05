@@ -63,7 +63,7 @@ body {
     background-color: #444;
 }
 
-#WebPage
+#WebPage,
 #deleteTable,
 #mainTable {
     transition: margin-left 50px;

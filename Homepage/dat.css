@@ -64,9 +64,8 @@ body {
 }
 
 #main{
-    margin: auto;
-    width: 500px;
-    transition: margin-left 50s;
+    /* transition: margin-left 50s; */
+    margin-left: 200px;
     padding: 10px;
 
     padding-left: 400%;

@@ -68,7 +68,7 @@ body {
 #mainTable {
     /* margin: auto;
     width: 500px;
-    transition: margin-left 50s;
+    transition: margin-left: 50s;
     padding: 10px;
 
     padding-left: 400%;
@@ -78,9 +78,8 @@ body {
     width: 250;
     margin: auto;
     border: 3px solid #73AD21;
-    padding-left: 400%;
-    padding-right: 10%;
 
+    margin-left: 200px;
 
 }
 

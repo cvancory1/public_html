@@ -115,7 +115,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                 ";
             echo "<div id='mainTable'>";
-
                 include 'AlumniTable.php';
             echo "</div>"; // end of mainTable 
 
@@ -169,8 +168,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("mainTable").style.marginLeft= "250";
-        document.getElementById("deleteTable").style.marginLeft= "250";
+        document.getElementById("mainTable").style.marginLeft= "0";
+        document.getElementById("deleteTable").style.marginLeft= "0";
 
     }
 

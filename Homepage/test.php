@@ -124,7 +124,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
             echo "<div id='deleteTable style='display:block;'>";
-                // include 'AlumniDelete.php';
+                include 'AlumniDelete.php';
 
             echo "</div>"; // end of table shown for deleting  class
             

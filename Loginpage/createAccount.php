@@ -92,6 +92,7 @@
 
 <body> 
 <?php
+session_start();
 
 // action='createAccount.php'
      echo" <div class='loginMain'>";
@@ -100,7 +101,7 @@
           echo"<p class='loginBox' id='login'> Create Your Alumni Account </p>";
           
           //When the user clicks Create Account the javascript function checks if it is a valid username and password then submits the form and runs the
-          echo"<form name='add_name' id='add_name'  method='post'  onsubmit='return checkForm(this);'>  
+          echo"<form name='add_name' id='add_name' action= 'Accountform.php'  method='post'  onsubmit='return checkForm(this);'>  
 
                <input type='text' id='username'  name = 'username' placeholder='SU Email' required> 
      
@@ -135,7 +136,6 @@ echo"</html>";
 
 
 
-session_start();
 
 $servername = "localhost";
 $username = "wlucas1";

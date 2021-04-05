@@ -123,7 +123,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
             echo "<div id='deleteTable style='display:block;'>";
-
+                
             echo "</div>"; // end of table shown for deleting  class
             
 

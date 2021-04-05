@@ -14,11 +14,7 @@
 session_start();
 
 
-//     // echo "<link rel='stylesheet' href='dat.css' type='text/css' />";
-
-//     echo "<style>";
-//      include 'dat.css';
-//    echo" </style>";
+echo "<div id='deleteTable style='display:block;'>";
 
 if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;
@@ -72,5 +68,8 @@ if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 echo "</table>";
 
                 mysqli_close($connection);
+
+    echo "</div>"; // end of mainTable 
+    
 
 ?>

@@ -11,6 +11,7 @@
 </html>
 
 <?php
+echo "<div id='mainTable'>";
 
 
 if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
@@ -63,5 +64,8 @@ if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 echo "</table>";
 
                 mysqli_close($connection);
+
+
+    echo "</div>"; // end of mainTable 
 
 ?>

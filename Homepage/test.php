@@ -51,7 +51,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
     echo "<script type='text/javascript'>var x = document.getElementByClass('warning');
     x.style.display = 'block'; </script>";
   
-    // echo "<script type='text/javascript'>var x = document.getElementById('main');
+    // echo "<script type='text/javascript'>var x = document.getElementById('mainTable');
     // x.style.display = 'none'; </script>";
 
     echo" <div id='warning' style='display:block;'>
@@ -78,7 +78,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     //         <button class='button'  onclick='stillHere()' >Still Here </button>
     //         </div>";
     // table area
-    echo "<div id='main'>";
+    echo "<div id='WebPage'>";
 
         print_r($_SESSION['privilege']);
         
@@ -90,6 +90,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <button class='button'  onclick='showDeleteTable()' > Delete </button>
                 </div>";
             }
+            echo "<div id='mainTableTable'>";
+
             echo "
                 <div id= 'mySidebar' class= 'sidebar'>
                 <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'>×</a>
@@ -120,12 +122,18 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             ";
 
             include 'AlumniTable.php';
-
-              
-    echo "</div>";
+            echo "</div>"; // end of mainTable 
 
 
- 
+            echo "<div id='deleteTable'>";
+            include 'AlumniDelete.php';
+            
+            echo "</div>"; // end of table shown for deleting  class
+            
+
+
+    echo "</div>"; // end of webpage class
+
 
         // }
     }//end "if" privlege
@@ -217,19 +225,19 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("mainTableTable").style.marginLeft = "250px";
 
     }
 
     function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
+        document.getElementById("mainTableTable").style.marginLeft= "0";
 
     }
 
     function showDeleteTable() {
         // var x = document.getElementById("myDIV");
-        var x = document.getElementById("main");
+        var x = document.getElementById("mainTableTable");
         x.style.display = "block";
 
         if (x.style.display === "none") {

@@ -12,7 +12,6 @@
 
 <?php
 
-echo "<link rel='stylesheet' href='dat.css' type='text/css' />";
 
 if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;

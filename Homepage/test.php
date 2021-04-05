@@ -77,7 +77,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     //         <p >Click 'Still Here' to stay logged in</p>
     //         <button class='button'  onclick='stillHere()' >Still Here </button>
     //         </div>";
-    // table area
+    // table area aa
     echo "<div id='WebPage'>";
 
         print_r($_SESSION['privilege']);

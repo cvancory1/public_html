@@ -66,8 +66,9 @@ body {
 #WebPage,
 #deleteTable,
 #mainTable {
-    transition: margin-left 50s;
-    /* padding: 10px; */
+    margin: auto;
+    /* transition: margin-left 50s; */
+    padding: 10px;
 
     padding-left: 400%;
     padding-right: 10%;

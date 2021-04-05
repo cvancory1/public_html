@@ -90,7 +90,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <button class='button'  onclick='showDeleteTable()' > Delete </button>
                 </div>";
             }
-            echo "<div id='mainTable'>";
 
                 echo "
                     <div id= 'mySidebar' class= 'sidebar'>
@@ -120,6 +119,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                 
                 ";
+            echo "<div id='mainTable'>";
 
                 include 'AlumniTable.php';
             echo "</div>"; // end of mainTable 

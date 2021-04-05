@@ -78,6 +78,8 @@ body {
     width: 250;
     margin: auto;
     border: 3px solid #73AD21;
+    padding-left: 400%;
+    padding-right: 10%;
 
 
 }

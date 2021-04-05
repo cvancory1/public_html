@@ -135,8 +135,6 @@ echo"</html>";
 
 
 
-
-
 $servername = "localhost";
 $username = "wlucas1";
 $password = "wlucas1";

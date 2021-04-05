@@ -90,7 +90,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <button class='button'  onclick='showDeleteTable()' > Delete </button>
                 </div>";
             }
-            echo "<div id='mainTableTable'>";
+            echo "<div id='mainTable'>";
 
             echo "
                 <div id= 'mySidebar' class= 'sidebar'>
@@ -125,7 +125,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             echo "</div>"; // end of mainTable 
 
 
-            echo "<div id='deleteTable'>";
+            echo "<div id='deleteTable style='display:block;''>";
             include 'AlumniDelete.php';
             
             echo "</div>"; // end of table shown for deleting  class
@@ -225,25 +225,31 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("mainTableTable").style.marginLeft = "250px";
+        document.getElementById("WebPage").style.marginLeft = "250px";
 
     }
 
     function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("mainTableTable").style.marginLeft= "0";
+        document.getElementById("WebPage").style.marginLeft= "0";
 
     }
 
     function showDeleteTable() {
         // var x = document.getElementById("myDIV");
-        var x = document.getElementById("mainTableTable");
+        var x = document.getElementById("mainTable");
+        var y = document.getElementById("deleteTable");
+
+
         x.style.display = "block";
 
         if (x.style.display === "none") {
             x.style.display = "block";
+            y.style.display = "none";
         } else {
             x.style.display = "none";
+            y.style.display = "block";
+
         }
 
     }

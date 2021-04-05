@@ -72,12 +72,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         <a href='logout.php'>Log Out</a>
         </div>";
 
-    // echo" <div id='warning' style='display:none;'>
-    //         <p >Are you still there? </p>
-    //         <p >Click 'Still Here' to stay logged in</p>
-    //         <button class='button'  onclick='stillHere()' >Still Here </button>
-    //         </div>";
-    // table area aa
+  
     echo "<div id='WebPage'>";
 
         print_r($_SESSION['privilege']);
@@ -225,7 +220,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("mainTable").style.marginLeft= "0";
+        document.getElementById("mainTable").style.marginLeft= "250";
         document.getElementById("deleteTable").style.marginLeft = "250px";
 
     }

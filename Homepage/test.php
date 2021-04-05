@@ -73,11 +73,13 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         </div>";
 
   
-    echo "<div id='WebPage'>";
 
         print_r($_SESSION['privilege']);
         
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
+           
+            echo "<div id='WebPage'>";
+           
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
                 echo "<div class='crud_button' >
                 <a href='delete.php' id = add  >add</a>

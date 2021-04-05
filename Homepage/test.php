@@ -173,12 +173,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
             echo "<div id='deleteTable style='display:block;'>";
-            ($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
-                ;
-            }
-            else{
-                print '<p>ERROR: connecting to MySQL.</p>';
-            }
 
             //Query to return contents of table Alumni here 
             $query="SELECT * FROM Alumni";

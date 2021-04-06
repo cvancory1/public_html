@@ -50,9 +50,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
    
     echo "<script type='text/javascript'>var x = document.getElementByClass('warning');
     x.style.display = 'block'; </script>";
-  
-    // echo "<script type='text/javascript'>var x = document.getElementById('mainTable');
-    // x.style.display = 'none'; </script>";
+
 
     echo" <div id='warning' style='display:block;'>
     <p >Are you still there? </p>

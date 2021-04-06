@@ -10,27 +10,40 @@
     echo "here1";
     // echo $_POST['checkbox'] ;
     echo $_POST['delete'];
-    echo $_POST['delete'][$0];
+    echo $_POST['delete'][0];
 
     // echo $_POST['delete[]'] ;
 
-    // if the form deleteRows was submitted 
-	if (isset($_POST['submit']) && isset($_POST['delete[]'])){
 
-    echo "here2";
+    if(isset($_POST['submit'])){
+
+        if(!empty($_POST['delete'])) {
+    
+            foreach($_POST['delete'] as $value){
+                echo "value : ".$value.'<br/>';
+            }
+    
+        }
+    
+    }
+
+    // // if the form deleteRows was submitted 
+	// if (isset($_POST['submit']) && isset($_POST['delete[]'])){
+
+    // echo "here2";
    
 
-		foreach($_POST['delete'] as $id)
-		{
-			$id = (int)$id;
-            echo $id;
-			$sql = "DELETE FROM Alumni WHERE alumniID = $id";
-            echo $sql;
+	// 	foreach($_POST['delete'] as $id)
+	// 	{
+	// 		$id = (int)$id;
+    //         echo $id;
+	// 		$sql = "DELETE FROM Alumni WHERE alumniID = $id";
+    //         echo $sql;
 
-            mysqli_query($connection, $sql);
+    //         mysqli_query($connection, $sql);
 
-		}
-	}
+	// 	}
+	// }
     mysqli_close($connection);
 
 ?>

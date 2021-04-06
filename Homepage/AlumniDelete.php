@@ -71,6 +71,22 @@
     echo "</form>";
     echo"here";
 
+
+    mysqli_close($connection);
+
+    echo "</div>"; // end of mainTable 
+    
+
+
+
+    if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
+        ;
+    }
+    else{
+        print '<p>ERROR: connecting to MySQL.</p>';
+    }
+
+
     // if the form deleteRows was submitted 
     if(isset($_POST['deleteRows'])){
         echo"here2";
@@ -86,9 +102,6 @@
     }
 
     mysqli_close($connection);
-
-    echo "</div>"; // end of mainTable 
-    
 
 ?>
 

@@ -25,6 +25,8 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
+    echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
+
         //Query to return contents of table Alumni here 
         $query="SELECT * FROM Alumni";
         $r=mysqli_query($connection, $query);
@@ -71,7 +73,7 @@
 
     echo "</table>";
 
-    // echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
+    echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
     // echo "</form>";
     // echo"here";
 

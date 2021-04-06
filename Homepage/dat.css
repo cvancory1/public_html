@@ -66,24 +66,24 @@ body {
     background-color: #444;
 }
 
-/* #main,
+ #main,
 #deleteTable{
     transition: margin-left 50s;
     margin-left: 200px;
     margin-right: -10px;
     padding: 10px;
 
-    padding-left: 400%;
+    padding-left: 50%;
     padding-right: 10%;
-    padding-top: -5%; */
-/* 
+    padding-top: -5%; 
+
     width: 250;
     margin: auto;
     border: 3px solid #73AD21;
 
-    margin-left: 200px; */
+    margin-left: 200px; 
 
-/* } */
+}
 
 
  .styled-table {

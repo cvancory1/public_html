@@ -3,10 +3,10 @@
 <html lang = "en">
 
 
-    <header>
+    <head>
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <link rel="stylesheet" href="dat.css" type="text/css" />
-    </header>
+        <link rel="stylesheet" href="dat.css" type="text/css" >
+    </head>
 
 
 <body> 

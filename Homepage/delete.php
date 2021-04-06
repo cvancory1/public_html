@@ -24,6 +24,7 @@
         echo "here1";
 
         if(!empty($_POST['delete'])) {
+            echo "here2";
     
             foreach($_POST['delete'] as $value){
                 echo "value : ".$value.'<br/>';

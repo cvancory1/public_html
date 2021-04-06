@@ -120,7 +120,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             echo "<div id='mainTable' >";
                 include 'AlumniTable.php';
                     
-            echo "</div>"; // end of mainTable 
+            echo "</div>"; // end of mainTable kk 
 
 
     

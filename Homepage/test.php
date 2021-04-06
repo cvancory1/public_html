@@ -123,8 +123,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             echo "</div>"; // end of mainTable 
 
 
-            // echo "<div id='deleteTable' style='background-color: #7E7E7E; display:none;'>";
-            echo "<div id='deleteTable'>";
+    
+            echo "<div id='deleteTable' display:none; margin-left: 200px; '>";
                 include 'AlumniDelete.php'; 
                 echo "<p> hiii </p>";
 

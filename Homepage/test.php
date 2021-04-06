@@ -134,7 +134,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 include 'AlumniDelete.php'; 
 
             echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
-            
+            echo"</form>";
             echo "</div>"; // end of table shown for deleting  class
             
 

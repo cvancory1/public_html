@@ -48,7 +48,7 @@
 
     while($row=mysqli_fetch_array($r)){
         echo "<tr>";
-        echo '<td><input type="checkbox" name="checkbox[]" value="" id="checkbox"></td>';
+        echo "<td> <input type='checkbox' name='checkbox[]' value='<?= $id ?>' id='checkbox'></td>";
         echo "<td>" . $row['alumniID'] . "</td>";
         echo "<td>" . $row['birthdate'] . "</td>";
         echo "<td>" . $row['status'] . "</td>";
@@ -68,6 +68,20 @@
     echo "</table>";
 
     echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
+
+
+    // if the form deleteRows was submitted 
+    if(isset($_POST['deleteRows'])){
+
+        if(isset($_POST['delete'])){ // if checkboxs are checked
+          foreach($_POST['delete'] as $deleteid){
+      
+            $deleteUser = "DELETE from Alumni WHERE id=".$deleteid;
+            mysqli_query($con,$deleteUser);
+          }
+        }
+       
+    }
 
     mysqli_close($connection);
 

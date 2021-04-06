@@ -14,7 +14,7 @@
 
 
     echo "<div id='deleteTable>";
-    echo"<form name='deleteRows' id='deleteRows' method='post'>";
+    echo"<form name='deleteRows' id='deleteRows' method='post'> action='' ";
 
     if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
         ;
@@ -48,7 +48,7 @@
 
     while($row=mysqli_fetch_array($r)){
         echo "<tr>";
-        echo "<td> <input type='checkbox' name='checkbox[]' value='<?= $id ?>' id='checkbox'></td>";
+        echo "<td> <input type='checkbox' name='delete[]' value='<?= $id ?>' id='checkbox'></td>";
         echo "<td>" . $row['alumniID'] . "</td>";
         echo "<td>" . $row['birthdate'] . "</td>";
         echo "<td>" . $row['status'] . "</td>";

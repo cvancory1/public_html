@@ -67,7 +67,7 @@ body {
 }
 
 #main,
-#deleteTable{
+{
     transition: margin-left 50s;
     margin-left: 200px;
     margin-right: -10px;

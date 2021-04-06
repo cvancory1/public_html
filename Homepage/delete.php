@@ -14,6 +14,7 @@
 
     echo "here2";
     echo $_POST['checkbox'];
+    echo $_POST['delete'];
 
 		foreach($_POST['delete'] as $id)
 		{

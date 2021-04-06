@@ -8,9 +8,9 @@
     }
 
     echo "here1";
-    echo $_POST['checkbox'];
-    echo $_POST['delete'];
-    echo $_POST['delete[]'];
+    echo $_POST['checkbox'] ." 1";
+    echo $_POST['delete']." 2";
+    echo $_POST['delete[]'] ." 3";
 
     // if the form deleteRows was submitted 
 	if (isset($_POST['submit']) && isset($_POST['delete[]'])){

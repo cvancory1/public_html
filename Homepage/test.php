@@ -116,7 +116,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                 
                 ";
-            echo "<div id='mainTable' style='margin-left: 200px;>";
+            echo "<div id='mainTable' >";
             // echo "<div id='mainTable' >";
                 include 'AlumniTable.php';
                     

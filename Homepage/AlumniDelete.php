@@ -72,11 +72,12 @@
 
     // if the form deleteRows was submitted 
     if(isset($_POST['deleteRows'])){
+        echo"here;
 
         if(isset($_POST['delete'])){ // if checkboxs are checked
           foreach($_POST['delete'] as $deleteid){
       
-            $deleteUser = "DELETE from Alumni WHERE id=".$deleteid;
+            $deleteUser = "DELETE from Alumni WHERE id='.$deleteid'";
             mysqli_query($con,$deleteUser);
           }
         }

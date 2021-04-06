@@ -14,7 +14,7 @@
 
 
     echo "<div id='deleteTable>";
-    echo"<form name='deleteRows' id='deleteRows' method='post'> action='' ";
+    echo"<form name='deleteRows' id='deleteRows' method='post' action=''> ";
 
     if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
         ;

@@ -124,10 +124,15 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     
             // echo "<div id='deleteTable' style='margin-left: 200px; display:none; '>";
+
             echo "<div id='deleteTable'  style='display:none;' >";
+            echo"<form name='deleteRows' id='deleteRows' method='post'  action='AlumniDelete.php'>";
+
                 include 'AlumniDelete.php'; 
                 // echo "<p> hiii </p>";
 
+            echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
+            
             echo "</div>"; // end of table shown for deleting  class
             
 

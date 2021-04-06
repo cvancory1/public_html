@@ -15,7 +15,10 @@
 		foreach($_POST['delete'] as $id)
 		{
 			$id = (int)$id;
+            echo $id;
 			$sql = "DELETE FROM Alumni WHERE alumniID = $id";
+            echo $sql;
+
             mysqli_query($connection, $sql);
 
 		}

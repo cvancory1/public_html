@@ -10,7 +10,7 @@
     echo "here1";
     // echo $_POST['checkbox'] ;
     echo $_POST['delete'];
-    echo $_POST['delete'][0];
+    echo $_POST['delete'][$0];
 
     // echo $_POST['delete[]'] ;
 

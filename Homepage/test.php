@@ -116,8 +116,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                 
                 ";
-            // echo "<div id='mainTable' style='margin-left: 200px;>";
-            echo "<div id='mainTable' >";
+            echo "<div id='mainTable' style='margin-left: 200px;>";
+            // echo "<div id='mainTable' >";
                 include 'AlumniTable.php';
                     
             echo "</div>"; // end of mainTable kk 
@@ -126,8 +126,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     
             // echo "<div id='deleteTable' style='margin-left: 200px; display:none; '>";
 
-            // // echo "<div id='deleteTable'  style='display:none;' >";
-            echo "<div id='deleteTable'  >";
+            echo "<div id='deleteTable'  style='display:none;' >";
+            // echo "<div id='deleteTable'  >";
             // echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
 
                 include 'AlumniDelete.php'; 

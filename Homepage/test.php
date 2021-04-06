@@ -11,6 +11,8 @@
 
 <body> 
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 <?php
 session_start();
@@ -125,7 +127,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     
             // echo "<div id='deleteTable' style='margin-left: 200px; display:none; '>";
 
-            echo "<div id='deleteTable'  style='display:none;' >";
+            // echo "<div id='deleteTable'  style='display:none;' >";
+            echo "<div id='deleteTable'  >";
             echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
 
                 include 'AlumniDelete.php'; 
@@ -203,6 +206,21 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
     }
+
+    $(document).ready(function(){
+        $('#submit').click(function(){            
+           $.ajax({  
+                url:"delete.php",  
+                method:"POST",  
+                data:$('#alumniDelete').serialize(),  
+                success:function(data)  
+                {  
+                     alert(data);  
+                     $('#alumniDelete')[0].reset();
+                }  
+           });  
+      });
+    });
 
 </script>
      

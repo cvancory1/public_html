@@ -78,7 +78,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     //         <button class='button'  onclick='stillHere()' >Still Here </button>
     //         </div>";
     // table area
-    echo "<div id='main'>";
+    // echo "<div id='main'>";
 
         print_r($_SESSION['privilege']);
         
@@ -172,7 +172,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 mysqli_close($connection);
 
               
-    echo "</div>";
+    // echo "</div>";
 
 
  

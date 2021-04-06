@@ -7,21 +7,22 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
+    echo "here2";
+    echo "here1";
 
     // if the form deleteRows was submitted 
-    if(isset($_POST['deleteRows'])){
-        echo"here2";
+    // if(isset($_POST['deleteRows'])){
 
-        if(isset($_POST['delete'])){ // if checkboxs are checked
-          foreach($_POST['delete'] as $deleteid){
+        // if(isset($_POST['delete'])){ // if checkboxs are checked
+        //   foreach($_POST['delete'] as $deleteid){
       
-            $deleteUser = "DELETE from Alumni WHERE id='.$deleteid'";
-            echo $deleteUser;
-            mysqli_query($con,$deleteUser);
-          }
-        }
+        //     $deleteUser = "DELETE from Alumni WHERE id='.$deleteid'";
+        //     echo $deleteUser;
+        //     mysqli_query($con,$deleteUser);
+        //   }
+        // }
        
-    }
+    // }
 
     mysqli_close($connection);
 

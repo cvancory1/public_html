@@ -10,7 +10,7 @@
     echo "here2";
     echo "here1";
 
-    if the form deleteRows was submitted 
+    // if the form deleteRows was submitted 
     if(isset($_POST['deleteRows'])){
 
         if(isset($_POST['delete'])){ // if checkboxs are checked

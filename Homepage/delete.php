@@ -12,7 +12,7 @@
     // $number = count ($_POST)["delete"];
     // echo "$number";
 
-    echo "here";
+    // echo "here";
     // echo $_POST['checkbox'] ;
     // echo $_POST['delete'];
     // echo $_POST['delete'][0];
@@ -25,7 +25,8 @@
 
         if(!empty($_POST['delete'])) {
             echo "here2";
-    
+            echo $_POST['delete'];
+            
             foreach($_POST['delete'] as $value){
                 echo "value : ".$value.'<br/>';
             }

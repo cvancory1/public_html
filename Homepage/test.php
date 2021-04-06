@@ -71,13 +71,12 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         </div>";
 
         echo "<div id='main'>";
-  
+
 
         print_r($_SESSION['privilege']);
         
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
            
-            // echo "<div id='WebPage'>";
            
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
                 echo "<div class='crud_button' >
@@ -127,7 +126,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             // echo "<div id='deleteTable' style='margin-left: 200px; display:none; '>";
             echo "<div id='deleteTable'>";
                 include 'AlumniDelete.php'; 
-                echo "<p> hiii </p>";
+                // echo "<p> hiii </p>";
 
             echo "</div>"; // end of table shown for deleting  class
             
@@ -168,15 +167,15 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("mainTable").style.marginLeft= "250";
-        document.getElementById("deleteTable").style.marginLeft = "250px";
+        document.getElementById("main").style.marginLeft= "250";
+        // document.getElementById("deleteTable").style.marginLeft = "250px";
 
     }
 
     function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("mainTable").style.marginLeft= "0";
-        document.getElementById("deleteTable").style.marginLeft= "0";
+        document.getElementById("main").style.marginLeft= "0";
+        // document.getElementById("deleteTable").style.marginLeft= "0";
 
     }
 

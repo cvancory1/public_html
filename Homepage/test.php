@@ -129,7 +129,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
 
                 include 'AlumniDelete.php'; 
-                // echo "<p> hiii </p>";
 
             echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
             

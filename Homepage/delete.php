@@ -13,6 +13,7 @@
 	if (isset($_POST['submit']) && isset($_POST['delete'])){
 
     echo "here2";
+    echo $delete[i];
 
 		foreach($_POST['delete'] as $id)
 		{

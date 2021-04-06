@@ -16,6 +16,7 @@
           foreach($_POST['delete'] as $deleteid){
       
             $deleteUser = "DELETE from Alumni WHERE id='.$deleteid'";
+            echo $deleteUser;
             mysqli_query($con,$deleteUser);
           }
         }

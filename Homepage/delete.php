@@ -15,6 +15,7 @@
         
         if(isset($_POST['delete'])){ // if checkboxs are checked
           foreach($_POST['delete'] as $deleteid){
+            echo "here3";
       
             $deleteUser = "DELETE from Alumni WHERE id='.$deleteid'";
             echo $deleteUser;

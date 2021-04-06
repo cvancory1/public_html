@@ -50,7 +50,8 @@
 
     while($row=mysqli_fetch_array($r)){
         echo "<tr>";
-        echo "<td> <input type='checkbox' name='delete[]' value='<?= $row[alumniID] ?>' id='checkbox'></td>";
+        $id = row['alumniID'];
+        echo "<td> <input type='checkbox' name='delete[]' value='<?php $id ?>' id='checkbox'></td>";
         echo "<td>" . $row['alumniID'] . "</td>";
         echo "<td>" . $row['birthdate'] . "</td>";
         echo "<td>" . $row['status'] . "</td>";
@@ -71,7 +72,7 @@
 
     echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
     echo "</form>";
-    echo"here";
+    // echo"here";
 
 
     mysqli_close($connection);

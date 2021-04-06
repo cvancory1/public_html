@@ -10,22 +10,16 @@
     echo "here1";
 
     // if the form deleteRows was submitted 
-    // if(isset($_POST['deleteRows'])){
-    echo "here2";
-        
-        if(isset($_POST['delete'])){ // if checkboxs are checked
-          foreach($_POST['delete'] as $deleteid){
-            // echo "here3";
-      
-            $deleteUser = "DELETE from Alumni WHERE id='$deleteid' ";
-            echo $deleteUser;
-            echo"";
-            mysqli_query($connection,$deleteUser);
-          }
-        }
-       
-    // }
+	if (isset($_POST['submit']) && isset($_POST['delete']))
+	{
+		foreach($_POST['delete'] as $id)
+		{
+			$id = (int)$id;
+			$sql = "DELETE FROM Alumni WHERE alumniID = $id";
+            mysqli_query($connection, $sql);
 
+		}
+	}
     mysqli_close($connection);
 
 ?>

@@ -10,7 +10,7 @@
     echo "here1";
 
     // if the form deleteRows was submitted 
-    if(isset($_POST['deleteRows'])){
+    // if(isset($_POST['deleteRows'])){
     echo "here2";
         
         if(isset($_POST['delete'])){ // if checkboxs are checked
@@ -22,7 +22,7 @@
           }
         }
        
-    }
+    // }
 
     mysqli_close($connection);
 

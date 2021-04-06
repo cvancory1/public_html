@@ -7,15 +7,16 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
-    echo "here1";
+    // echo "here1";
     // echo $_POST['checkbox'] ;
-    echo $_POST['delete'];
-    echo $_POST['delete'][0];
+    // echo $_POST['delete'];
+    // echo $_POST['delete'][0];
 
     // echo $_POST['delete[]'] ;
 
 
     if(isset($_POST['submit'])){
+        echo "here1";
 
         if(!empty($_POST['delete'])) {
     

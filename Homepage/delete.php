@@ -10,10 +10,10 @@
     echo "here1";
 
     // if the form deleteRows was submitted 
-	if (isset($_POST['submit']) && isset($_POST['delete'])){
+	if (isset($_POST['submit']) && isset($_POST['checkbox'])){
 
     echo "here2";
-    echo $delete[i];
+    echo $_POST['checkbox'];
 
 		foreach($_POST['delete'] as $id)
 		{

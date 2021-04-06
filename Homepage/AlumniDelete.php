@@ -25,7 +25,7 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
-    echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
+    // echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
 
         //Query to return contents of table Alumni here 
         $query="SELECT * FROM Alumni";
@@ -53,7 +53,6 @@
     while($row=mysqli_fetch_array($r)){
         echo "<tr>";
         $id = $row['alumniID'];
-        echo "<td> <input type='checkbox' name='delete[]' value='<?php $id ?>' id='checkbox'></td>";
         echo $id;
         echo "<td>" . $row['alumniID'] . "</td>";
         echo "<td>" . $row['birthdate'] . "</td>";
@@ -73,7 +72,7 @@
 
     echo "</table>";
 
-    echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
+    // echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
     // echo "</form>";
     // echo"here";
 

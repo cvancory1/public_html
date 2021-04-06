@@ -124,12 +124,14 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     
             // echo "<div id='deleteTable' style='margin-left: 200px; display:none; '>";
+            echo "<td> <input type='checkbox' name='delete[]' value='<?php $id ?>' id='checkbox'></td>";
 
             echo "<div id='deleteTable'  style='display:none;' >";
 
                 include 'AlumniDelete.php'; 
                 // echo "<p> hiii </p>";
 
+            echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
             
             echo "</div>"; // end of table shown for deleting  class
             

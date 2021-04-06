@@ -124,7 +124,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
     
-            echo "<div id='deleteTable' display:none; margin-left: 200px; '>";
+            echo "<div id='deleteTable' style='margin-left: 200px; display:none; '>";
                 include 'AlumniDelete.php'; 
                 echo "<p> hiii </p>";
 

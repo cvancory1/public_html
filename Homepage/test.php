@@ -129,6 +129,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             echo "<div id='deleteTable'  style='display:none;' >";
             // echo "<div id='deleteTable'  >";
             echo"<form  method='post'  action='delete.php' "; 
+            echo "<td> <input type='checkbox' name='delete[]' value='5' id='checkbox'></td>";
 
                 include 'AlumniDelete.php'; 
 

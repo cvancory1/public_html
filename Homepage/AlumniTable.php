@@ -12,7 +12,6 @@
 <?php
 echo "<div id='mainTable'>";
 
-echo"<form name='deleteRows' id='deleteRows' method='post'>";
 
 
         if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
@@ -66,7 +65,6 @@ echo"<form name='deleteRows' id='deleteRows' method='post'>";
 
                 mysqli_close($connection);
 
-    echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
 
     echo "</div>"; // end of mainTable 
 

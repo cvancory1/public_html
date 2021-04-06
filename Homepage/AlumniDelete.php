@@ -13,7 +13,8 @@
     session_start();
 
 
-    echo "<div id='deleteTable style='display:block;'>";
+    echo "<div id='deleteTable>";
+    echo"<form name='deleteRows' id='deleteRows' method='post'>";
 
     if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
         ;
@@ -65,6 +66,8 @@
     }
 
     echo "</table>";
+
+    echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
 
     mysqli_close($connection);
 

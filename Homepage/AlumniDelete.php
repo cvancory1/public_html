@@ -16,7 +16,7 @@
     // echo "<div id='deleteTable>'";
     /*echo"<form name='deleteRows' id='deleteRows' method='post'  action='<?php echo $_SERVER[PHP_SELF]; ?>'>"; 
     */
-    echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
+    // echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
 
     if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
         ;
@@ -71,8 +71,8 @@
 
     echo "</table>";
 
-    echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
-    echo "</form>";
+    // echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
+    // echo "</form>";
     // echo"here";
 
 

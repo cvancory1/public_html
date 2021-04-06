@@ -206,20 +206,20 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     }
 
-    $(document).ready(function(){
-        $('#submit').click(function(){            
-           $.ajax({  
-                url:"delete.php",  
-                method:"POST",  
-                data:$('#alumniDelete').serialize(),  
-                success:function(data)  
-                {  
-                     alert(data);  
-                     $('#alumniDelete')[0].reset();
-                }  
-           });  
-      });
-    });
+    // $(document).ready(function(){
+    //     $('#submit').click(function(){            
+    //        $.ajax({  
+    //             url:"delete.php",  
+    //             method:"POST",  
+    //             data:$('#alumniDelete').serialize(),  
+    //             success:function(data)  
+    //             {  
+    //                  alert(data);  
+    //                  $('#alumniDelete')[0].reset();
+    //             }  
+    //        });  
+    //   });
+    // });
 
 </script>
      

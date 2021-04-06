@@ -66,8 +66,7 @@ body {
     background-color: #444;
 }
 
-#main
-{
+#main{
     transition: margin-left 50s;
     margin-left: 100px;
     margin-right: -10px;

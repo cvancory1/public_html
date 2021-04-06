@@ -13,7 +13,7 @@
     session_start();
 
 
-    echo "<div id='deleteTable>'";
+    // echo "<div id='deleteTable>'";
     /*echo"<form name='deleteRows' id='deleteRows' method='post'  action='<?php echo $_SERVER[PHP_SELF]; ?>'>"; 
     */
     echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
@@ -50,7 +50,7 @@
 
     while($row=mysqli_fetch_array($r)){
         echo "<tr>";
-        echo "<td> <input type='checkbox' name='delete[]' value='<?= $id ?>' id='checkbox'></td>";
+        echo "<td> <input type='checkbox' name='delete[]' value='<?= $alumniID ?>' id='checkbox'></td>";
         echo "<td>" . $row['alumniID'] . "</td>";
         echo "<td>" . $row['birthdate'] . "</td>";
         echo "<td>" . $row['status'] . "</td>";
@@ -76,7 +76,7 @@
 
     mysqli_close($connection);
 
-    echo "</div>"; // end of mainTable 
+    // echo "</div>"; // end of mainTable 
     
 
 ?>

@@ -14,7 +14,7 @@
 
 
     echo "<div id='deleteTable>";
-    echo"<form name='deleteRows' id='deleteRows' method='post'  action='$_SERVER'['PHP_SELF'];'>";
+    echo"<form name='deleteRows' id='deleteRows' method='post'  action='$_SERVER[PHP_SELF];'>";
 
     if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
         ;
@@ -68,11 +68,12 @@
     echo "</table>";
 
     echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
-
+    echo "</form>";
+    echo"here";
 
     // if the form deleteRows was submitted 
     if(isset($_POST['deleteRows'])){
-        echo"here";
+        echo"here2";
 
         if(isset($_POST['delete'])){ // if checkboxs are checked
           foreach($_POST['delete'] as $deleteid){

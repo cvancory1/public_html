@@ -7,6 +7,11 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
+
+
+    $number = count ($_POST)["delete"];
+    echo "$number";
+
     // echo "here1";
     // echo $_POST['checkbox'] ;
     // echo $_POST['delete'];
@@ -15,18 +20,18 @@
     // echo $_POST['delete[]'] ;
 
 
-    if(isset($_POST['submit'])){
-        echo "here1";
+    // if(isset($_POST['submit'])){
+    //     echo "here1";
 
-        if(!empty($_POST['delete'])) {
+    //     if(!empty($_POST['delete'])) {
     
-            foreach($_POST['delete'] as $value){
-                echo "value : ".$value.'<br/>';
-            }
+    //         foreach($_POST['delete'] as $value){
+    //             echo "value : ".$value.'<br/>';
+    //         }
     
-        }
+    //     }
     
-    }
+    // }
 
     // // if the form deleteRows was submitted 
 	// if (isset($_POST['submit']) && isset($_POST['delete[]'])){

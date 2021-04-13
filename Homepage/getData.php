@@ -21,14 +21,18 @@
 
             echo "{\"c\":[{\"v\":\"";
             echo $row['programName'];
-            echo "\",\"f\":null},{\"v\":5,\"f\":null}]},";
+            echo "\",\"f\":null},{\"v\":";
+            echo $row['count(programName)'];
+            echo",\"f\":null}]},";
 
         }
 
         $row = mysqli_fetch_assoc($r);
         echo "{\"c\":[{\"v\":\"";
         echo $row['programName'];
-        echo "\",\"f\":null},{\"v\":5,\"f\":null}]}] }";
+        echo "\",\"f\":null},{\"v\":";
+        echo $row['count(programName)'];
+        echo ",\"f\":null}]}] }";
 
 
         // echo" \n";

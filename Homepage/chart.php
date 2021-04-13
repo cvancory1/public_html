@@ -18,15 +18,17 @@
           async: false
           }).responseText;
 
-        echo "hi";
-        echo jsonData;
+        console.log("hi");
+        console.log(jsonData);
+
         var data = google.visualization.arrayToDataTable(jsonData);
         var options = {
           title: 'My Daily Activities',
           pieHole: 0.4,
          };
+        console.log(data);
 
-        echo data;
+
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
         chart.draw(data, options);
 

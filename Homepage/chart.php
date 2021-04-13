@@ -37,6 +37,7 @@
         // json_encode($json_array);
         
         $file = fopen("hensenMajors.json", "w") or die("Unable to open file!");
+        //test
         fwrite($myfile, json_encode($json_array) );
 
 

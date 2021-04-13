@@ -73,9 +73,8 @@
         // var data = google.visualization.arrayToDataTable([['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]);
         var data = google.visualization.arrayToDataTable(jsonData);
 
-        // [['Program Name', 'Number'],['Biology', 5], ['Chemistry',5], ['Computer Science',5], ['Data Science' , 5]]
-        // [['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]
-
+        [['Program Name', 'Number'],['Biology', 5], ['Chemistry', 5], ['Computer Science', 5], ['Data Science' , 5]]
+        [['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]
         var options = {
           title: 'My Daily Activities',
           pieHole: 0.4,

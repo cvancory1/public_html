@@ -23,40 +23,45 @@
             print '<p>ERROR: connecting to MySQL.</p>';
         }
 
-        // echo"hi";
+        echo"hi";
 
-        // $query = " select programName from Program where schoolName = 'Hensen'";
-        // $r=mysqli_query($connection, $query);
+        $query = " select programName from Program where schoolName = 'Hensen'";
+        $r=mysqli_query($connection, $query);
 
 
-        // $json_array = array();  
-        // while($row = mysqli_fetch_assoc($r))  
-        // {  
-        //     $json_array[] = $row;  
-        // }  
-        // // json_encode($json_array);
+        $json_array = array();  
+        while($row = mysqli_fetch_assoc($r))  
+        {  
+            $json_array[] = $row;  
+        }  
+
+        // cvancory1@acadweb1:~/public_html$ pwd
+        // /home/cvancory1/public_html/Homepage/hensenMajors.json
+        // json_encode($json_array);
         
         // $file = fopen("hensenMajors.json", "a") or die("Unable to open file!");
+        $file = fopen("/home/cvancory1/public_html/Homepage/hensenMajors.json", "a") or die("Unable to open file!");
         // fwrite($myfile, json_encode($json_array) );
+        fwrite($myfile, "hello" );
 
 
-        // fclose($file);
+        fclose($file);
 
 
-        
-        $dir = 'myDir';
 
- // create new directory with 744 permissions if it does not exist yet
- // owner will be the user/group the PHP script is run under
-    if ( !file_exists($dir) ) {
-        mkdir ($dir, 0744);
-    }
+//         $dir = 'myDir';
 
-    file_put_contents ($dir.'/test.txt', 'Hello File');
-        mysqli_close ($connection);
+//  // create new directory with 744 permissions if it does not exist yet
+//  // owner will be the user/group the PHP script is run under
+//     if ( !file_exists($dir) ) {
+//         mkdir ($dir, 0744);
+//     }
+
+//     file_put_contents ($dir.'/test.txt', 'Hello File');
+//         mysqli_close ($connection);
 
 
-    ?>
+//     ?>
 
   
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

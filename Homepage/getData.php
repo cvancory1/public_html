@@ -9,7 +9,6 @@
 
         $query = "select programName from Program where schoolName = 'Hensen'";
         $r=mysqli_query($connection, $query);
-        echo "here";
 
         $json_array = array();  
         while($row = mysqli_fetch_assoc($r))  

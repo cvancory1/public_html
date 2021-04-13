@@ -55,7 +55,18 @@
     <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
+
+
+
       function drawChart() {
+        var jsonData = $.ajax({
+          url: "getData.php",
+          dataType: "json",
+          async: false
+          }).responseText;
+        document.write(jsonData);
+        document.write("[['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]");
+
         var data = google.visualization.arrayToDataTable([['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]);
 
         var options = {

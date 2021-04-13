@@ -23,7 +23,7 @@
             print '<p>ERROR: connecting to MySQL.</p>';
         }
 
-        echo"hi";
+        // echo"hi";
 
         $query = " select programName from Program where schoolName = 'Hensen'";
         $r=mysqli_query($connection, $query);
@@ -33,7 +33,8 @@
         while($row = mysqli_fetch_assoc($r))  
         {  
             $json_array[] = $row;  
-            // echo $json_array[];
+            echo $row;
+            // echo $ $json_array[]
 
         }  
 
@@ -41,13 +42,14 @@
         // /home/cvancory1/public_html/Homepage/hensenMajors.json
         // json_encode($json_array);
         
-        $file = fopen("hensenMajors.json", "a") or die("Unable to open file!");
+        // $file = fopen("hensenMajors.json", "a") or die("Unable to open file!");
         // $file = fopen("/home/cvancory1/public_html/Homepage/hensenMajors.json", "a") or die("Unable to open file!");
         // fwrite($myfile, json_encode($json_array) );
-        echo json_encode($json_array);
+        $temp= json_encode($json_array);
+        echo $temp;
 
 
-        fwrite($file, "hello" );
+        // fwrite($file, "hello" );
 
 
         fclose($file);

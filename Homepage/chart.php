@@ -67,10 +67,11 @@
           dataType: "json",
           async: false
           }).responseText;
-        document.write(jsonData);
-        document.write("[['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]");
+        // document.write(jsonData);
+        // document.write("[['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]");
 
-        var data = google.visualization.arrayToDataTable([['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]);
+        // var data = google.visualization.arrayToDataTable([['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]);
+        var data = google.visualization.arrayToDataTable(jsonData);
 
         var options = {
           title: 'My Daily Activities',

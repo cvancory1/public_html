@@ -13,7 +13,7 @@
         echo "['ProgramName', 'Number'],";
 
         $amount = mysqli_num_rows($r);
-        for( $i=0; i< $amount-1 ; $i++){
+        for( $i=0; $i< $amount-1 ; $i++){
             echo "['$row[programName]' , 5], ";
 
         }

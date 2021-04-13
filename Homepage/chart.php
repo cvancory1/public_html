@@ -61,7 +61,7 @@
         }  
         // json_encode($json_array);
         
-        $file = fopen("hensenMajors.json", "wrx") or die("Unable to open file!");
+        $file = fopen("hensenMajors.json", "w") or die("Unable to open file!");
         fwrite($myfile, json_encode($json_array) );
 
 

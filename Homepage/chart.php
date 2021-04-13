@@ -18,21 +18,22 @@
           async: false
           }).responseText;
 
-        console.log("hi");
-        console.log(jsonData);
+        document.write("hi");
+        document.write(jsonData);
 
         var data = google.visualization.arrayToDataTable(jsonData);
         var options = {
           title: 'My Daily Activities',
           pieHole: 0.4,
          };
-        console.log(data);
+        document.write(data);
+
 
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
         chart.draw(data, options);
 
-
+    }
           
     //   // Create our data table out of JSON data loaded from server.
     //   var data = new google.visualization.DataTable(jsonData);

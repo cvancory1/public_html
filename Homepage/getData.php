@@ -25,6 +25,7 @@
 
         // $temp= json_encode($json_array);
         // echo $temp;
+        //here
         
         mysqli_close($connection);
 

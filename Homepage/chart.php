@@ -60,7 +60,7 @@
       google.charts.setOnLoadCallback(drawChart);
 
 
-
+        
       function drawChart() {
         var jsonData = $.ajax({
           url: "getData.php",

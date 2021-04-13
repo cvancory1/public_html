@@ -23,7 +23,7 @@
         echo "['$row[programName]', 5]]";
        
          // $temp= json_encode($json_array);
-        // echo $temp;
+        // echo $temp;jj
         //here
         // [['Program Name', 'Number'],['Biology' , 5], ['Chemistry' , 5], ['Computer Science' , 5], ['Data Science' , 5]]
         // [['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]

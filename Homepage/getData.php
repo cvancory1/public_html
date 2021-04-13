@@ -20,10 +20,9 @@
         }
         $row = mysqli_fetch_assoc($r);
         
-        echo "['$row[programName]' , 5]]";
+        echo "['$row[programName]', 5]]";
        
-
-        // $temp= json_encode($json_array);
+         // $temp= json_encode($json_array);
         // echo $temp;
         //here
         // [['Program Name', 'Number'],['Biology' , 5], ['Chemistry' , 5], ['Computer Science' , 5], ['Data Science' , 5]]

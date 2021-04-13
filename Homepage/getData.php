@@ -10,6 +10,7 @@
         $query = "select programName , count('programName') from 'MajoredIn' group by 'programName'";
         $r=mysqli_query($connection, $query);
 
+        
         echo "{\"cols\": [{\"id\":\"\",\"label\":\"Program Name\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Major\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [";
      
 

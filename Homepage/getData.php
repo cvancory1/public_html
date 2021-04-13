@@ -20,9 +20,9 @@
         // }
         // $row = mysqli_fetch_assoc($r);
 
-        //   echo "{\"cols\": [ {\"id\":\"\",\"label\":\"Program Name\",\"pattern\":\"\",\"type\":\"string\"},{\"id\":\"\",\"label\":\"Major\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [{\"c\":[{\"v\":\"Biology\",\"f\":null},{\"v\":5,\"f\":null}]},{\"c\":[{\"v\":\"Chemistry\",\"f\":null},{\"v\":5,\"f\":null}]}, {\"c\":[{\"v\":\"Computer Science\",\"f\":null},{\"v\":5,\"f\":null}]},{\"c\":[{\"v\":\"Data Science \",\"f\":null},{\"v\":5,\"f\":null}]},]}";
 
-        echo  "{\"cols\": [{\"id\":\"\",\"label\":\"Topping\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Slices\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [{\"c\":[{\"v\":\"Mushrooms\",\"f\":null},{\"v\":3,\"f\":null}]},{\"c\":[{\"v\":\"Onions\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Olives\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Zucchini\",\"f\":null},{\"v\":1,\"f\":null}]}, {\"c\":[{\"v\":\"Pepperoni\",\"f\":null},{\"v\":2,\"f\":null}]}] }";
+        // echo  "{\"cols\": [{\"id\":\"\",\"label\":\"Topping\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Slices\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [{\"c\":[{\"v\":\"Mushrooms\",\"f\":null},{\"v\":3,\"f\":null}]},{\"c\":[{\"v\":\"Onions\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Olives\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Zucchini\",\"f\":null},{\"v\":1,\"f\":null}]}, {\"c\":[{\"v\":\"Pepperoni\",\"f\":null},{\"v\":2,\"f\":null}]}] }";
+        echo  "{\"cols\": [{\"id\":\"\",\"label\":\"Program Name\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Major\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [{\"c\":[{\"v\":\"Bio\",\"f\":null},{\"v\":5,\"f\":null}]},{\"c\":[{\"v\":\"Chem\",\"f\":null},{\"v\":5,\"f\":null}]},{\"c\":[{\"v\":\"Data Science\",\"f\":null},{\"v\":5,\"f\":null}]},{\"c\":[{\"v\":\"Computer science\",\"f\":null},{\"v\":5,\"f\":null}]}, {\"c\":[{\"v\":\"Pepperoni\",\"f\":null},{\"v\":2,\"f\":null}]}] }";
         
        
          mysqli_close($connection);

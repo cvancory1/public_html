@@ -4,73 +4,7 @@
 
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <!--Load the AJAX API-->
-    
-  </head>
-
-  <body>
-    <!--Div that will hold the pie chart-->
-    <!-- <div id="chart_div"></div> -->
-    
-
-    <?php
-
-        if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
-            ;
-        }
-        else{
-            print '<p>ERROR: connecting to MySQL.</p>';
-        }
-
-        // echo"hi";
-
-        $query = " select programName from Program where schoolName = 'Hensen'";
-        $r=mysqli_query($connection, $query);
-
-
-        $json_array = array();  
-        while($row = mysqli_fetch_assoc($r))  
-        {  
-            $json_array[] = $row;  
-            // echo $row. "\n";
-            // echo $ $json_array[]
-
-        }  
-
-        // cvancory1@acadweb1:~/public_html$ pwd
-        // /home/cvancory1/public_html/Homepage/hensenMajors.json
-        // json_encode($json_array);
-        
-        // $file = fopen("hensenMajors.json", "a") or die("Unable to open file!");
-        // $file = fopen("/home/cvancory1/public_html/Homepage/hensenMajors.json", "a") or die("Unable to open file!");
-        // fwrite($myfile, json_encode($json_array) );
-        $temp= json_encode($json_array);
-        echo $temp;
-
-
-        // fwrite($file, "hello" );
-
-
-        fclose($file);
-
-
-
-//         $dir = 'myDir';
-
-//  // create new directory with 744 permissions if it does not exist yet
-//  // owner will be the user/group the PHP script is run under
-//     if ( !file_exists($dir) ) {
-//         mkdir ($dir, 0744);
-//     }
-
-//     file_put_contents ($dir.'/test.txt', 'Hello File');
-//         mysqli_close ($connection);
-
-
-//     ?>
-
-  
+<!-- 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
@@ -106,6 +40,36 @@
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
+    </script> -->
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    // Load the Visualization API and the piechart package.
+    google.charts.load('current', {'packages':['corechart']});
+      
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+      
+    function drawChart() {
+      var jsonData = $.ajax({
+          url: "getData.php",
+          dataType: "json",
+          async: false
+          }).responseText;
+          
+      // Create our data table out of JSON data loaded from server.
+      var data = new google.visualization.DataTable(jsonData);
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, {width: 400, height: 240});
+    }
+
     </script>
+  </head>
+
  </html>
 

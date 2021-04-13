@@ -10,13 +10,6 @@
     }
 
  
-    $dataPoints = array( 
-        array("y" => 7,"label" => "March" ),
-        array("y" => 12,"label" => "April" ),
-        array("y" => 28,"label" => "May" ),
-        array("y" => 18,"label" => "June" ),
-        array("y" => 41,"label" => "July" )
-    );
      
 ?>
     
@@ -25,42 +18,52 @@
 
 
 <!DOCTYPE HTML>
-    <html>
-    <head>
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
 
-    <script>
-    window.onload = function() {
-     
-    var chart = new CanvasJS.Chart("chartContainer", {
-        animationEnabled: true,
-        title:{
-            text: "Revenue Chart of Acme Corporation"
-        },
-        axisY: {
-            title: "Revenue (in USD)",
-            includeZero: true,
-            prefix: "$",
-            suffix:  "k"
-        },
-        data: [{
-            type: "bar",
-            yValueFormatString: "$#,##0K",
-            indexLabel: "{y}",
-            indexLabelPlacement: "inside",
-            indexLabelFontWeight: "bolder",
-            indexLabelFontColor: "white",
-            dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-        }]
-    });
-    chart.render();
-     
-    }
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
     </script>
-    </head>
-    <body>
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-    </body>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
     </html>
 
 

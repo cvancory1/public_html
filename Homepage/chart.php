@@ -42,6 +42,7 @@
         $file = fopen("hensenMajors.json", "a") or die("Unable to open file!");
         // $file = fopen("/home/cvancory1/public_html/Homepage/hensenMajors.json", "a") or die("Unable to open file!");
         // fwrite($myfile, json_encode($json_array) );
+        echo json_encode($json_array);
         fwrite($file, "hello" );
 
 

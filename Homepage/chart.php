@@ -17,15 +17,27 @@
           dataType: "json",
           async: false
           }).responseText;
-          
-      // Create our data table out of JSON data loaded from server.
-    //   var data = new google.visualization.DataTable(jsonData);
-    var data = google.visualization.arrayToDataTable(jsonData);
 
-      // Instantiate and draw our chart, passing in some options.
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-      chart.draw(data, {width: 400, height: 240});
-    }
+          var data = google.visualization.arrayToDataTable(jsonData);
+          var options = {
+          title: 'My Daily Activities',
+          pieHole: 0.4,
+         };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+
+
+
+          
+    //   // Create our data table out of JSON data loaded from server.
+    //   var data = new google.visualization.DataTable(jsonData);
+    // //   var data = google.visualization.arrayToDataTable(jsonData);
+
+    //   // Instantiate and draw our chart, passing in some options.
+    //   var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    //   chart.draw(data, {width: 400, height: 240});
+    // }
 
     </script>
   </head>

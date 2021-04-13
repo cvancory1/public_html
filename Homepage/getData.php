@@ -14,7 +14,7 @@
         while($row = mysqli_fetch_assoc($r))  
         {  
             $json_array[] = $row;  
-            echo $row;
+            echo $row["programName"];
             
 
         }  

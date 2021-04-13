@@ -18,6 +18,8 @@
             echo "['$row[programName]' , 5], ";
 
         }
+        $row = mysqli_fetch_assoc($r);
+        
         echo "['$row[programName]' , 5] ";
        
 

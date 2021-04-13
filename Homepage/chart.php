@@ -39,10 +39,10 @@
         // /home/cvancory1/public_html/Homepage/hensenMajors.json
         // json_encode($json_array);
         
-        // $file = fopen("hensenMajors.json", "a") or die("Unable to open file!");
-        $file = fopen("/home/cvancory1/public_html/Homepage/hensenMajors.json", "a") or die("Unable to open file!");
+        $file = fopen("hensenMajors.json", "a") or die("Unable to open file!");
+        // $file = fopen("/home/cvancory1/public_html/Homepage/hensenMajors.json", "a") or die("Unable to open file!");
         // fwrite($myfile, json_encode($json_array) );
-        fwrite($myfile, "hello" );
+        fwrite($file, "hello" );
 
 
         fclose($file);

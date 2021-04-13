@@ -30,10 +30,11 @@
 
 
         $json_array = array();  
-        echo $json_array;
         while($row = mysqli_fetch_assoc($r))  
         {  
             $json_array[] = $row;  
+            echo $json_array;
+
         }  
 
         // cvancory1@acadweb1:~/public_html$ pwd

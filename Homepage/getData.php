@@ -14,10 +14,10 @@
 
         $amount = mysqli_num_rows($r);
         for( $i=0; $i< $amount-1 ; $i++){
-            echo "['$row[programName]' , 5], ";
+            echo "['$r[programName]' , 5], ";
 
         }
-        echo "['$row[programName]' , 5] ";
+        echo "['$r[programName]' , 5] ";
        
 
         // $temp= json_encode($json_array);

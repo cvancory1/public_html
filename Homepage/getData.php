@@ -14,6 +14,7 @@
         while($row = mysqli_fetch_assoc($r))  
         {  
             $json_array[] = $row;  
+            echo $row;
             
 
         }  
@@ -22,5 +23,26 @@
         echo $temp;
         
         mysqli_close($connection);
+
+            // Current
+        // [{"programName":"Biology"},{"programName":"Chemistry"},{"programName":"Computer Science"},{"programName":"Data Science"}]
+        // 
+        
+        // GOAL : 
+        // {
+        //     
+        //     "rows": [
+        //           {"c":[{"v":"Mushrooms","f":null},{"v":3,"f":null}]},
+        //           {"c":[{"v":"Onions","f":null},{"v":1,"f":null}]},
+        //           {"c":[{"v":"Olives","f":null},{"v":1,"f":null}]},
+        //           {"c":[{"v":"Zucchini","f":null},{"v":1,"f":null}]},
+        //           {"c":[{"v":"Pepperoni","f":null},{"v":2,"f":null}]}
+        //         ]
+
+        // "cols": [
+        //     //           {"id":"","label":"Topping","pattern":"","type":"string"},
+        //     //           {"id":"","label":"Slices","pattern":"","type":"number"}
+        //     //         ],
+        //   }
 
 ?>

@@ -1,32 +1,5 @@
 
 
-<?php
-
-
-    if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
-        ;
-    }
-    else{
-        print '<p>ERROR: connecting to MySQL.</p>';
-    }
-
-    $query = "select programName from School where school = Hensen";
-    $r=mysqli_query($connection, $query);
-
-
-    $json_array = array();  
-    while($row = mysqli_fetch_assoc($result))  
-    {  
-        $json_array[] = $row;  
-    }  
-    echo json_encode($json_array);  
-
-    mysqli_close ($connection);
-
-
-?>
-
-
 
 
 <!DOCTYPE HTML>
@@ -38,7 +11,7 @@
 
   <body>
     <!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
+    <!-- <div id="chart_div"></div> -->
     
 
     <?php

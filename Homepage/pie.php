@@ -14,7 +14,6 @@
           ['Sleep',    7]
         ]);
         
-        // document.write(data);
         var options = {
           title: 'My Daily Activities',
           pieHole: 0.4,

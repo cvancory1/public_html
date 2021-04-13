@@ -10,20 +10,31 @@
         $query = "select programName from Program where schoolName = 'Hensen'";
         $r=mysqli_query($connection, $query);
 
-        $json_array = array();  
-        while($row = mysqli_fetch_assoc($r))  
-        {  
-            $json_array[] = $row;  
-            echo $row["programName"];
-            
+        echo "['ProgramName', 'Number'],";
 
-        }  
+        $amount = mysqli_num_rows($r);
+        for( $i=0; i< $amount-1 ; $i++){
+            echo "['$row[programName]' , 5], ";
 
-        $temp= json_encode($json_array);
-        echo $temp;
+        }
+        echo "['$row[programName]' , 5] ";
+       
+
+        // $temp= json_encode($json_array);
+        // echo $temp;
         
         mysqli_close($connection);
 
+
+
+        // var data = google.visualization.arrayToDataTable([
+        //     ['Task', 'Hours per Day'],
+        //     ['Work',     11],
+        //     ['Eat',      2],
+        //     ['Commute',  2],
+        //     ['Watch TV', 2],
+        //     ['Sleep',    7]
+        //   ]);
             // Current
         // [{"programName":"Biology"},{"programName":"Chemistry"},{"programName":"Computer Science"},{"programName":"Data Science"}]
         // 

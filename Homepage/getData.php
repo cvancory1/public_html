@@ -15,7 +15,7 @@
         $amount = mysqli_num_rows($r);
         for( $i=0; $i< $amount-1 ; $i++){
             $row = mysqli_fetch_assoc($r);
-            echo "['$row[programName]',5], ";
+            echo "['$row[programName]', 5], ";
 
         }
         $row = mysqli_fetch_assoc($r);

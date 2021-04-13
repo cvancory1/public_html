@@ -12,17 +12,17 @@
     google.charts.setOnLoadCallback(drawChart);
       
     function drawChart() {
-    //   var jsonData = $.ajax({
-    //       url: "getData.php",
-    //       dataType: "json",
-    //       async: false
-    //       }).responseText;
+      var jsonData = $.ajax({
+          url: "getData.php",
+          dataType: "json",
+          async: false
+          }).responseText;
           
       // Create our data table out of JSON data loaded from server.
         // var string = "{'cols': [  {'id':'','label':'Topping','pattern':'','type':'string'}, {'id':'','label':'Slices','pattern':'','type':'number'}],'rows': [{'c':[{'v':'Mushrooms','f':null},{'v':3,'f':null}]},{'c':[{'v':'Onions','f':null},{'v':1,'f':null}]},{'c':[{'v':'Olives','f':null},{'v':1,'f':null}]},{'c':[{'v':'Zucchini','f':null},{'v':1,'f':null}]},{'c':[{'v':'Pepperoni','f':null},{'v':2,'f':null}]} }";
-        var string = "{\"cols\": [{\"id\":\"\",\"label\":\"Topping\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Slices\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [{\"c\":[{\"v\":\"Mushrooms\",\"f\":null},{\"v\":3,\"f\":null}]},{\"c\":[{\"v\":\"Onions\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Olives\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Zucchini\",\"f\":null},{\"v\":1,\"f\":null}]}, {\"c\":[{\"v\":\"Pepperoni\",\"f\":null},{\"v\":2,\"f\":null}]}] }";
+        // var string = "{\"cols\": [{\"id\":\"\",\"label\":\"Topping\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Slices\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [{\"c\":[{\"v\":\"Mushrooms\",\"f\":null},{\"v\":3,\"f\":null}]},{\"c\":[{\"v\":\"Onions\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Olives\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Zucchini\",\"f\":null},{\"v\":1,\"f\":null}]}, {\"c\":[{\"v\":\"Pepperoni\",\"f\":null},{\"v\":2,\"f\":null}]}] }";
 
-      var data = new google.visualization.DataTable(string);
+      var data = new google.visualization.DataTable(jsonData);
 
       // Instantiate and draw our chart, passing in some options.
       var chart = new google.visualization.PieChart(document.getElementById('chart_div'));

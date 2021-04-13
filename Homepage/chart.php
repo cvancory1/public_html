@@ -21,7 +21,7 @@
         document.write("hi");
         document.write(jsonData);
 
-        var data = google.visualization.arrayToDataTable(jsonData);
+        var data = google.visualization.arrayToDataTable([['ProgramName', 'Number'],['Biology' , 5], ['Chemistry' , 5], ['Computer Science' , 5], ['Data Science' , 5]]);
         var options = {
           title: 'My Daily Activities',
           pieHole: 0.4,

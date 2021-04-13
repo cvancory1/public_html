@@ -29,7 +29,7 @@
         mysqli_close($connection);
 
 
-
+        // [['ProgramName', 'Number'],['Biology' , 5], ['Chemistry' , 5], ['Computer Science' , 5], ['Data Science' , 5]
         // var data = google.visualization.arrayToDataTable([
         //     ['Task', 'Hours per Day'],
         //     ['Work',     11],

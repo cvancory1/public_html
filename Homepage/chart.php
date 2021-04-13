@@ -33,7 +33,7 @@
         while($row = mysqli_fetch_assoc($r))  
         {  
             $json_array[] = $row;  
-            echo $row. "\n";
+            // echo $row. "\n";
             // echo $ $json_array[]
 
         }  

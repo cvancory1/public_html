@@ -39,8 +39,10 @@
   <body>
     <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
+    
 
     <?php
+
         if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
             ;
         }
@@ -48,7 +50,7 @@
             print '<p>ERROR: connecting to MySQL.</p>';
         }
 
-
+        echo"hi";
 
         $query = " select programName from Program where schoolName = 'Hensen'";
         $r=mysqli_query($connection, $query);

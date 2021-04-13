@@ -61,7 +61,7 @@
           ['Biology', 5],
           ['Chemistry ', 5],
           ['Computer Science ', 5],
-          ['Data Science ', 5],
+          ['Data Science ', 5]
         ]);
 
         var options = {

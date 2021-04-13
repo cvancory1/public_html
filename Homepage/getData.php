@@ -10,12 +10,12 @@
         $query = "select programName from Program where schoolName = 'Hensen'";
         $r=mysqli_query($connection, $query);
 
-        echo "[['ProgramName', 'Number'],";
+        echo "[['Program Name', 'Number'],";
 
         $amount = mysqli_num_rows($r);
         for( $i=0; $i< $amount-1 ; $i++){
             $row = mysqli_fetch_assoc($r);
-            echo "['$row[programName]' , 5], ";
+            echo "['$row[programName]',5], ";
 
         }
         $row = mysqli_fetch_assoc($r);
@@ -26,7 +26,8 @@
         // $temp= json_encode($json_array);
         // echo $temp;
         //here
-        
+        // [['Program Name', 'Number'],['Biology' , 5], ['Chemistry' , 5], ['Computer Science' , 5], ['Data Science' , 5]]
+        // [['Program Name', 'Number'],['Biology', 5],['Chemistry ', 5],['Computer Science ', 5],['Data Science ', 5]]
         mysqli_close($connection);
 
 

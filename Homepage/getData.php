@@ -10,15 +10,25 @@
         $query = "select programName from Program where schoolName = 'Hensen'";
         $r=mysqli_query($connection, $query);
 
-        // echo "{ \"cols\": [ {\"id\":\"\", \" ";
-            
-        // $amount = mysqli_num_rows($r);
-        // for( $i=0; $i< $amount-1 ; $i++){
-        //     $row = mysqli_fetch_assoc($r);
-        //     echo "['$row[programName]', 5],";
+        echo "{\"cols\": [{\"id\":\"\",\"label\":\"Program Name\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Major\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [";
+     
 
-        // }
-        // $row = mysqli_fetch_assoc($r);
+            
+        $amount = mysqli_num_rows($r);
+        for( $i=0; $i< $amount-1 ; $i++){
+            $row = mysqli_fetch_assoc($r);
+
+            echo "{\"c\":[{\"v\":\"";
+            echo $row['programName'];
+            echo "\",\"f\":null},{\"v\":5,\"f\":null}]},";
+
+        }
+
+        $row = mysqli_fetch_assoc($r);
+        echo "{\"c\":[{\"v\":\"";
+            echo $row['programName'];
+            echo "\",\"f\":null},{\"v\":5,\"f\":null}]},";
+
 
 
         // echo  "{\"cols\": [{\"id\":\"\",\"label\":\"Topping\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Slices\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [{\"c\":[{\"v\":\"Mushrooms\",\"f\":null},{\"v\":3,\"f\":null}]},{\"c\":[{\"v\":\"Onions\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Olives\",\"f\":null},{\"v\":1,\"f\":null}]},{\"c\":[{\"v\":\"Zucchini\",\"f\":null},{\"v\":1,\"f\":null}]}, {\"c\":[{\"v\":\"Pepperoni\",\"f\":null},{\"v\":2,\"f\":null}]}] }";

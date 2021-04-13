@@ -18,15 +18,16 @@
           async: false
           }).responseText;
 
-          var data = google.visualization.arrayToDataTable(jsonData);
-          var options = {
+          
+        var data = google.visualization.arrayToDataTable(jsonData);
+        var options = {
           title: 'My Daily Activities',
           pieHole: 0.4,
          };
 
+         echo data;
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
         chart.draw(data, options);
-
 
 
           
@@ -44,6 +45,6 @@
 
   <body>
     <!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
+    <div id="donutchart"></div>
   </body>
 </html>

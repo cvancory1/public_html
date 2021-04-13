@@ -30,6 +30,7 @@
 
 
         $json_array = array();  
+        echo $json_array;
         while($row = mysqli_fetch_assoc($r))  
         {  
             $json_array[] = $row;  
@@ -43,6 +44,8 @@
         // $file = fopen("/home/cvancory1/public_html/Homepage/hensenMajors.json", "a") or die("Unable to open file!");
         // fwrite($myfile, json_encode($json_array) );
         echo json_encode($json_array);
+
+
         fwrite($file, "hello" );
 
 

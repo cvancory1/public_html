@@ -27,7 +27,7 @@
         $row = mysqli_fetch_assoc($r);
         echo "{\"c\":[{\"v\":\"";
             echo $row['programName'];
-            echo "\",\"f\":null},{\"v\":5,\"f\":null}]},";
+            echo "\",\"f\":null},{\"v\":5,\"f\":null}]}] }";
 
 
         echo" \n";
@@ -51,5 +51,8 @@
         //         ]
         //   }
        
+
+        {"cols": [{"id":"","label":"Program Name","pattern":"","type":"string"}, {"id":"","label":"Major","pattern":"","type":"number"}],"rows": [{"c":[{"v":"Biology","f":null},{"v":5,"f":null}]},{"c":[{"v":"Chemistry","f":null},{"v":5,"f":null}]},{"c":[{"v":"Computer Science","f":null},{"v":5,"f":null}]},{"c":[{"v":"Data Science","f":null},{"v":5,"f":null}]}, 
+        {"cols": [{"id":"","label":"Program Name","pattern":"","type":"string"}, {"id":"","label":"Major","pattern":"","type":"number"}],"rows": [{"c":[{"v":"Biology","f":null},{"v":5,"f":null}]},{"c":[{"v":"Chemistry","f":null},{"v":5,"f":null}]},{"c":[{"v":"Computer Science","f":null},{"v":5,"f":null}]},{"c":[{"v":"Data Science","f":null},{"v":5,"f":null}]}] }
 
 ?>

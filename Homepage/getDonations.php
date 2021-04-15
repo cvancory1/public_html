@@ -11,7 +11,7 @@
         $r=mysqli_query($connection, $query);
 
 
-        echo "{\"cols\": [{\"id\":\"\",\"label\":\"Program Name\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Major\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [";
+        echo "{\"cols\": [{\"id\":\"\",\"label\":\"School Name\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Dollars Donated\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [";
      
             
         $amount = mysqli_num_rows($r);
@@ -28,7 +28,7 @@
 //
         $row = mysqli_fetch_assoc($r);
         echo "{\"c\":[{\"v\":\"";
-        echo $row['programName'];
+        echo $row['schoolName'];
         echo "\",\"f\":null},{\"v\":";
         echo $row['sum(amount)'];
         echo ",\"f\":null}]}] }";

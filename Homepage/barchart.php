@@ -21,7 +21,7 @@
           async: false
           }).responseText;
 
-          
+
         var options = {
           chart: {
             title: 'Company Performance',
@@ -31,7 +31,7 @@
 
         var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
-        chart.draw(data, google.charts.Bar.convertOptions(options));
+        chart.draw(data, google.charts.Bar.convertOptions(jsonData));
       }
     </script>
   </head>

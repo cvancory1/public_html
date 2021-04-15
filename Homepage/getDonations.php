@@ -10,7 +10,7 @@
         $query = "select schoolName, sum(amount) from Donated natural join (select distinct alumniID, schoolName from MajoredIn natural join Program)Major group by schoolName;";
         $r=mysqli_query($connection, $query);
 
-
+//f
         echo "{\"cols\": [{\"id\":\"\",\"label\":\"School Name\",\"pattern\":\"\",\"type\":\"string\"}, {\"id\":\"\",\"label\":\"Dollars Donated\",\"pattern\":\"\",\"type\":\"number\"}],\"rows\": [";
      
             

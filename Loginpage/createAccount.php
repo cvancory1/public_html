@@ -200,5 +200,6 @@ if (isset($_POST['username']) and isset($_POST['password']) and isset($_POST['co
 }
 
 mysqli_close($conn);
+//
 
 ?>

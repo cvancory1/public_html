@@ -34,7 +34,6 @@
         echo $row['count(programName)'];
         echo ",\"f\":null}]}] }";
 
-        // {"cols": [{"id":"","label":"Program Name","pattern":"","type":"string"}, {"id":"","label":"Major","pattern":"","type":"number"}],"rows": [{"c":[{"v":"Accounting","f":null},{"v":1,"f":null}]},{"c":[{"v":"Communication","f":null},{"v":1,"f":null}]},{"c":[{"v":"Computer Science","f":null},{"v":2,"f":null}]},{"c":[{"v":"Data Science","f":null},{"v":1,"f":null}]},{"c":[{"v":"Middle East Studies","f":null},{"v":1,"f":null}]},{"c":[{"v":"Social Work","f":null},{"v":1,"f":null}]}] }
-        // {"cols": [{"id":"","label":"Program Name","pattern":"","type":"string"}, {"id":"","label":"Major","pattern":"","type":"number"}],"rows": [{"c":[{"v":"Fulton","f":null},{"v":10000,"f":null}]},{"c":[{"v":"Health and Human Services","f":null},{"v":7000,"f":null}]},{"c":[{"v":"Hensen","f":null},{"v":11000,"f":null}]},{"c":[{"v":"","f":null},{"v":8000,"f":null}]}] }
-         mysqli_close($connection);
+        
+        mysqli_close($connection);
 ?>

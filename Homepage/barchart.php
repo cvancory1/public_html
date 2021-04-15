@@ -16,6 +16,7 @@
         //   ["Queen's bishop pawn (c4)", 10],
         //   ['Other', 3]
         // ]);
+        //ll
         var jsonData = $.ajax({
           url: "getDonations.php",
           dataType: "json",

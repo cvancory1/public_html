@@ -34,7 +34,7 @@
 
         var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
-        chart.draw(data, google.charts.Bar.convertOptions(options));
+        chart.draw(jsonData, google.charts.Bar.convertOptions(options));
       }
     </script>
   </head>

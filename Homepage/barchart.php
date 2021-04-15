@@ -17,7 +17,7 @@
         //   ['Other', 3]
         // ]);
         var jsonData = $.ajax({
-          url: "getData.php",
+          url: "getDonations.php",
           dataType: "json",
           async: false
           }).responseText;

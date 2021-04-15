@@ -15,7 +15,8 @@
           ['2017', 1030, 540, 350]
         ]);
 
-        alert(data);
+        // alert(data);
+        console.log(data);
 
         // var jsonData = $.ajax({
         //   url: "getDonations.php",

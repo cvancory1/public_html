@@ -64,7 +64,7 @@
             echo "</table>";
 
             // echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
-            echo "</form>";
+            // echo "</form>";
             // echo"here";
 
 

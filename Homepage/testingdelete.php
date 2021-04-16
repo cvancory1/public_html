@@ -73,6 +73,8 @@
 ?>
 
  <input type='submit'  class = 'button' value='Delete Alumni'/>
+</form>";
+
         </body>
 </html>
 

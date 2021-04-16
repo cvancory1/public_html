@@ -6,7 +6,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link rel="stylesheet" href="dat.css" type="text/css" >
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
     </head>
 
 
@@ -113,11 +113,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                     <div class='menu'>
                     <button class='openbtn' onclick='openNav()'>☰</button>
-                    <button class='placeholder'>X</button> 
+                    <button class='Mail'> <i style='font-size:24px' class='fa'>&#xf0e0;</i> </button> 
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
-                    <i class='fas fa-envelope'></i>
                     </div>
                     
 

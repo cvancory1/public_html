@@ -116,8 +116,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
+                    <i class='fas fa-envelope'></i>
                     </div>
-
+                    
 
                     <br> <br> <br> <br>
                 

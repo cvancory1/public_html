@@ -127,6 +127,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             // echo "<div id='deleteTable' style='margin-left: 200px; display:none; '>";
 
             echo "<div id='deleteTable'  style='display:none;' >";
+            echo"<form  method='post'  action='delete.php' "; 
+
             // echo "<div id='deleteTable'  >";
 
 
@@ -205,7 +207,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
 
-            echo"<form  method='post'  action='delete.php' "; 
             // echo "<td> <input type='checkbox' name='delete[]' value='5' id='checkbox'></td>";
 
                  

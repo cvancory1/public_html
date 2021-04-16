@@ -80,7 +80,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
            
             echo "<div class='navigation'>
-                <a class='button' href='' >
+                <a class='button' href=' >
               <div class='logout'>LOGOUT</div>
                 </a>
               </div>";
@@ -89,7 +89,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 echo "<div class='crud_button' >
                 <a href='delete.php' id = add  >add</a>
                 <a href='animalsUpdate1.php' id= update>Update</a>
-                <button class='button'  onclick='showDeleteTable()' > Delete </button>
+                <button class=''  onclick='showDeleteTable()' > Delete </button>
                 </div>";
             }
 

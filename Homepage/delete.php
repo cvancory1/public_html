@@ -34,7 +34,7 @@
 
                 mysqli_query($connection, $sql);
             }
-
+        }
     mysqli_close($connection);
     header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 

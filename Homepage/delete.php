@@ -7,13 +7,17 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
+    // if submit button was cicked 
     if(isset($_POST['but_delete'])){
+        echo"here";
 
+        // if there are checkboxes that are checked
         if(isset($_POST['delete'])){
           foreach($_POST['delete'] as $deleteid){
       
-            $deleteUser = "DELETE from users WHERE id=".$deleteid;
-            mysqli_query($con,$deleteUser);
+            $sql = "DELETE FROM Alumni WHERE alumniID = $id";
+            echo $sql;
+            mysqli_query($connection,$sql);
           }
         }
        

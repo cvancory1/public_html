@@ -23,7 +23,7 @@
         // }
     // }
 
-        if(isset($_POST["submit"]) ) {
+        if(isset($_POST["but_delete"]) ) {
             $usersCount = count($_POST["delete"]);
             echo $usersCount;
             for($i=0;$i<$usersCount;$i++) {

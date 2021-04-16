@@ -17,7 +17,9 @@
     // echo $_POST['delete'];
     // echo $_POST['delete'][0];
 
-    // echo $_POST['delete[]'] ;
+    echo $_POST['delete[]'] ;
+
+    echo $_POST['submit'];
 
 
     if(isset($_POST['submit'])){

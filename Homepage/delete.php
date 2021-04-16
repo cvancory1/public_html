@@ -32,8 +32,11 @@
                 echo $delete . " ". $birthdate . " ";
                 $sql = " DELETE FROM Alumni WHERE alumniID =$delete  AND birthdate = '$birthdate' ";
                 echo $sql;
-                $r = mysqli_query($connection, $sql);
-                echo $r;
+                $resuli = mysqli_query($connection, $sql);
+
+                if (!$result) {
+                    die('Invalid query: ' . mysql_error());
+                }
             }
         }
     mysqli_close($connection);

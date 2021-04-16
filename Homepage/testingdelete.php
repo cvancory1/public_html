@@ -50,7 +50,7 @@
                 echo $id;
                 echo " ".$bday;
                 echo "<td><input type='checkbox' name='delete[]' value='$id' ></td>";
-                echo "<td><input type='hidden' name='birthday[]' value= $bday ></td>";
+                echo "<input type='hidden' name='birthday[]' value= $bday >";
  
                 echo "<td>" . $row['alumniID'] . "</td>";
                 echo "<td>" . $row['birthdate'] . "</td>";

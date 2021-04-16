@@ -35,7 +35,7 @@
     
     // }
 
-    // // if the form deleteRows was submitted 
+    // // if the form deleteRows was submitted  a
 	if (isset($_POST['submit']) && isset($_POST['delete[]'])){
 
     echo "here2";

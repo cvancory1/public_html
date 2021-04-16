@@ -3,15 +3,13 @@
 <html lang = "en">
 
 <body> 
-<!-- <form name='deleteRows' id='deleteRows' method='post'  action='delete.php' >
- <input type='submit'  value='Delete' class = 'button' /> -->
+
 
  <form method='post' action='delete.php'>
     <input type='submit' value='Delete' name='but_delete'><br><br>
 
 
 <?php
-        // echo"<form  method='post'  action='delete.php' >"; 
 
         if($connection = @mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;
@@ -68,11 +66,6 @@
             }
 
             echo "</table>";
-
-            // echo "<br /> <input type='submit'  class = 'button' value='Delete'/>";
-            // echo "</form>";
-            // echo"here";
-
 
             mysqli_close($connection);
 

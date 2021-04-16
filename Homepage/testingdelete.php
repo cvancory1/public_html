@@ -3,7 +3,6 @@
 <html lang = "en">
 
 
-
  <form method='post' action='delete.php'>
     <input type='submit' value='Delete' name='but_delete'><br><br>
 

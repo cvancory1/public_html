@@ -8,21 +8,30 @@
     }
 
     // if submit button was cicked 
-    if(isset($_POST['but_delete'])){
+    // if(isset($_POST['but_delete'])){
 
         // if there are checkboxes that are checked
-        if(isset($_POST['delete'])){
-          foreach($_POST['delete'] as $id){
-              $birthday = $_POST['birthday'];
+        // if(isset($_POST['delete'])){
+        //   foreach($_POST['delete'] as $id and $_POST['birthday'] as $birthday){
+        //     //   $birthday = $_POST['birthday'];
 
 
-            $sql = "DELETE FROM Alumni WHERE alumniID = $id AND birthday =  $birthday ";
-            echo $sql;
-            mysqli_query($connection,$sql);
-          }
-        }
-       
-      }
+        //     $sql = "DELETE FROM Alumni WHERE alumniID = $id AND birthday =  $birthday ";
+        //     echo $sql;
+        //     mysqli_query($connection,$sql);
+        //   }
+        // }
+    // }
+
+        if(isset($_POST["submit"]) && $_POST["submit"]!="") {
+            $usersCount = count($_POST["delete"]);
+            for($i=0;$i<$usersCount;$i++) {
+                $delete = $_POST['delete'][$i];
+                $birthdate = $_POST['birthday'][$i];
+                $sql = " DELETE FROM Alumni WHERE alumniID =$delete  AND birthdate = $birthdate ";
+
+                mysqli_query($connection, $sql);
+            }
 
     mysqli_close($connection);
     header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );

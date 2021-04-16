@@ -6,7 +6,7 @@
 <form name='deleteRows' id='deleteRows' method='post'  action='delete.php' >
 
 <?php
-        echo"<form  method='post'  action='delete.php' "; 
+        // echo"<form  method='post'  action='delete.php' >"; 
 
         if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;

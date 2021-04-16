@@ -13,8 +13,7 @@
         // if there are checkboxes that are checked
         if(isset($_POST['delete'])){
           foreach($_POST['delete'] as $id){
-            echo $_POST['delete'];
-            $sql = "DELETE FROM Alumni WHERE alumniID = $id";
+            $sql = "DELETE FROM Alumni WHERE alumniID = $id ;";
             echo $sql;
             mysqli_query($connection,$sql);
           }
@@ -23,6 +22,6 @@
       }
 
     mysqli_close($connection);
-    header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
+    header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 
 ?>

@@ -116,7 +116,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                     <div class='menu'>
                     <button class='openbtn' onclick='openNav()'>☰</button>
-                    <button class='Mail'> <i class='ri-mail-send-line'></i> </button> 
+                  
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
@@ -129,7 +129,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     
             echo "</div>"; // end of mainTable k
 
-
+            // <button class='Mail'> <i class='ri-mail-send-line'></i> </button> 
     
 
             echo "<div id='deleteTable'  style='display:none;' >";

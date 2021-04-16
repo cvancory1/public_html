@@ -79,9 +79,11 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
            
-            echo "<a class='button' href='' >
-            <div class='logout'>LOGOUT</div>
-              </a>" ;
+            echo "<div class='navigation'>
+                <a class='button' href='' >
+              <div class='logout'>LOGOUT</div>
+                </a>
+              </div>";
            
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
                 echo "<div class='crud_button' >

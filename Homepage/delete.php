@@ -32,10 +32,11 @@
                 echo $delete . " ". $birthdate . " ";
                 $sql = " DELETE FROM Alumni WHERE alumniID =$delete  AND birthdate = $birthdate ";
                 echo $sql;
-                mysqli_query($connection, $sql);
+                $r = mysqli_query($connection, $sql);
+                echo $r;
             }
         }
     mysqli_close($connection);
-    header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
+    // header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 
 ?>

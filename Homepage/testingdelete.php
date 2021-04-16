@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang = "en">
 
-<body> 
 
 
  <form method='post' action='delete.php'>
@@ -77,6 +76,5 @@
 
 </form>
 
-        </body>
 </html>
 

@@ -121,10 +121,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
                     </div>
-                    
-
                     <br> <br> <br> <br>
-                
                 
                 ";
             echo "<div id='mainTable' >";

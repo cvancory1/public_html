@@ -15,7 +15,7 @@
         if(isset($_POST['delete'])){
           foreach($_POST['delete'] as $deleteid){
       
-            $sql = "DELETE FROM Alumni WHERE alumniID = $id";
+            $sql = "DELETE FROM Alumni WHERE alumniID = $deleteid";
             echo $sql;
             mysqli_query($connection,$sql);
           }

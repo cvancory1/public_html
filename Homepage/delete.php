@@ -9,8 +9,8 @@
 
 
 
-    // $number = count ($_POST)["delete"];
-    // echo "$number";
+    $number = count ($_POST)["delete"];
+    echo "$number";
 
     echo "here";
     // echo $_POST['checkbox'] ;

@@ -80,7 +80,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
            
             echo "<div class='navigation'>
-                <a class='button' href=' >
+                <a class='button' href='logout.php'>
               <div class='logout'>LOGOUT</div>
                 </a>
               </div>";
@@ -92,6 +92,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <button class=''  onclick='showDeleteTable()' > Delete </button>
                 </div>";
             }
+
+            // todo: add button class to lines above
 
                 echo "
                     <div id= 'mySidebar' class= 'sidebar'>

@@ -80,7 +80,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
            
             echo "<div class='navigation'>
-                <a class='button' href='logout.php'>
+                <a class='button' href='logout.php' logout>
               <div class='logout'>LOGOUT</div>
                 </a>
               </div>";

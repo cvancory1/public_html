@@ -9,7 +9,6 @@
 
     // if submit button was cicked 
     if(isset($_POST['but_delete'])){
-        echo"here";
 
         // if there are checkboxes that are checked
         if(isset($_POST['delete'])){

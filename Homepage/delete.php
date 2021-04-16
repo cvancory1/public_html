@@ -25,6 +25,7 @@
 
         if(isset($_POST["submit"]) && $_POST["submit"]!="") {
             $usersCount = count($_POST["delete"]);
+            echo $usersCount;
             for($i=0;$i<$usersCount;$i++) {
                 $delete = $_POST['delete'][$i];
                 $birthdate = $_POST['birthday'][$i];

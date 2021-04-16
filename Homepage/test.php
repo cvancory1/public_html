@@ -72,7 +72,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     //     <a href='logout.php'>Log Out</a>
     //     </div>";
 
-    //     echo "<div id='main'>";
+        echo "<div id='main'>";
 
 
         print_r($_SESSION['privilege']);

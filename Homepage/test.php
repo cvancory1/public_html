@@ -71,10 +71,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
    
     // logout button TODO move into the session variable if stmt
-    //  echo "<div class='profile'>
-    //     <!-- <button class='button'>  </button> -->
-    //     <a href='logout.php'>Log Out</a>
-    //     </div>";
+     echo "<div class='profile'>
+         <button class='button'>  </button> 
+        <a href='logout.php'>Log Out</a>
+        </div>";
 
         echo "<div id='main'>";
 
@@ -90,6 +90,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             // //   </div>";
            
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
+
                 echo "<div class='crud_button' >
                 <a href='delete.php' id = add  >add</a>
                 <a href='animalsUpdate1.php' id= update>Update</a>
@@ -116,7 +117,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                     <div class='menu'>
                     <button class='openbtn' onclick='openNav()'>☰</button>
-                    <button class='placeholder'>X</button>
+                    <button class='placeholder'> <button class='Mail'> <i class='ri-mail-send-line'></i> </button> </button>
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
                     </div>
@@ -128,7 +129,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     
             echo "</div>"; // end of mainTable k
 
-            // <button class='Mail'> <i class='ri-mail-send-line'></i> </button> 
+            // 
     
 
             echo "<div id='deleteTable'  style='display:none;' >";

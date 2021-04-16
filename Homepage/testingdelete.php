@@ -3,19 +3,21 @@
 <html lang = "en">
 
 <body> 
-<!-- <form name='deleteRows' id='deleteRows' method='post'  action='delete.php' > -->
+<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' >
+ <input type='submit'  class = 'button' value='Delete Alumni'/>
+
 
 <?php
         // echo"<form  method='post'  action='delete.php' >"; 
 
-        if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
+        if($connection = @mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;
             }
             else{
                 print '<p>ERROR: connecting to MySQL.</p>';
             }
 
-            echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
+            // echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
 
                 //Query to return contents of table Alumni here 
                 $query="SELECT * FROM Alumni";
@@ -63,8 +65,8 @@
 
             echo "</table>";
 
-            echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
-            echo "</form>";
+            // echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
+            // echo "</form>";
             // echo"here";
 
 
@@ -72,8 +74,7 @@
 
 ?>
 
- <!-- <input type='submit'  class = 'button' value='Delete Alumni'/>
-</form>"; -->
+</form>";
 
         </body>
 </html>

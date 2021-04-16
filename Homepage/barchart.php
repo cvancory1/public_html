@@ -16,7 +16,7 @@
         // ]);
 
         // alert(data);
-        console.log(data);
+        // console.log(data);
 
         var jsonData = $.ajax({
           url: "getDonations.php",

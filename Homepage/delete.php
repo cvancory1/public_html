@@ -28,6 +28,7 @@
             for($i=0;$i<$usersCount;$i++) {
                 $delete = $_POST['delete'][$i];
                 $birthdate = $_POST['birthday'][$i];
+                echo $delete . " ". $birthdate . " ";
                 $sql = " DELETE FROM Alumni WHERE alumniID =$delete  AND birthdate = $birthdate ";
 
                 mysqli_query($connection, $sql);

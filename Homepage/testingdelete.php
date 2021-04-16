@@ -3,8 +3,11 @@
 <html lang = "en">
 
 <body> 
-<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' >
- <input type='submit'  class = 'button' value='Delete Alumni'/>
+<!-- <form name='deleteRows' id='deleteRows' method='post'  action='delete.php' >
+ <input type='submit'  value='Delete' class = 'button' /> -->
+
+ <form method='post' action='delete.php'>
+    <input type='submit' value='Delete' name='but_delete'><br><br>
 
 
 <?php
@@ -46,7 +49,8 @@
                 echo "<tr>";
                 $id = $row['alumniID'];
                 echo $id;
-                echo "<td> <input type='checkbox' name='delete[]' value='<?php $id ?>' id='checkbox'></td>";
+                echo "<td><input type='checkbox' name='delete[]' value='<?= $id ?>' ></td>";
+ 
                 echo "<td>" . $row['alumniID'] . "</td>";
                 echo "<td>" . $row['birthdate'] . "</td>";
                 echo "<td>" . $row['status'] . "</td>";
@@ -65,7 +69,7 @@
 
             echo "</table>";
 
-            // echo "<br /> <input type='submit'  class = 'button' value='Delete Alumni'/>";
+            // echo "<br /> <input type='submit'  class = 'button' value='Delete'/>";
             // echo "</form>";
             // echo"here";
 

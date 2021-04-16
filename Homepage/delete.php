@@ -7,35 +7,45 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
+    if(isset($_POST['but_delete'])){
 
-
-    $number = count ($_POST)["delete"];
-    echo "$number";
-
-    echo "here";
-    // echo $_POST['checkbox'] ;
-    // echo $_POST['delete'];
-    // echo $_POST['delete'][0];
-
-    echo $_POST['delete[]'] ;
-
-    echo $_POST['submit'];
-
-
-    if(isset($_POST['submit'])){
-        echo "here1";
-
-        if(!empty($_POST['delete'])) {
-            echo "here2";
-            echo $_POST['delete'];
-            
-            foreach($_POST['delete'] as $value){
-                echo "value : ".$value.'<br/>';
-            }
-    
+        if(isset($_POST['delete'])){
+          foreach($_POST['delete'] as $deleteid){
+      
+            $deleteUser = "DELETE from users WHERE id=".$deleteid;
+            mysqli_query($con,$deleteUser);
+          }
         }
+       
+      }
+
+    // $number = count ($_POST)["delete"];
+    // echo "$number";
+
+    // echo "here";
+    // // echo $_POST['checkbox'] ;
+    // // echo $_POST['delete'];
+    // // echo $_POST['delete'][0];
+
+    // echo $_POST['delete[]'] ;
+
+    // echo $_POST['submit'];
+
+
+    // if(isset($_POST['submit'])){
+    //     echo "here1";
+
+    //     if(!empty($_POST['delete'])) {
+    //         echo "here2";
+    //         echo $_POST['delete'];
+            
+    //         foreach($_POST['delete'] as $value){
+    //             echo "value : ".$value.'<br/>';
+    //         }
     
-    }
+    //     }
+    
+    // }
 
     // // // if the form deleteRows was submitted  a
 	// if (isset($_POST['submit']) && isset($_POST['delete[]'])){

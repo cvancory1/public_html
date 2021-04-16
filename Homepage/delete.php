@@ -13,7 +13,10 @@
         // if there are checkboxes that are checked
         if(isset($_POST['delete'])){
           foreach($_POST['delete'] as $id){
-            $sql = "DELETE FROM Alumni WHERE alumniID = $id ;";
+              $birthday = $_POST['bday'];
+
+              
+            $sql = "DELETE FROM Alumni WHERE alumniID = $id AND birthday =  $birthday ";
             echo $sql;
             mysqli_query($connection,$sql);
           }

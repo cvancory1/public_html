@@ -145,7 +145,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 print '<p>ERROR: connecting to MySQL.</p>';
             }
 
-            // echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
+            echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
 
                 //Query to return contents of table Alumni here 
                 $query="SELECT * FROM Alumni";
@@ -203,16 +203,12 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     // echo "</div>"; // end of mainTable 
     
 
-
-
-
-
             // echo "<td> <input type='checkbox' name='delete[]' value='5' id='checkbox'></td>";
 
                  
 
             echo "<br /> <input type='submit' name = 'submit' value='Delete Alumni'/>";
-            // echo"</form>";
+            echo"</form>";
             echo "</div>"; // end of table shown for deleting  class
             
 

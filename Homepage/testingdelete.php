@@ -49,7 +49,7 @@
                 echo "<tr>";
                 $id = $row['alumniID'];
                 echo $id;
-                echo "<td><input type='checkbox' name='delete[]' value='<?= $id ?>' ></td>";
+                echo "<td><input type='checkbox' name='delete[]' value='<?php $id ?>' ></td>";
  
                 echo "<td>" . $row['alumniID'] . "</td>";
                 echo "<td>" . $row['birthdate'] . "</td>";

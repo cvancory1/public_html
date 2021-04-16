@@ -37,6 +37,6 @@
             }
         }
     mysqli_close($connection);
-    // header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
+    header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 
 ?>

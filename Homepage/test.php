@@ -13,8 +13,7 @@
 <body> 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"> for black sidebar buttons  -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
 
 
 
@@ -124,9 +123,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     
             echo "</div>"; // end of mainTable k
 
-            // <button class='placeholder'> <button class='Mail'> <i class='ri-mail-send-line'></i> </button>
-            
-    
 
             echo "<div id='deleteTable'  style='display:none;' >";
             include 'testingdelete.php';

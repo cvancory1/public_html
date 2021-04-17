@@ -17,7 +17,7 @@
             $privilege = $_POST['Privilege'][$i];
 
             echo $username . " ". $privilege . " ";
-            $sql = " UPDATE Login SET privelege= $privilege WHERE username= $username";
+            $sql = " UPDATE Login SET privelege= '$privilege' WHERE username= '$username' ";
             
 
             echo $sql;

@@ -212,7 +212,7 @@ a {
 /* end of logout button css  */
 
 
-.tooltip .tooltiptext .openbtn{
+.tooltip .tooltiptext .openbtn .placeholder{
     top: -5px;
     left: 105%; 
   }

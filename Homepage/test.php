@@ -204,23 +204,25 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             superView.style.display = "none";
         }
 
+
+
     }
 
     // none hides the table from view
     function showUsers() {
-        var main = document.getElementById("mainTable");
-        var delete = document.getElementById("deleteTable");
-        var superView = document.getElementById("superView");
+        var x = document.getElementById("mainTable");
+        var y = document.getElementById("deleteTable");
+        var z = document.getElementById("superView");
 
 
         if (superView.style.display === "none") { 
-            main.style.display = "none";
-            delete.style.display = "none";
-            superView.style.display = "block";
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "block";
         } else {
-            main.style.display = "block";
-            delete.style.display = "none";
-            superView.style.display = "none";
+            x.style.display = "block";
+            y.style.display = "none";
+            z.style.display = "none";
         }
 
     }

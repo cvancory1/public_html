@@ -155,7 +155,7 @@ body {
     z-index: 9;
 }  
 
-
+/* 
 /* logout button form  */
 @import url(https://fonts.googleapis.com/css?family=Oswald:400);
 
@@ -170,7 +170,7 @@ img {
   float: left;
 }
 
-.logout {
+/* .logout {
   font-size: .8em;
   font-family: 'Oswald', sans-serif;
     position: relative;
@@ -182,7 +182,7 @@ img {
   transition: opacity .45s;
   -webkit-transition: opacity .35s;
 
-}
+} */
 
 .button {
     text-decoration: none;
@@ -207,7 +207,7 @@ a:hover .logout{
 
 a {
   text-decoration: none;
-}
+} */
 
 /* end of logout button css  */
 

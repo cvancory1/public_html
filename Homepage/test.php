@@ -173,6 +173,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 <script type="text/javascript">
 
+    function signout() {
+        window.location="logout.php";
+    }
 
     function test(){
         // var x = document.getElementById("myDIV");

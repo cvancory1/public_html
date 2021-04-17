@@ -16,19 +16,18 @@
             $username = $_POST['username'][$i];
             $privilege = $_POST['Privilege'][$i];
             echo $username . " ". $privilege . " ";
-            $sql = " UPDATE USERS SET privelege= $privilege WHERE username=$username;
+            $sql = " UPDATE USERS SET privelege= $privilege WHERE username=$username";
             
 
             echo $sql;
             $resuli = mysqli_query($connection, $sql);
 
-            if (!$result) {
-                echo 'Invalid query: ' . mysql_error();
-            }
         }
     }
 
     mysqli_close($connection);
+    header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
+
 
 
 ?>

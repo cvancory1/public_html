@@ -75,7 +75,7 @@
 
                     $username = $row['username'];
                     $privilege = $row['privilege'];
-                    echo $username;
+                    echo $username. " ";
                     echo $privilege;
                     echo "<input type='hidden' name='Privilege[]' value= $privilege >";
 

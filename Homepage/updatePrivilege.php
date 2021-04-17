@@ -20,7 +20,7 @@
             $sql = " UPDATE Login SET privilege= '$privilege' WHERE username= '$username' ";
             
 
-            // echo $sql;
+            echo $sql;
             $resuli = mysqli_query($connection, $sql);
 
         }

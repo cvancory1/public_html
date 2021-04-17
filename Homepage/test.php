@@ -114,7 +114,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
          // Superuser can add edit users to the database
          if($_SESSION["privilege"] == "superUser"){
-            echo "<button class='placeholder'  onclick= 'showUsersTable()' title='Add Edit Users'>  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z' fill='rgba(255,255,255,1)'/></svg></button>";
+            echo "<button class='placeholder'  onclick= 'showUsers()' title='Add Edit Users'>  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z' fill='rgba(255,255,255,1)'/></svg></button>";
 
          }
 
@@ -189,21 +189,16 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     }
 
     function showDeleteTable() {
-        var main = document.getElementById("mainTable");
-        var  delete= document.getElementById("deleteTable");
-        var addUser = document.getElementById("superView");
+        var x = document.getElementById("mainTable");
+        var y = document.getElementById("deleteTable");
 
 
-
-        if (main.style.display === "none") { 
-            main.style.display = "block"; // displays 
-            delete.style.display = "none";
-            addUser.style.display = "none";
+        if (x.style.display === "none") { 
+            x.style.display = "block";
+            y.style.display = "none";
         } else {
-            main.style.display = "none";
-            delete.style.display = "block";
-            addUser.style.display = "none";
-
+            x.style.display = "none";
+            y.style.display = "block";
 
         }
 
@@ -211,26 +206,21 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     // none hides the table from view
     function showUsersTable() {
-    //     var main = document.getElementById("mainTable");
-    //     var delete = document.getElementById("deleteTable");
-    //     var addUser = document.getElementById("superView");
+        var main = document.getElementById("mainTable");
+        var delete = document.getElementById("deleteTable");
 
 
-    //     if (main.style.display === "none") { 
-    //         main.style.display = "block";
-    //         delete.style.display = "none";
-    //         addUser.style.display = "none";
-    //         addUser
-    //     } else {
-    //         main.style.display = "none";
-    //         delete.style.display = "none";
-    //         addUser.style.display = "none";
+        if (main.style.display === "none") { 
+            main.style.display = "block";
+            delete.style.display = "none";
+        } else {
+            main.style.display = "none";
+            delete.style.display = "none";
+
+        }
 
 
-    //     }
-
-
-    // }
+    }
 
 
    

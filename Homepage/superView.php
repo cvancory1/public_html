@@ -76,7 +76,7 @@
                     $username = $row['username'];
                     $privilege = $row['privilege'];
                     // echo $username. " ";
-                    echo "privilege"  .$privilege. " ";
+                    echo "privilege "  .$privilege. " ";
                     echo "<input type='hidden' name='Privilege[]' value= $privilege >";
 
                     if($row['privilege'] == 'viewUser'){

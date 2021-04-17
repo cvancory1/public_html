@@ -95,9 +95,11 @@
                 mysqli_close($connection);
         ?>
 
-        </div>
-        
+</form>
+
 
         </body>
+
+
 
 </html>

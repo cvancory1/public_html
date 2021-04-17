@@ -15,7 +15,7 @@
 
             $username = $_POST['username'][$i];
             $privilege = $_POST['Privilege'][$i];
-            echo $delete . " ". $birthdate . " ";
+            echo $username . " ". $privilege . " ";
             $sql = " UPDATE USERS SET privelege= $privilege WHERE username=$username;
             
 
@@ -29,7 +29,7 @@
     }
 
     mysqli_close($connection);
-    header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 
 
 ?>
+

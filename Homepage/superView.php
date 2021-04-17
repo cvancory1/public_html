@@ -14,37 +14,7 @@
 
     <form method='post' action='updatePrivilege.php'>
     <input type='submit' value='updatePrivilege' name='submit_button'><br><br>
-    <!-- <?php
-            // Connect to MySQL Database
-            if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
-                ;
-            }
-            else{
-                print '<p>ERROR: connecting to MySQL.</p>';
-            }
-
-            //Query to return contents of table Alumni
-            $query="SELECT username, privilege FROM Login";
-            $r=mysqli_query($connection, $query);
-                echo "<table id='alumniTable' class='styled-table'>
-                    <thead>
-                        <tr>
-                            <th> Username </th>
-                            <th> Privilege </th>
-                        </tr>
-                    </thead>";
-
-                while($row=mysqli_fetch_array($r)){
-                    echo "<tr>";
-                    echo "<td>" . $row['username'] . "</td>";
-                    echo "<td>" . $row['privilege'] . "</td>";
-                    echo "</tr>";
-                }
-
-                echo "</table>";
-
-                mysqli_close($connection);
-        ?> -->
+    
 
         <?php
             // Connect to MySQL Database
@@ -102,7 +72,7 @@
 </form>
 
 
-        </body>
+    </body>
 
 
 

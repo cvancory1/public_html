@@ -117,7 +117,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                     <div class='menu'>
                     <button class='openbtn' onclick='openNav()'>☰</button>
-                    <button class='placeholder'> <button class='Mail'> <i class='ri-mail-send-line'></i> > </button>
+                    <button class='placeholder'> <button class='Mail'> <i class='ri-mail-send-line'></i> </button>
+                    <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
                     </div>

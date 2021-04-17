@@ -87,7 +87,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             // <div class='logout'> </div>
             //   </a>" ;
 
-              // todo
            
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
 

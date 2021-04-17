@@ -71,9 +71,12 @@
                     echo "<tr>";
                     echo "<td><input type='checkbox' name='username[]' value='$username' ></td>";
                     echo "<td>" . $row['username'] . "</td>";
+                    
 
                     $username = $row['username'];
                     $privilege = $row['privilege'];
+                    echo $username;
+                    echo $privilege;
                     echo "<input type='hidden' name='Privilege[]' value= $privilege >";
 
                     if($row['privilege'] == 'viewUser'){

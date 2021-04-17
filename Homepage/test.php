@@ -209,23 +209,22 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     }
 
     // none hides the table from view
-    function showUsers() {
-        var x = document.getElementById("mainTable");
-        var y = document.getElementById("deleteTable");
-        var z = document.getElementById("superView");
+    // function showUsers() {
+    //     var x = document.getElementById("mainTable");
+    //     var y = document.getElementById("deleteTable");
+    //     var z = document.getElementById("superView");
 
-        alert("here");
-        if (superView.style.display === "none") { 
-            x.style.display = "none";
-            y.style.display = "none";
-            z.style.display = "block";
-        } else {
-            x.style.display = "block";
-            y.style.display = "none";
-            z.style.display = "none";
-        }
+    //     if (z.style.display === "none") { 
+    //         x.style.display = "none";
+    //         y.style.display = "none";
+    //         z.style.display = "block";
+    //     } else {
+    //         x.style.display = "block";
+    //         y.style.display = "none";
+    //         z.style.display = "none";
+    //     }
 
-    }
+    // }
 
    
 

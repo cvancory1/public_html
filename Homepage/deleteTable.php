@@ -1,3 +1,7 @@
+<!-- Holds the code which displays the Alumni table in the database 
+    - calls deleteTable.php if the superuser wants to delete Alumni 
+    - is #included in other files  -->
+
 <html>
 <!DOCTYPE html>
 <html lang = "en">
@@ -5,7 +9,6 @@
 
  <form method='post' action='delete.php'>
     <input type='submit' value='Delete' name='but_delete'><br><br>
-
 
 <?php
 

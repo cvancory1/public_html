@@ -48,18 +48,21 @@
                     // echo $username. " ";
 
                     echo "privilege "  .$privilege. " ";
-                    echo "<input type='hidden' name='Privilege[]' value= $privilege >";
+                    // echo "<input type='hidden' name='Privilege[]' value= $privilege >";
 
                     if($row['privilege'] == 'viewUser'){
                         echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser' selected>viewUser</option><option value='editUser'>editUser</option><option value='superUser'>superUser</option></select></td>";
-                        
+                        echo "<input type='hidden' name='Privilege[]' value= 'viewUser' >";
                     }
                     else if($row['privilege'] == 'editUser'){
                         echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser'>viewUser</option><option value='editUser' selected>editUser</option><option value='superUser'>superUser</option></select></td>";
+                        echo "<input type='hidden' name='Privilege[]' value= 'editUser' >";
                         
                     }
                     else if($row['privilege'] == 'superUser'){
                         echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser'>viewUser</option><option value='editUser'>editUser</option><option value='superUser' selected>superUser</option></select></td>"; 
+                        echo "<input type='hidden' name='Privilege[]' value= 'superUser' >";
+                        
                     }
                     echo "</tr>";
                 }

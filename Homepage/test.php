@@ -214,7 +214,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var y = document.getElementById("deleteTable");
         var z = document.getElementById("superView");
 
-
+        alert("here");
         if (superView.style.display === "none") { 
             x.style.display = "none";
             y.style.display = "none";

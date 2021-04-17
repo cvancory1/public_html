@@ -189,16 +189,21 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     }
 
     function showDeleteTable() {
-        var x = document.getElementById("mainTable");
-        var y = document.getElementById("deleteTable");
+        var main = document.getElementById("mainTable");
+        var  delete= document.getElementById("deleteTable");
+        var addUser = document.getElementById("superView");
 
 
-        if (x.style.display === "none") { 
-            x.style.display = "block";
-            y.style.display = "none";
+
+        if (main.style.display === "none") { 
+            main.style.display = "block"; // displays 
+            delete.style.display = "none";
+            addUser.style.display = "none";
         } else {
-            x.style.display = "none";
-            y.style.display = "block";
+            main.style.display = "none";
+            delete.style.display = "block";
+            addUser.style.display = "none";
+
 
         }
 
@@ -206,26 +211,26 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     // none hides the table from view
     function showUsersTable() {
-        var main = document.getElementById("mainTable");
-        var delete = document.getElementById("deleteTable");
-        var addUser = document.getElementById("superView");
+    //     var main = document.getElementById("mainTable");
+    //     var delete = document.getElementById("deleteTable");
+    //     var addUser = document.getElementById("superView");
 
 
-        if (main.style.display === "none") { 
-            main.style.display = "block";
-            delete.style.display = "none";
-            addUser.style.display = "none";
-            addUser
-        } else {
-            main.style.display = "none";
-            delete.style.display = "none";
-            addUser.style.display = "none";
+    //     if (main.style.display === "none") { 
+    //         main.style.display = "block";
+    //         delete.style.display = "none";
+    //         addUser.style.display = "none";
+    //         addUser
+    //     } else {
+    //         main.style.display = "none";
+    //         delete.style.display = "none";
+    //         addUser.style.display = "none";
 
 
-        }
+    //     }
 
 
-    }
+    // }
 
 
    

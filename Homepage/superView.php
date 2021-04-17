@@ -70,12 +70,12 @@
 
                 while($row=mysqli_fetch_array($r)){
                     echo "<tr>";
+                    echo "<td><input type='checkbox' name='username[]' value='$username' ></td>";
                     echo "<td>" . $row['username'] . "</td>";
+
                     $username = $row['username'];
                     $privilege = $row['privilege'];
-                    echo "<td><input type='checkbox' name='delete[]' value='$username' ></td>";
                     echo "<input type='hidden' name='Privilege[]' value= $privilege >";
-
 
                     if($row['privilege'] == 'viewUser'){
                         echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser' selected>viewUser</option><option value='editUser'>editUser</option><option value='superUser'>superUser</option></select></td>";

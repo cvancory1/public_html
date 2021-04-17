@@ -7,20 +7,20 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
-    echo " here";
+    // echo " here";
     if(isset($_POST["submit_button"]) ) {
         $usersCount = count($_POST["username"]);
-        echo $usersCount;
+        // echo $usersCount;
         for($i=0; $i<$usersCount; $i++) {
 
             $username = $_POST['username'][$i];
             $privilege = $_POST['Privilege'][$i];
 
-            echo $username . " ". $privilege . " ";
+            // echo $username . " ". $privilege . " ";
             $sql = " UPDATE Login SET privilege= '$privilege' WHERE username= '$username' ";
             
 
-            echo $sql;
+            // echo $sql;
             $resuli = mysqli_query($connection, $sql);
 
         }

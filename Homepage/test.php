@@ -205,24 +205,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     }
 
     // none hides the table from view
-    function showUsersTable() {
-        var main = document.getElementById("mainTable");
-        var delete = document.getElementById("deleteTable");
-
-
-        if (main.style.display === "none") { 
-            main.style.display = "block";
-            delete.style.display = "none";
-        } else {
-            main.style.display = "none";
-            delete.style.display = "none";
-
-        }
-
-
-    }
-
-
+   
    
 
  </script>

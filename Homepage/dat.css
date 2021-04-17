@@ -211,3 +211,10 @@ a {
     top: -5px;
     left: 105%; 
   }
+
+.SignOut{
+  position:absolute;
+  bottom:20px;
+  right:50px;
+
+}

@@ -156,7 +156,7 @@ body {
 }  
 
 
-/* logout button form */
+/* logout button form  */
 @import url(https://fonts.googleapis.com/css?family=Oswald:400);
 
 .navigation {
@@ -208,3 +208,11 @@ a:hover .logout{
 a {
   text-decoration: none;
 }
+
+/* end of logout button css  */
+
+
+.tooltip .tooltiptext .openbtn{
+    top: -5px;
+    left: 105%; 
+  }

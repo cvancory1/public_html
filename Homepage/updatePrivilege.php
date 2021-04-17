@@ -11,13 +11,13 @@
     if(isset($_POST["submit_button"]) ) {
         $usersCount = count($_POST["username"]);
         echo $usersCount;
-        for($i=0;$i<$usersCount;$i++) {
+        for($i=0; $i<$usersCount; $i++) {
 
             $username = $_POST['username'][$i];
             $privilege = $_POST['Privilege'][$i];
-            
+
             echo $username . " ". $privilege . " ";
-            $sql = " UPDATE USERS SET privelege= $privilege WHERE username= $username";
+            $sql = " UPDATE Login SET privelege= $privilege WHERE username= $username";
             
 
             echo $sql;

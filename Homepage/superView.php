@@ -69,7 +69,7 @@
 
                 while($row=mysqli_fetch_array($r)){
                     echo "<tr>";
-                    echo "<td><input type='checkbox' name='username[]' value='$username' ></td>";
+                    echo "<td><input type='checkbox' name='username[]' value=$username ></td>";
                     echo "<td>" . $row['username'] . "</td>";
                     
 

@@ -71,10 +71,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
    
     // logout button TODO move into the session variable if stmt
-    //  echo "<div class='profile'>
-    //      <button class='button'>  </button> 
-    //     <a href='logout.php'>Log Out</a>
-    //     </div>";
+     echo "<div class='profile'>
+        <!-- <button class='button'>  </button> -->
+        <a href='logout.php'>Log Out</a>
+        </div>";
 
         echo "<div id='main'>";
 
@@ -83,11 +83,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
            
-            // echo "<div class='navigation'>
-            //     <a class='button' href='logout.php' <i class='ri-logout-box-r-line'></i>>
-            //   <div class='logout'>LOGOUT</div>
-            //     </a>
-            //   </div>";
            
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
 

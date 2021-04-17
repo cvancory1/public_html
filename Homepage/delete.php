@@ -34,7 +34,9 @@
                 echo $sql;
                 $resuli = mysqli_query($connection, $sql);
 
-              
+                if (!$result) {
+                    echo 'Invalid query: ' . mysql_error();
+                }
             }
         }
     mysqli_close($connection);

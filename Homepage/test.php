@@ -13,7 +13,7 @@
 <body> 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 
 
@@ -81,7 +81,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         print_r($_SESSION['privilege']);
         
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
-           
+            echo "<a class='button' href='' >
+            <div class='logout'>LOGOUT</div>
+              </a>" ;
            
             if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
 
@@ -111,7 +113,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 
                     <div class='menu'>
                     <button class='openbtn' onclick='openNav()'>☰</button>
-                    <button class='placeholder'>X</button>
+                    <button class='placeholder'> <i class='ri-mail-send-line'></i></button>
                     <button class='placeholder'>X</button>
                     <button class='placeholder'>X</button>
                     </div>
@@ -167,21 +169,18 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
         document.getElementById("main").style.marginLeft= "250";
-        // document.getElementById("deleteTable").style.marginLeft = "250px";
 
     }
 
     function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
         document.getElementById("main").style.marginLeft= "200px";
-        // document.getElementById("deleteTable").style.marginLeft= "0";
 
     }
 
     function showDeleteTable() {
         var x = document.getElementById("mainTable");
         var y = document.getElementById("deleteTable");
-        // var z = document.getElementById("mySidebar")
 
 
         if (x.style.display === "none") { 

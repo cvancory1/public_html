@@ -131,7 +131,7 @@ body {
     background-color:black;
     position:absolute;
     top:20px;
-    right:30px;
+    right:50px;
 } 
   
 #warning{
@@ -151,9 +151,8 @@ body {
     z-index: 9;
 }  
 
-/* 
-logout button form 
-@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+/* logout button form 
+@import url(https://fonts.googleapis.com/css?family=Oswald:400); */
 
 .navigation {
   width: 100%;
@@ -166,7 +165,7 @@ img {
   float: left;
 }
 
-/* .logout {
+ .logout {
   font-size: .8em;
   font-family: 'Oswald', sans-serif;
     position: relative;
@@ -178,8 +177,8 @@ img {
   transition: opacity .45s;
   -webkit-transition: opacity .35s;
 
-} */
-/* 
+} 
+
 .button {
     text-decoration: none;
     float: right;
@@ -203,7 +202,7 @@ a:hover .logout{
 
 a {
   text-decoration: none;
-} */ */
+} 
 
 /* end of logout button css  */
 

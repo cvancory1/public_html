@@ -124,6 +124,11 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <br> <br> <br> <br>";
 
 
+        echo "<div id='totalMajors' >";
+        include 'getData.php';
+        echo "</div>"; // shows the pie chart
+
+
         echo "<div id='mainTable' >";
         include 'AlumniTable.php';
         echo "</div>"; // end of mainTable k
@@ -243,6 +248,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         dummy.select();
         document.execCommand("copy");
         document.body.removeChild(dummy);
+
+        alert("All of the emails displayed were copied to your clipboard");
     }
 
    

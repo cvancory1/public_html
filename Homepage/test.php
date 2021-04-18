@@ -95,7 +95,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             <button class='openbtn' onclick='openNav()'>☰</button>
             <button class='openbtn'  onclick='openNav()' title='Open Sidebar'> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm5 2H4v14h4V5zm2 0v14h10V5H10z' fill='rgba(255,255,255,1)'/>  </svg>  </button>
             <button class='placeholder'onclick='getEmails()'  title='Email Alumni'> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M22 20.007a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V19h18V7.3l-8 7.2-10-9V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v16.007zM4.434 5L12 11.81 19.566 5H4.434zM0 15h8v2H0v-2zm0-5h5v2H0v-2z' fill='rgba(255,255,255,1)'/></svg></i></button>
-            <button class='placeholder'  title='Display Data Charts'> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0H24V24H0z'/><path d='M5 3v16h16v2H3V3h2zm15.293 3.293l1.414 1.414L16 13.414l-3-2.999-4.293 4.292-1.414-1.414L13 7.586l3 2.999 4.293-4.292z' fill='rgba(255,255,255,1)'/></svg></button>
+            <button class='placeholder' onclick='showCharts()' title='Display Data Charts'> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0H24V24H0z'/><path d='M5 3v16h16v2H3V3h2zm15.293 3.293l1.414 1.414L16 13.414l-3-2.999-4.293 4.292-1.414-1.414L13 7.586l3 2.999 4.293-4.292z' fill='rgba(255,255,255,1)'/></svg></button>
             
             
         
@@ -124,14 +124,14 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <br> <br> <br> <br>";
 
 
-        echo "<div id='totalMajors' >";
-        include 'pie.php';
-        echo "</div>"; // shows the pie chart
-
 
         echo "<div id='mainTable' >";
         include 'AlumniTable.php';
         echo "</div>"; // end of mainTable k
+
+        echo "<div id='totalMajors' style='display:none;' >";
+        include 'pie.php';
+        echo "</div>"; // shows the pie chart
 
 
         echo "<div id='deleteTable'  style='display:none;' >";
@@ -193,6 +193,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     }
 
+
     function showDeleteTable() {
         var x = document.getElementById("mainTable");
         var y = document.getElementById("deleteTable");
@@ -213,7 +214,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     }
 
-    // none hides the table from view
+    // shows the view for SuperUsers only where they can promote users to editUsers or superUsers
     function showUsers() {
         var x = document.getElementById("mainTable");
         var y = document.getElementById("deleteTable");
@@ -227,6 +228,28 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             x.style.display = "block";
             y.style.display = "none";
             z.style.display = "none";
+        }
+
+    }
+
+    function showCharts() {
+        var a = document.getElementById("mainTable");
+        var b = document.getElementById("deleteTable");
+        var c = document.getElementById("superView");
+        var d= document.getElementById("totalMajors");
+
+
+        if (d.style.display === "none") { 
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display = "none";
+            d.style.display = "block";
+        } else {
+            a.style.display = "block";
+            b.style.display = "none";
+            c.style.display = "none";
+            d.style.display = "none";
+
         }
 
     }

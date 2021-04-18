@@ -11,7 +11,7 @@
     if(isset($_POST["submit_button"]) ) {
         $usersCount = count($_POST["username"]);
         // echo $usersCount;
-        for($i=0; $i<$usersCount; $i++) {
+        for($i=0; $i < $usersCount; $i++) {
 
             $username = $_POST['username'][$i];
             $privilege = $_POST['Privilege'][$i];
@@ -24,8 +24,7 @@
     }
 
     mysqli_close($connection);
-    header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
-
+    // header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 
 
 ?>

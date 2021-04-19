@@ -128,10 +128,15 @@
             ?>
 
             <!-- selector -->
+
             <div align="center" >
+                <table>
+                <tr> 
+                <td>
+
 
                 <select class="inputTable" data-target=".tableSelect"  name="inputTable">
-                    <option value="alumniID" data-show=".alumniID">Alumni ID</option>
+                    <option value="alumniID" data-show=".alumniID"  selected>Alumni ID</option>
                     <option value="birthdate" data-show=".birthdate">Birthdate</option>
                     <option value="status" data-show=".status">Status</option>
                     <option value="email" data-show=".email">Email</option>
@@ -145,6 +150,9 @@
                     <option value="countryRegion" data-show=".countryRegion">Country/Region</option>
                     <option value="zipcode" data-show=".zipcode">Zipcode</option>
                 </select>
+
+                </td>
+                <td>
                 
                 <!-- search bar -->
                 <div class="tableSelect" id = tableTest>
@@ -162,6 +170,12 @@
                     <div class="countryRegion hide"><input type="text" id="countryRegionInput" class="box" onkeyup="filterTable(this);" name="countryRegion" placeholder="Search for Country/Region..."></div>
                     <div class="zipcode hide"><input type="text" id="zipcodeInput" class="box" onkeyup="filterTable(this);" name="zipcode" placeholder="Search for Zipcode..."></div>
                 </div>
+
+                </td>
+                </tr>
+                </table>
+
+
             </div>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -178,9 +192,20 @@
                 // triggers the above function before right before the user sees the page
                 // without this the user would see all of the textboxs
                 $(document).ready(function(){ 
-                    
+                    var show = $("option:selected", this).data('show');
+                    $(show).removeClass('hide');
                 });
             </script>
+
+
+
+
+
+
+
+
+
+
 
             <style>
                 .hide {

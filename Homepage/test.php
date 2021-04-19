@@ -148,11 +148,82 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         // }
     }//end "if" privlege
 
+
+    
+
  
 
 ?>
 
+        <div align="center" >
+                <table>
+                <tr> 
+                <td>
 
+
+                <select class="inputTable" data-target=".tableSelect"  name="inputTable">
+                    <option value="alumniID" data-show=".alumniID"  selected>Alumni ID</option>
+                    <option value="birthdate" data-show=".birthdate">Birthdate</option>
+                    <option value="status" data-show=".status">Status</option>
+                    <option value="email" data-show=".email">Email</option>
+                    <option value="phoneNumber" data-show=".phoneNumber">Phone Number</option>
+                    <option value="firstName" data-show=".firstName">First Name</option>
+                    <option value="middleName" data-show=".middleName">Middle Name</option>
+                    <option value="lastName" data-show=".lastName">Last Name</option>
+                    <option value="streetName" data-show=".streetName">Street Name</option>
+                    <option value="city" data-show=".city">City</option>
+                    <option value="state" data-show=".state">State</option>
+                    <option value="countryRegion" data-show=".countryRegion">Country/Region</option>
+                    <option value="zipcode" data-show=".zipcode">Zipcode</option>
+                </select>
+
+                </td>
+                <td>
+                
+                <!-- search bar -->
+                <div class="tableSelect" id = tableTest>
+                    <div class="alumniID hide"><input type="text" id="alumniIDInput" class="box" onkeyup="filterTable(this);" name="alumniID" placeholder="Search for Alumni ID..."></div>
+                    <div class="birthdate hide"><input type="text" id="birthdateInput" class="box" onkeyup="filterTable(this);" name="birthdate" placeholder="Search for Birthdate..."></div>
+                    <div class="status hide"><input type="text" id="statusInput" class="box" onkeyup="filterTable(this);" name="status" placeholder="Search for Status..."></div>
+                    <div class="email hide"><input type="text" id="emailInput" class="box" onkeyup="filterTable(this);" name="email" placeholder="Search for Email..."></div>
+                    <div class="phoneNumber hide"><input type="text" id="phoneNumberInput" class="box" onkeyup="filterTable(this);" name="phoneNumber" placeholder="Search for Phone Number..."></div>
+                    <div class="firstName hide"><input type="text" id="firstNameInput" class="box" onkeyup="filterTable(this);" name="firstName" placeholder="Search for First Name..."></div>
+                    <div class="middleName hide"><input type="text" id="middleNameInput" class="box" onkeyup="filterTable(this);" name="middleName" placeholder="Search for Middle Name..."></div>
+                    <div class="lastName hide"><input type="text" id="lastNameInput" class="box" onkeyup="filterTable(this);" name="lastName" placeholder="Search for Last Name..."></div>
+                    <div class="streetName hide"><input type="text" id="streetNameInput" class="box" onkeyup="filterTable(this);" name="streetName" placeholder="Search for Street Name..."></div>
+                    <div class="city hide"><input type="text" id="cityInput" class="box" onkeyup="filterTable(this);" name="city" placeholder="Search for City..."></div>
+                    <div class="state hide"><input type="text" id="stateInput" class="box" onkeyup="filterTable(this);" name="state" placeholder="Search for State..."></div>
+                    <div class="countryRegion hide"><input type="text" id="countryRegionInput" class="box" onkeyup="filterTable(this);" name="countryRegion" placeholder="Search for Country/Region..."></div>
+                    <div class="zipcode hide"><input type="text" id="zipcodeInput" class="box" onkeyup="filterTable(this);" name="zipcode" placeholder="Search for Zipcode..."></div>
+                </div>
+
+                </td>
+                </tr>
+                </table>
+
+
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                // waits for the user to click something     
+                //       event     selector    data     handler
+                $(document).on('change', '.inputTable', function() { 
+                    var target = $(this).data('target'); // previous thing selected
+                    var show = $("option:selected", this).data('show');// new thing selected
+                    $(target).children().addClass('hide');// adds the class hide so the CSS will hide it
+                    $(show).removeClass('hide');// removes the hide functionality on the new thing selected
+                });
+
+                // triggers the above function before right before the user sees the page
+                // without this the user would see all of the textboxs
+                $(document).ready(function(){ 
+                    var show = $("option:selected", this).data('show');
+                    $(show).removeClass('hide');
+                });
+            </script>
+
+    </div>
 
 <script type="text/javascript">
 

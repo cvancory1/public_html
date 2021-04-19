@@ -259,7 +259,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
         echo "<div id='mainTable' >";
-        include 'AlumniTable.php';
+        include 'emailTest.php';
         echo "</div>"; // end of mainTable k
 
         echo "<div id='totalMajors' style='display:none;' >";

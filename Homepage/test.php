@@ -198,16 +198,20 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var x = document.getElementById("mainTable");
         var y = document.getElementById("deleteTable");
         var z = document.getElementById("superView");
-
+        var d= document.getElementById("totalMajors");
 
         if (x.style.display === "none") { 
             x.style.display = "block";
             y.style.display = "none";
             superView.style.display = "none";
+            d.style.display = "none";
+
         } else {
             x.style.display = "none";
             y.style.display = "block";
             z.style.display = "none";
+            d.style.display = "none";
+
         }
 
 
@@ -219,15 +223,20 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var x = document.getElementById("mainTable");
         var y = document.getElementById("deleteTable");
         var z = document.getElementById("superView");
+        var d= document.getElementById("totalMajors");
+
 
         if (z.style.display === "none") { 
             x.style.display = "none";
             y.style.display = "none";
             z.style.display = "block";
+            d.style.display = "none";
         } else {
             x.style.display = "block";
             y.style.display = "none";
             z.style.display = "none";
+            d.style.display = "none";
+
         }
 
     }

@@ -253,6 +253,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var z = document.getElementById("superView");
         var d= document.getElementById("totalMajors");
         var e= document.getElementById("emailTest");
+        var f= document.getElementById("addTable");
+
 
 
         if (x.style.display === "none") { 
@@ -261,6 +263,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             z.style.display = "none";
             d.style.display = "none";
             e.style.display = "none";
+            f.style.display = "none";
+
 
         } else {
             x.style.display = "none";
@@ -268,6 +272,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             z.style.display = "none";
             d.style.display = "none";
             e.style.display = "none";
+            f.style.display = "none";
+
 
         }
     }
@@ -279,6 +285,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var z = document.getElementById("superView");
         var d= document.getElementById("totalMajors");
         var e= document.getElementById("emailTest");
+        var f= document.getElementById("addTable");
+
 
 
         if (z.style.display === "none") { 
@@ -287,6 +295,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             z.style.display = "block";
             d.style.display = "none";
             e.style.display = "none";
+            f.style.display = "none";
+
 
         } else {
             x.style.display = "block";
@@ -294,6 +304,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             z.style.display = "none";
             d.style.display = "none";
             e.style.display = "none";
+            f.style.display = "none";
+
 
         }
 
@@ -305,6 +317,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var c = document.getElementById("superView");
         var e= document.getElementById("emailTest");
         var d= document.getElementById("totalMajors");
+        var f= document.getElementById("addTable");
+
 
 
         if (d.style.display === "none") { 
@@ -313,6 +327,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             c.style.display = "none";
             d.style.display = "block";
             e.style.display = "none";
+            f.style.display = "none";
+
 
         } else {
             a.style.display = "block";
@@ -320,6 +336,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             c.style.display = "none";
             d.style.display = "none";
             e.style.display = "none";
+            f.style.display = "none";
+
 
 
         }
@@ -332,6 +350,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var c = document.getElementById("superView");
         var d= document.getElementById("totalMajors");
         var e= document.getElementById("emailTest");
+        var f= document.getElementById("addTable");
+
 
 
         if (e.style.display === "none") { 
@@ -340,6 +360,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             c.style.display = "none";
             d.style.display = "none";
             e.style.display = "block";
+            f.style.display = "none";
+
 
         } else {
             a.style.display = "block";
@@ -347,6 +369,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             c.style.display = "none";
             d.style.display = "none";
             e.style.display = "none";
+            f.style.display = "none";
+
 
 
         }

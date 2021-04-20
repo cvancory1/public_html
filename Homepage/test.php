@@ -104,7 +104,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" ){
 
             echo"
-            <button class='placeholder' title='Add Data'> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z' fill='rgba(255,255,255,1)'/></svg></button>
+            <button class='placeholder' onclick='showAddTable()' title='Add Data'> <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z' fill='rgba(255,255,255,1)'/></svg></button>
             <button class='placeholder' onclick='showDeleteTable()' title='Delete Data'>  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-9 3h2v6H9v-6zm4 0h2v6h-2v-6zM9 4v2h6V4H9z' fill='rgba(255,255,255,1)'/></svg></button>
             <button class='placeholder'  title='Edit Data'>  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M12.9 6.858l4.242 4.243L7.242 21H3v-4.243l9.9-9.9zm1.414-1.414l2.121-2.122a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414l-2.122 2.121-4.242-4.242z' fill='rgba(255,250,250,1)'/></svg></button>
            
@@ -218,7 +218,34 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         document.getElementById("main").style.marginLeft= "100";
 
     }
+    function showAddTable(){
+        var a = document.getElementById("mainTable");
+        var b = document.getElementById("deleteTable");
+        var c = document.getElementById("superView");
+        var e= document.getElementById("emailTest");
+        var d= document.getElementById("totalMajors");
+        var f= document.getElementById("addTable");
 
+        if((f.style.display == "none"){
+            x.style.display = "none";
+            y.style.display = "none";
+            z.style.display = "none";
+            d.style.display = "none";
+            e.style.display = "none";
+            f.style.display === "block";
+
+        } else {
+            x.style.display = "none";
+            y.style.display = "block";
+            z.style.display = "none";
+            d.style.display = "none";
+            e.style.display = "none";
+            f.style.display ="none";
+
+
+        }
+
+    }
 
     function showDeleteTable() {
         var x = document.getElementById("mainTable");

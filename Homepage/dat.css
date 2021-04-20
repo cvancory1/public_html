@@ -178,6 +178,9 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
+    bottom:150px;
+    right:420px;
+      
   }
   
   #btntest
@@ -188,7 +191,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     
-    width: 170px;
+    width: 120px;
     height: 40px;
     line-height: 1;
     font-size: 18px;

@@ -67,7 +67,7 @@
     <form action="test.php" method="post">
         <!-- <input type="button" value="Click" id="btntest" />
          -->
-         <button class=button value="Click" id="btntest">
+         <button class= button value="Click" id="btntest">
             <span class="submit">Submit</span>
             <span class="loading"><i class="fa fa-refresh"></i></span>
             <span class="check"><i class="fa fa-check"></i></span>

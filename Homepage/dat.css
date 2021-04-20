@@ -207,7 +207,7 @@ body {
 }
 
 
-input.selectUsername {
+.selectUsername {
     width : 20px;
     height : 20px;
 }

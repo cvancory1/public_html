@@ -103,6 +103,15 @@
             document.execCommand("copy");
             document.body.removeChild(dummy);
         });
+
+
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", active);
+
+        function active() {
+        btn.classList.toggle("is_active");
+        }
     </script>
 
     </body>

@@ -138,7 +138,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         include 'emailTest.php';
         echo "</div>"; // end of mainTable k
 
-      
+        echo "<div id='addTable'  style='display:none;  >";
+        include 'addTest2.php';
+        echo "</div>"; // end of table shown for deleting  class
 
         echo "<div id='deleteTable'  style='display:none;  >";
         include 'deleteTable.php';

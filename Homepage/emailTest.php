@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="dat.css" type="text/css" />
     </header>
 
-    <body>
 
     <form action="test.php" method="post">
         <!-- <input type="button" value="Click" id="btntest" />
@@ -117,5 +116,4 @@
         button.addEventListener('transitionend', addClass);
     </script>
 
-    </body>
 </html>

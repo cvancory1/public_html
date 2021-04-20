@@ -6,7 +6,7 @@
 <html lang = "en">
 
     <header>
-        <title> Test UI </title>
+        <title> Alumni Database</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link rel="stylesheet" href="dat.css" type="text/css" />
     </header>

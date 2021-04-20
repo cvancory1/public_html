@@ -151,6 +151,12 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         include 'superView.php';
         echo "</div>"; // end of superview div
 
+        echo "<div id='foo1'   >";
+        include 'foo1.php';
+        echo "</div>"; // end of superview div
+
+
+
    
 
 

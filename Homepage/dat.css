@@ -168,7 +168,7 @@ body {
 
 
 /* for submit button on emailTest.php */
-/* *, *:before, *:after {
+ *, *:before, *:after {
     box-sizing: border-box;
     outline: none;
 }
@@ -297,4 +297,4 @@ html {
     100% {
         transform: scale(1);
    }
-} */
+} 

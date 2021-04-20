@@ -244,7 +244,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 }
             </script>
 
-            <div align="center">
                 <table>
                     <tr>
                         <td>

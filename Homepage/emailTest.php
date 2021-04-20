@@ -64,7 +64,7 @@
             mysqli_close($connection);
         ?>
 
-    <form action="emailTest.php" method="post">
+    <form action="test.php" method="post">
         <!-- <input type="button" value="Click" id="btntest" />
          -->
     <div class="wrapper">

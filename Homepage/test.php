@@ -133,6 +133,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let tr = table.getElementsByTagName("tr");
 
                     var index = input;
+                    alert(index);
                    
 
              // if (id == "alumniIDInput"){

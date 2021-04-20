@@ -69,7 +69,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
    
     echo "<div id='main'>";
-
+// ad
 
     print_r($_SESSION['privilege']);
     

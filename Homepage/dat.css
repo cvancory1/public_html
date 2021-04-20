@@ -77,7 +77,7 @@ body {
     padding-right: 30%;
     padding-top: -5%; 
     display: grid;
-    place
+    place-items: center;
 
 
 }

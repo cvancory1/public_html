@@ -71,7 +71,7 @@ body {
 #main{
     transition: margin-left .5s;
     /* margin-left: 200px;
-    margin-right: -10px; */
+    */
     padding: 10px;
 
     /* padding-left: 50%; */
@@ -79,6 +79,7 @@ body {
     padding-top: -5%;  */
     display: grid;
     place-items: center;
+    margin-right: -10px; 
    
 
 

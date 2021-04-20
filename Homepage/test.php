@@ -133,7 +133,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let tr = table.getElementsByTagName("tr");
 
                     // var index= $('#dropdown option').length;
-                    var e = document.getElementById("id");
+                    var e = document.getElementById(id);
                     var index = e.options[e.selectedIndex].value;
                     alert(index);
                     // return result

@@ -69,8 +69,9 @@
 
 <script language="JavaScript">
 		document.getElementById('checkAll').onclick = function() {
-            var checkboxes = document.querySelectorAll("input[type='checkbox']");
+            var checkboxes = document.querySelectorAll("#selectUsername");
             for (var checkbox of checkboxes) {
+            
                 checkbox.checked = this.checked;
             }
         }

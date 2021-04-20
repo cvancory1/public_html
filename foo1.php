@@ -1,71 +1,69 @@
+<!-- Holds the code which displays the username and privelege of all users in the database 
+    - calls updatePrivelege.php if the superuser wants to update priveleges
+    - is #included in other files  -->
 
-<html>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang = "en">
 
-<?php
-    echo"here";
-        if($connection = @mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
+    <header>
+        <title> Test UI </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="dat.css" type="text/css" />
+    </header>
+
+
+    <form method='post' action='updatePrivilege.php'>
+    <input type='submit'class= 'submitButton'  value='Update Privilege' name='submit_button'><br><br>
+    
+
+        <?php
+            // Connect to MySQL Database
+            if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;
             }
             else{
                 print '<p>ERROR: connecting to MySQL.</p>';
             }
 
-            // echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
-
-                //Query to return contents of table Alumni here 
-                $query="SELECT * FROM Alumni";
-                $r=mysqli_query($connection, $query);
-                echo "<table id='alumniDelete' class='styled-table'>
+            //Query to return contents of table Alumni
+            $query="SELECT username, privilege FROM Login";
+            $r=mysqli_query($connection, $query);
+                echo "<table id='alumniTable' class='styled-table'>
                     <thead>
                         <tr>
-                        <th> Select </th>
-                        <th> Alumni ID </th>
-                        <th> Birthdate </th>
-                        <th> Status </th>
-                        <th> Email </th>
-                        <th> Phone Number </th>
-                        <th> First Name </th>
-                        <th> Middle Name </th>
-                        <th> Last Name </th>
-                        <th> Street Name </th>
-                        <th> City </th>
-                        <th> State </th>
-                        <th> Country/Region </th>
-                        <th> Zipcode </th>
-                    </tr>
-                </thead>";
+                            <th> Select User </th>
+                            <th> Username </th>
+                            <th> Privilege </th>
+                        </tr>
+                    </thead>";
 
-            while($row=mysqli_fetch_array($r)){
-                echo "<tr>";
-                $id = $row['alumniID'];
-                $bday = $row['birthdate'];
-                echo "<td><input type='checkbox' name='delete[]' value='$id' ></td>";
-                echo "<input type='hidden' name='birthday[]' value= $bday >";
- 
-                echo "<td>" . $row['alumniID'] . "</td>";
-                echo "<td>" . $row['birthdate'] . "</td>";
-                echo "<td>" . $row['status'] . "</td>";
-                echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['phoneNumber'] . "</td>";
-                echo "<td>" . $row['firstName'] . "</td>";
-                echo "<td>" . $row['middleName'] . "</td>";
-                echo "<td>" . $row['lastName'] . "</td>";
-                echo "<td>" . $row['streetName'] . "</td>";
-                echo "<td>" . $row['city'] . "</td>";
-                echo "<td>" . $row['state'] . "</td>";
-                echo "<td>" . $row['countryRegion'] . "</td>";
-                echo "<td>" . $row['zipcode'] . "</td>";
-                echo "</tr>";
-            }
+                while($row=mysqli_fetch_array($r)){
+                    echo "<tr>";
+                    $username = $row['username'];
+                    echo "<td><input type='checkbox' name='username[]' value=$username ></td>";
+                    echo "<td>" . $row['username'] . "</td>";
 
-            echo "</table>";
+                    if($row['privilege'] == 'viewUser'){
+                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser' selected>viewUser</option><option value='editUser'>editUser</option><option value='superUser'>superUser</option></select></td>";
+                    }
+                    else if($row['privilege'] == 'editUser'){
+                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser'>viewUser</option><option value='editUser' selected>editUser</option><option value='superUser'>superUser</option></select></td>";
+                        
+                    }
+                    else if($row['privilege'] == 'superUser'){
+                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser'>viewUser</option><option value='editUser'>editUser</option><option value='superUser' selected>superUser</option></select></td>"; 
+                        
+                    }
+                    echo "</tr>";
 
-            mysqli_close($connection);
+                }
 
-?>
+                echo "</table>";
+
+                mysqli_close($connection);
+        ?>
+
+</form>
 
 
 </html>
-

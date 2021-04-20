@@ -122,7 +122,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 </div>
                 <br> <br> <br> <br>";
         ?>
-        
+
     <div id="main">
          
           
@@ -151,16 +151,17 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         include 'superView.php';
         echo "</div>"; // end of superview div
 
-    echo "</div>"; // end of webpage class
+   
 
 
         // }
     }//end "if" privlege
 
 
- 
+    echo "</div>"; // end of webpage class
 
 ?>
+
 
 
 

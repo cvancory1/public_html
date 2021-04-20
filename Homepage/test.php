@@ -134,6 +134,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
                     var index = input;
                     alert(input.value);
+                    alert(ele.id);
                    
 
              // if (id == "alumniIDInput"){

@@ -133,7 +133,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let tr = table.getElementsByTagName("tr");
 
                     var index= $('#dropdown option').length;
-                    alert(index);
                     // if (id == "alumniIDInput"){
                     //     index = 0;
                     // }

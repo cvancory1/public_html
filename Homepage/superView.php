@@ -69,7 +69,7 @@
 
 <script language="JavaScript">
         document.getElementById('select-all').onclick = function() {
-            var checkboxes = document.getElementsByName('username');
+            var checkboxes = document.getElementsByName('username[]');
             for (var checkbox of checkboxes) {
             checkbox.checked = this.checked;
             }

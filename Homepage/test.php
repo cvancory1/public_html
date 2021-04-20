@@ -127,24 +127,13 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             <script type="text/javascript">
                 function filterTable(ele) {
                     var id = ele.id;
-                    // let input = document.getElementById(id);
-                    // let filter = input.value.toUpperCase();
-                    // let table = document.getElementById("alumniTable");
-                    // let tr = table.getElementsByTagName("tr");
+                    let input = document.getElementById(id);
+                    let filter = input.value.toUpperCase();
+                    let table = document.getElementById("alumniTable");
+                    let tr = table.getElementsByTagName("tr");
 
-                    // var index= $('#dropdown option').length;
-                    var e = document.getElementById(id);
-                    var index = e.options[e.selectedIndex].value;
-                    alert(index);
-                    // return result
-
-
-            // function GetSelectedValue(){
-            //     var e = document.getElementById("country");
-            //     var result = e.options[e.selectedIndex].value;
-            //     return result
-            //     document.getElementById("result").innerHTML = result;
-            // }
+                    var index = input;
+                   
 
              // if (id == "alumniIDInput"){
                     //     index = 0;
@@ -207,11 +196,11 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     <tr>
                         <td>
                             <select class="inputTable" data-target=".tableSelect"  name="inputTable" id = 'dropdown'>
-                                <option value="alumniID" data-show=".alumniID" selected>Alumni ID</option>
-                                <option value="birthdate" data-show=".birthdate">Birthdate</option>
-                                <option value="status" data-show=".status">Status</option>
-                                <option value="email" data-show=".email">Email</option>
-                                <option value="phoneNumber" data-show=".phoneNumber">Phone Number</option>
+                                <option value="1" data-show=".alumniID" selected>Alumni ID</option>
+                                <option value="2" data-show=".birthdate">Birthdate</option>
+                                <option value="3" data-show=".status">Status</option>
+                                <option value="4" data-show=".email">Email</option>
+                                <option value="5" data-show=".phoneNumber">Phone Number</option>
                                 <option value="firstName" data-show=".firstName">First Name</option>
                                 <option value="middleName" data-show=".middleName">Middle Name</option>
                                 <option value="lastName" data-show=".lastName">Last Name</option>

@@ -138,10 +138,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         include 'emailTest.php';
         echo "</div>"; // end of mainTable k
 
-        echo "<div id='totalMajors' style='display:none;' >";
-        include 'pie.php';
-        echo "</div>"; // shows the pie chart
-
+      
 
         echo "<div id='deleteTable'  style='display:none;  >";
         include 'deleteTable.php';
@@ -162,6 +159,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
     echo "</div>"; // end of webpage class
+    echo "<div id='totalMajors' style='display:none;' >";
+    include 'pie.php';
+    echo "</div>"; // shows the pie chart
+
 
 ?>
 

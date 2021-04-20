@@ -14,7 +14,7 @@
 
     <form method='post' action='updatePrivilege.php'>
     <input type='submit'class= 'submitButton'  value='Update Privilege' name='submit_button'>
-    <input type="button" value = "select All" id='checkAll' >
+    <input type="checkbox" value = "select All" id='select-all' >
     
 
         <?php
@@ -68,13 +68,12 @@
 
 
 <script language="JavaScript">
-		document.getElementById('checkAll').onclick = function() {
-            var checkboxes = document.querySelectorAll("#selectUsername");
-            for (var checkbox of checkboxes) {
-                alert("hi");
-                checkbox.checked = this.checked;
-            }
+	document.getElementById('select-all').onclick = function() {
+        var checkboxes = document.getElementsByName('username');
+        for (var checkbox of checkboxes) {
+            checkbox.checked = this.checked;
         }
+    }
 		</script>
 
 </html>

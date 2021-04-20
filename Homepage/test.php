@@ -132,8 +132,21 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
-                    var index= $('#dropdown option').length;
-                    // if (id == "alumniIDInput"){
+                    // var index= $('#dropdown option').length;
+                    var e = document.getElementById("id");
+                    var index = e.options[e.selectedIndex].value;
+                    alert(index);
+                    // return result
+
+
+            // function GetSelectedValue(){
+            //     var e = document.getElementById("country");
+            //     var result = e.options[e.selectedIndex].value;
+            //     return result
+            //     document.getElementById("result").innerHTML = result;
+            // }
+
+             // if (id == "alumniIDInput"){
                     //     index = 0;
                     // }
                     // else if (id == "birthdateInput"){
@@ -172,6 +185,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     // else if (id == "zipcodeInput"){
                     //     index = 12;
                     // }
+
 
                     for (let i = 0; i < tr.length; i++) {
                         td = tr[i].getElementsByTagName("td")[index];

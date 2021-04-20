@@ -10,7 +10,7 @@
 
 
 <?php
-include 'searchAlumni.php';
+// include 'searchAlumni.php';
 
 echo "<div id='mainTable'>";
 

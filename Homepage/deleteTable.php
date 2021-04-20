@@ -7,7 +7,7 @@
 <html lang = "en">
 
 
- <form method='post' action='delete.php'>
+ <form method='post' action ='delete.php'>
     <!-- <input type='submit' class= 'submitButton' value='Delete' name='but_delete'><br><br> -->
     <input type='submit'  value='delete' name='but_delete'><br><br>
 

@@ -68,7 +68,7 @@
         <!-- <input type="button" value="Click" id="btntest" />
          -->
     <div class="wrapper">
-  <button class="" id ="btntest" >
+  <button class="" id="btntest">
     <span>Submit</span>
     <div class="success">
     <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
@@ -103,7 +103,6 @@
             document.execCommand("copy");
             document.body.removeChild(dummy);
         });
-
 
         let btn = document.querySelector("button");
 

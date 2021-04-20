@@ -225,7 +225,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         include 'AlumniTable.php';
         echo "</div>"; // end of mainTable 
 
-        echo "<div id='emailTest' >";
+        echo "<div id='emailTest' style='display:none;' >";
         include 'emailTest.php';
         echo "</div>"; // end of mainTable k
 
@@ -379,8 +379,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var a = document.getElementById("mainTable");
         var b = document.getElementById("deleteTable");
         var c = document.getElementById("superView");
-        var e= document.getElementById("emailTest");
         var d= document.getElementById("totalMajors");
+        var e= document.getElementById("emailTest");
 
 
         if (e.style.display === "none") { 

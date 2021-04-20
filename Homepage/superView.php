@@ -41,7 +41,7 @@
                 while($row=mysqli_fetch_array($r)){
                     echo "<tr>";
                     $username = $row['username'];
-                    echo "<td><input type='checkbox' id = 'selectUsername' name='username[]' value=$username ></td>";
+                    echo "<td> <input type='checkbox' id = 'selectUsername' name='username[]' value=$username ></td>";
                     echo "<td>" . $row['username'] . "</td>";
 
                     if($row['privilege'] == 'viewUser'){
@@ -69,7 +69,7 @@
 
 <script language="JavaScript">
 		document.getElementById('checkAll').onclick = function() {
-            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var checkboxes = document.querySelectorAll("input[type='checkbox']");
             for (var checkbox of checkboxes) {
                 checkbox.checked = this.checked;
             }

@@ -67,11 +67,10 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
 }
 $_SESSION['LAST_ACTIVITY'] = $time;
 
+    // print_r($_SESSION['privilege']) ;
    
     echo "<div id='main'>";
-// ad
 
-    print_r($_SESSION['privilege']);
     
     if ($_SESSION["privilege"] == "superUser" ||  $_SESSION["privilege"] == "editUser" || $_SESSION["privilege"] == "viewUser") {
         
@@ -302,23 +301,24 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var y = document.getElementById("deleteTable");
         var z = document.getElementById("superView");
         var d= document.getElementById("totalMajors");
+        var e= document.getElementById("emailTest");
+
 
         if (x.style.display === "none") { 
             x.style.display = "block";
             y.style.display = "none";
             z.style.display = "none";
             d.style.display = "none";
+            e.style.display = "none";
 
         } else {
             x.style.display = "none";
             y.style.display = "block";
             z.style.display = "none";
             d.style.display = "none";
+            e.style.display = "none";
 
         }
-
-
-
     }
 
     // shows the view for SuperUsers only where they can promote users to editUsers or superUsers

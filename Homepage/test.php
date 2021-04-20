@@ -132,7 +132,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
-                    var index= $('input').length;
+                    var index= $('.inputTable').length;
                     alert(index);
                     // if (id == "alumniIDInput"){
                     //     index = 0;

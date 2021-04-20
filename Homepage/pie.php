@@ -26,7 +26,7 @@
 
       // Instantiate and draw our chart, passing in some options.
       var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-      chart.draw(data, {width: 800, height: 480});
+      chart.draw(data, {width: 800, height: 600});
     }
 
     </script>

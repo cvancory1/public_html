@@ -196,6 +196,7 @@ body {
     text-transform: uppercase;
     overflow: hidden;
     font:sans-serif;
+    font-size: 20px;
      
     display: flex;
     flex-direction: column;

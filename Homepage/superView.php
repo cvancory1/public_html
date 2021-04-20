@@ -13,7 +13,7 @@
 
 
     <form method='post' action='updatePrivilege.php'>
-    <input type='submit'class= submitButton  value='updatePrivilege' name='submit_button'><br><br>
+    <input type='submit'class= submitButton  value='Update Privilege' name='submit_button'><br><br>
     
 
         <?php

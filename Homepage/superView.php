@@ -71,7 +71,7 @@
 		document.getElementById('checkAll').onclick = function() {
             var checkboxes = document.querySelectorAll("#selectUsername");
             for (var checkbox of checkboxes) {
-            
+                alert("hi");
                 checkbox.checked = this.checked;
             }
         }

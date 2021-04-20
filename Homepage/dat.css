@@ -168,7 +168,47 @@ body {
 
 
 /* for submit button on emailTest.php */
- *, *:before, *:after {
+
+
+
+
+
+/* for submit button on emailTest.php */
+ 
+
+
+.submitButton {
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 12.5rem;
+    margin: 0;
+    padding: 1.5rem 3.125rem;
+    background-color: #3498db;
+    border: none;
+    border-radius: 0.3125rem;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    overflow: hidden;
+    font:sans-serif;
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 5%;
+    height: 5vh;
+}
+
+
+
+
+ /* *, *:before, *:after {
     box-sizing: border-box;
     outline: none;
 }
@@ -297,4 +337,4 @@ html {
     100% {
         transform: scale(1);
    }
-} 
+}  */

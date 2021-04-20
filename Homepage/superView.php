@@ -42,7 +42,7 @@
                     $username = $row['username'];
                     echo "<td> <input type='checkbox' id = 'selectUsername' name='username[]' value=$username ></td>";
                     echo "<td>" . $row['username'] . "</td>";
-
+                    
                     if($row['privilege'] == 'viewUser'){
                         echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser' selected>viewUser</option><option value='editUser'>editUser</option><option value='superUser'>superUser</option></select></td>";
                     }
@@ -62,7 +62,8 @@
 
                 mysqli_close($connection);
         ?>
-
+     <input type="checkbox" id="car" name="username" value="car">
+    <label for="car">Car</label>
 </form>
 
 

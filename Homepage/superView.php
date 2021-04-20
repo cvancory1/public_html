@@ -40,7 +40,7 @@
                 while($row=mysqli_fetch_array($r)){
                     echo "<tr>";
                     $username = $row['username'];
-                    echo "<td> <input type='checkbox' id = 'selectUsername' name='username[]' value=$username ></td>";
+                    echo "<td> <input type='checkbox' class = 'selectUsername' name='username[]' value=$username ></td>";
                     echo "<td>" . $row['username'] . "</td>";
                     
                     if($row['privilege'] == 'viewUser'){

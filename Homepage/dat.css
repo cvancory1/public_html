@@ -208,6 +208,6 @@ body {
 
 
 
-input./*checkbox class name*/ {
-    transform: scale(/*preferred magnification*/);
+input.userName {
+    transform: scale(30px);
   }

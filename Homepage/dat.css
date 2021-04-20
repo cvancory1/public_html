@@ -180,6 +180,7 @@ body{
     height: 100%;
   }
   
+  #btntest,
   button{
     font-family: 'Ubuntu', sans-serif;
     position: absolute;
@@ -202,11 +203,12 @@ body{
     transition: all .35s;
   }
   
+  #btntest,
   button:hover{
     background: #8C82FC;
     color: #fff;
   }
-  
+  #btntest,
   button span{
     opacity: 1;
     visibility: visible;

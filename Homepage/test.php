@@ -226,46 +226,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
-                    var index;
-                    if (id == "alumniIDInput"){
-                        index = 0;
-                    }
-                    else if (id == "birthdateInput"){
-                        index = 1;
-                    }
-                    else if (id == "statusInput"){
-                        index = 2;
-                    }
-                    else if (id == "emailInput"){
-                        index = 3;
-                    }
-                    else if (id == "phoneNumberInput"){
-                        index = 4;
-                    }
-                    else if (id == "firstNameInput"){
-                        index = 5;
-                    }
-                    else if (id == "middleNameInput"){
-                        index = 6;
-                    }
-                    else if (id == "lastNameInput"){
-                        index = 7;
-                    }
-                    else if (id == "streetNameInput"){
-                        index = 8;
-                    }
-                    else if (id == "cityInput"){
-                        index = 9;
-                    }
-                    else if (id == "stateInput"){
-                        index = 10;
-                    }
-                    else if (id == "countryRegionInput"){
-                        index = 11;
-                    }
-                    else if (id == "zipcodeInput"){
-                        index = 12;
-                    }
+                    var sel = document.getElementById("dropdown");
+                    var index = sel.options[sel.selectedIndex].value;
 
                     for (let i = 0; i < tr.length; i++) {
                         td = tr[i].getElementsByTagName("td")[index];
@@ -286,7 +248,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <table>
                     <tr>
                         <td>
-                            <select class="inputTable" data-target=".tableSelect"  name="inputTable">
+                            <select class="inputTable" data-target=".tableSelect"  name="inputTable" id = 'dropdown'>
                                 <option value="alumniID" data-show=".alumniID" selected>Alumni ID</option>
                                 <option value="birthdate" data-show=".birthdate">Birthdate</option>
                                 <option value="status" data-show=".status">Status</option>

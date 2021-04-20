@@ -48,7 +48,7 @@
                 while($row=mysqli_fetch_array($r)){
                     echo "<tr>";
                     $email = $row['email'];
-                    echo "<td><input type='checkbox' value='$email' style=' margin-left: auto '></td>";
+                    echo "<td><input type='checkbox' value='$email' style=' margin-left: auto ; margin-right:auto;'></td>";
                     echo "<td>" . $row['alumniID'] . "</td>";
                     echo "<td>" . $row['birthdate'] . "</td>";
                     echo "<td>" . $row['status'] . "</td>";

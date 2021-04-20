@@ -152,7 +152,6 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 }
             </script>
 
-            <!-- <div align="center"> -->
                 <table>
                     <tr>
                         <td>
@@ -223,6 +222,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
         echo "<div id='mainTable' >";
+        include 'AlumniTable.php';
+        echo "</div>"; // end of mainTable 
+
+        echo "<div id='emailTest' >";
         include 'emailTest.php';
         echo "</div>"; // end of mainTable k
 
@@ -303,7 +306,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         if (x.style.display === "none") { 
             x.style.display = "block";
             y.style.display = "none";
-            superView.style.display = "none";
+            z.style.display = "none";
             d.style.display = "none";
 
         } else {
@@ -324,6 +327,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var y = document.getElementById("deleteTable");
         var z = document.getElementById("superView");
         var d= document.getElementById("totalMajors");
+        var e= document.getElementById("emailTest");
 
 
         if (z.style.display === "none") { 
@@ -331,11 +335,14 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             y.style.display = "none";
             z.style.display = "block";
             d.style.display = "none";
+            e.style.display = "none";
+
         } else {
             x.style.display = "block";
             y.style.display = "none";
             z.style.display = "none";
             d.style.display = "none";
+            e.style.display = "none";
 
         }
 
@@ -345,6 +352,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var a = document.getElementById("mainTable");
         var b = document.getElementById("deleteTable");
         var c = document.getElementById("superView");
+        var e= document.getElementById("emailTest");
         var d= document.getElementById("totalMajors");
 
 
@@ -353,36 +361,47 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             b.style.display = "none";
             c.style.display = "none";
             d.style.display = "block";
+            e.style.display = "none";
+
         } else {
             a.style.display = "block";
             b.style.display = "none";
             c.style.display = "none";
             d.style.display = "none";
+            e.style.display = "none";
+
 
         }
 
     }
 
-    // function getEmails() {
-    //     var myTab = document.getElementById('alumniTable');
-    //     var dummy = document.createElement("textarea");
-    //     document.body.appendChild(dummy);
+    function getEmails() {
+        var a = document.getElementById("mainTable");
+        var b = document.getElementById("deleteTable");
+        var c = document.getElementById("superView");
+        var e= document.getElementById("emailTest");
+        var d= document.getElementById("totalMajors");
 
-    //     //loop through each table row
-    //     for (i=1; i < myTab.rows.length; i++){
 
-    //         // GET THE CELLS COLLECTION OF THE CURRENT ROW.
-    //         var objCells = myTab.rows.item(i).cells;
+        if (e.style.display === "none") { 
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display = "none";
+            d.style.display = "none";
+            e.style.display = "block";
 
-    //         dummy.value = dummy.value + ' ' + objCells.item(3).innerHTML + ';';
-    //     }
+        } else {
+            a.style.display = "block";
+            b.style.display = "none";
+            c.style.display = "none";
+            d.style.display = "none";
+            e.style.display = "none";
 
-    //     dummy.select();
-    //     document.execCommand("copy");
-    //     document.body.removeChild(dummy);
 
-    //     alert("All of the emails displayed were copied to your clipboard");
-    // }
+        }
+
+
+    }
 
    
 

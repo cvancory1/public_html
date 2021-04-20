@@ -132,7 +132,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
-                    var index= $('.inputTable').length;
+                    var index= $('#dropdown option').length;
                     alert(index);
                     // if (id == "alumniIDInput"){
                     //     index = 0;
@@ -193,7 +193,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 <table>
                     <tr>
                         <td>
-                            <select class="inputTable" data-target=".tableSelect"  name="inputTable">
+                            <select class="inputTable" data-target=".tableSelect"  name="inputTable" id = 'dropdown'>
                                 <option value="alumniID" data-show=".alumniID" selected>Alumni ID</option>
                                 <option value="birthdate" data-show=".birthdate">Birthdate</option>
                                 <option value="status" data-show=".status">Status</option>

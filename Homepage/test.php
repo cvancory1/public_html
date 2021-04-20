@@ -132,7 +132,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
-                    var index= $('#id').length;
+                    var index= $('input').length;
                     alert(index);
                     // if (id == "alumniIDInput"){
                     //     index = 0;
@@ -400,26 +400,26 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     }
 
-    function getEmails() {
-        var myTab = document.getElementById('alumniTable');
-        var dummy = document.createElement("textarea");
-        document.body.appendChild(dummy);
+    // function getEmails() {
+    //     var myTab = document.getElementById('alumniTable');
+    //     var dummy = document.createElement("textarea");
+    //     document.body.appendChild(dummy);
 
-        //loop through each table row
-        for (i=1; i < myTab.rows.length; i++){
+    //     //loop through each table row
+    //     for (i=1; i < myTab.rows.length; i++){
 
-            // GET THE CELLS COLLECTION OF THE CURRENT ROW.
-            var objCells = myTab.rows.item(i).cells;
+    //         // GET THE CELLS COLLECTION OF THE CURRENT ROW.
+    //         var objCells = myTab.rows.item(i).cells;
 
-            dummy.value = dummy.value + ' ' + objCells.item(3).innerHTML + ';';
-        }
+    //         dummy.value = dummy.value + ' ' + objCells.item(3).innerHTML + ';';
+    //     }
 
-        dummy.select();
-        document.execCommand("copy");
-        document.body.removeChild(dummy);
+    //     dummy.select();
+    //     document.execCommand("copy");
+    //     document.body.removeChild(dummy);
 
-        alert("All of the emails displayed were copied to your clipboard");
-    }
+    //     alert("All of the emails displayed were copied to your clipboard");
+    // }
 
    
 

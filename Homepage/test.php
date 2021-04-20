@@ -226,21 +226,22 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var d= document.getElementById("totalMajors");
         var f= document.getElementById("addTable");
 
-        if((f.style.display == "none"){
-            x.style.display = "none";
-            y.style.display = "none";
-            z.style.display = "none";
+        if (f.style.display === "none") { 
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display = "none";
             d.style.display = "none";
             e.style.display = "none";
-            f.style.display === "block";
+            f.style.display = "block";
 
         } else {
-            x.style.display = "none";
-            y.style.display = "block";
-            z.style.display = "none";
+            a.style.display = "block";
+            b.style.display = "none";
+            c.style.display = "none";
             d.style.display = "none";
             e.style.display = "none";
-            f.style.display ="none";
+            f.style.display = "none";
+
 
 
         }

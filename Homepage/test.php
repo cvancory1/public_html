@@ -132,52 +132,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
-                    var index = input;
-
                     var sel = document.getElementById("dropdown");
                     var index = sel.options[sel.selectedIndex].value;
-                    // alert(sv);
 
-             // if (id == "alumniIDInput"){
-                    //     index = 0;
-                    // }
-                    // else if (id == "birthdateInput"){
-                    //     index = 1;
-                    // }
-                    // else if (id == "statusInput"){
-                    //     index = 2;
-                    // }
-                    // else if (id == "emailInput"){
-                    //     index = 3;
-                    // }
-                    // else if (id == "phoneNumberInput"){
-                    //     index = 4;
-                    // }
-                    // else if (id == "firstNameInput"){
-                    //     index = 5;
-                    // }
-                    // else if (id == "middleNameInput"){
-                    //     index = 6;
-                    // }
-                    // else if (id == "lastNameInput"){
-                    //     index = 7;
-                    // }
-                    // else if (id == "streetNameInput"){
-                    //     index = 8;
-                    // }
-                    // else if (id == "cityInput"){
-                    //     index = 9;
-                    // }
-                    // else if (id == "stateInput"){
-                    //     index = 10;
-                    // }
-                    // else if (id == "countryRegionInput"){
-                    //     index = 11;
-                    // }
-                    // else if (id == "zipcodeInput"){
-                    //     index = 12;
-                    // }
-
+             
 
                     for (let i = 0; i < tr.length; i++) {
                         td = tr[i].getElementsByTagName("td")[index];
@@ -204,14 +162,14 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                                 <option value="3" data-show=".status">Status</option>
                                 <option value="4" data-show=".email">Email</option>
                                 <option value="5" data-show=".phoneNumber">Phone Number</option>
-                                <option value="firstName" data-show=".firstName">First Name</option>
-                                <option value="middleName" data-show=".middleName">Middle Name</option>
-                                <option value="lastName" data-show=".lastName">Last Name</option>
-                                <option value="streetName" data-show=".streetName">Street Name</option>
-                                <option value="city" data-show=".city">City</option>
-                                <option value="state" data-show=".state">State</option>
-                                <option value="countryRegion" data-show=".countryRegion">Country/Region</option>
-                                <option value="zipcode" data-show=".zipcode">Zipcode</option>
+                                <option value="6" data-show=".firstName">First Name</option>
+                                <option value="7" data-show=".middleName">Middle Name</option>
+                                <option value="8" data-show=".lastName">Last Name</option>
+                                <option value="9" data-show=".streetName">Street Name</option>
+                                <option value="10" data-show=".city">City</option>
+                                <option value="11" data-show=".state">State</option>
+                                <option value="12" data-show=".countryRegion">Country/Region</option>
+                                <option value="13" data-show=".zipcode">Zipcode</option>
                             </select>
                         </td>
                         

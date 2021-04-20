@@ -125,8 +125,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             <div id="main">
             <script type="text/javascript">
                 function filterTable(ele) {
-                    // var id = ele.id;
-                    // let input = document.getElementById(id);
+                    var id = ele.id;
+                    let input = document.getElementById(id);
                     let filter = input.value.toUpperCase();
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
@@ -207,6 +207,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     var show = $("option:selected", this).data('show');
                     $(show).removeClass('hide');
                 });
+
+                
             </script>
 
             <style>

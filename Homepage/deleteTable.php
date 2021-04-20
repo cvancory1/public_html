@@ -48,9 +48,6 @@
                 echo "<tr>";
                 $id = $row['alumniID'];
                 $bday = $row['birthdate'];
-
-                echo $id;
-                echo " ".$bday;
                 echo "<td><input type='checkbox' name='delete[]' value='$id' ></td>";
                 echo "<input type='hidden' name='birthday[]' value= $bday >";
  

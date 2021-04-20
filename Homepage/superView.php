@@ -13,8 +13,8 @@
 
 
     <form method='post' action='updatePrivilege.php'>
-    <input type='submit'class= 'submitButton'  value='Update Privilege' name='submit_button'><br><br>
-    <button onClick="checkAll(this)" class= 'submitButton'  value='Select All'><br><br>
+    <input type='submit'class= 'submitButton'  value='Update Privilege' name='submit_button'>
+    <input type="submit" name="checkAll" o>
     
 
         <?php
@@ -41,7 +41,7 @@
                 while($row=mysqli_fetch_array($r)){
                     echo "<tr>";
                     $username = $row['username'];
-                    echo "<td><input type='checkbox' name='username[]' value=$username ></td>";
+                    echo "<td><input type='checkbox' id = 'selectUsername' name='username[]' value=$username ></td>";
                     echo "<td>" . $row['username'] . "</td>";
 
                     if($row['privilege'] == 'viewUser'){
@@ -68,14 +68,12 @@
 
 
 <script language="JavaScript">
-			function checkAll(source) 
-			{
-			  checkboxes = document.getElementsByName('Privilege[]');
-			  for(var i=0, n=checkboxes.length;i<n;i++) 
-			  {
-				checkboxes[i].checked = source.checked;
-			  }
-			}
+		document.getElementById('selectUsername').onclick = function() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        }
 		</script>
 
 </html>

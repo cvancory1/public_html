@@ -159,7 +159,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
 
     echo "</div>"; // end of webpage class
-    echo "<div id='totalMajors' style='display:none;' >";
+
+    echo "<div id='totalMajors' >";
     include 'pie.php';
     echo "</div>"; // shows the pie chart
 

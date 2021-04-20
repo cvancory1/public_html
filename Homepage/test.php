@@ -131,7 +131,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
-                    var sel = document.getElementById("dropdown");
+                    var sel = document.getElementById("#dropdown");
                     var index = sel.options[sel.selectedIndex].value;
                  
 
@@ -216,7 +216,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 .hide {
                     display: none;
                 }
-            </style>
+            </style> 
 
     <?php
 

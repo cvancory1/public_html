@@ -133,9 +133,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let tr = table.getElementsByTagName("tr");
 
                     var index = input;
-                    alert(input.value);
-                    alert(ele.id);
-                   
+
+                    var sel = document.getElementById("dropdown");
+                    var sv = sel.options[sel.selectedIndex].value;
+                    alert(sv);
 
              // if (id == "alumniIDInput"){
                     //     index = 0;

@@ -180,8 +180,8 @@ body{
     height: 100%;
   }
   
-  #btntest,
-  button{
+  #btntest
+  {
     font-family: 'Ubuntu', sans-serif;
     position: absolute;
     top: 50%;

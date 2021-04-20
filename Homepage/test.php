@@ -233,7 +233,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         echo "</div>"; // shows the pie chart
 
 
-        echo "<div id='deleteTable'  style='display:none;' >";
+        echo "<div id='deleteTable'  style='display:none; overflow:scroll' >";
         include 'deleteTable.php';
         echo "</div>"; // end of table shown for deleting  class
 

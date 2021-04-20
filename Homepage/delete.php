@@ -1,5 +1,5 @@
 <?php
-
+    echo "here";
     if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
         ;
     }
@@ -14,9 +14,9 @@
             for($i=0;$i<$usersCount;$i++) {
                 $delete = $_POST['delete'][$i];
                 $birthdate = $_POST['birthday'][$i];
-                // echo $delete . " ". $birthdate . " ";
+                echo $delete . " ". $birthdate . " ";
                 $sql = " DELETE FROM Alumni WHERE alumniID =$delete  AND birthdate = '$birthdate' ";
-                // echo $sql;
+                echo $sql;
                 $resuli = mysqli_query($connection, $sql);
 
                 

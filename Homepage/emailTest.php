@@ -69,7 +69,7 @@
          -->
     <div class="wrapper">
   <button class="" id="btntest">
-    <span>Submit</span>
+    <span>Copy Emails</span>
     <div class="success">
     <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
       

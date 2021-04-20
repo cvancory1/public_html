@@ -123,7 +123,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 </div>
                 <br> <br> <br> <br>";
         ?>
-              <div id="main">
+            <div id="main">
             <script type="text/javascript">
                 function filterTable(ele) {
                     var id = ele.id;
@@ -132,46 +132,46 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
-                    var index;
-                    if (id == "alumniIDInput"){
-                        index = 0;
-                    }
-                    else if (id == "birthdateInput"){
-                        index = 1;
-                    }
-                    else if (id == "statusInput"){
-                        index = 2;
-                    }
-                    else if (id == "emailInput"){
-                        index = 3;
-                    }
-                    else if (id == "phoneNumberInput"){
-                        index = 4;
-                    }
-                    else if (id == "firstNameInput"){
-                        index = 5;
-                    }
-                    else if (id == "middleNameInput"){
-                        index = 6;
-                    }
-                    else if (id == "lastNameInput"){
-                        index = 7;
-                    }
-                    else if (id == "streetNameInput"){
-                        index = 8;
-                    }
-                    else if (id == "cityInput"){
-                        index = 9;
-                    }
-                    else if (id == "stateInput"){
-                        index = 10;
-                    }
-                    else if (id == "countryRegionInput"){
-                        index = 11;
-                    }
-                    else if (id == "zipcodeInput"){
-                        index = 12;
-                    }
+                    var index= $('#id').length;
+                    // if (id == "alumniIDInput"){
+                    //     index = 0;
+                    // }
+                    // else if (id == "birthdateInput"){
+                    //     index = 1;
+                    // }
+                    // else if (id == "statusInput"){
+                    //     index = 2;
+                    // }
+                    // else if (id == "emailInput"){
+                    //     index = 3;
+                    // }
+                    // else if (id == "phoneNumberInput"){
+                    //     index = 4;
+                    // }
+                    // else if (id == "firstNameInput"){
+                    //     index = 5;
+                    // }
+                    // else if (id == "middleNameInput"){
+                    //     index = 6;
+                    // }
+                    // else if (id == "lastNameInput"){
+                    //     index = 7;
+                    // }
+                    // else if (id == "streetNameInput"){
+                    //     index = 8;
+                    // }
+                    // else if (id == "cityInput"){
+                    //     index = 9;
+                    // }
+                    // else if (id == "stateInput"){
+                    //     index = 10;
+                    // }
+                    // else if (id == "countryRegionInput"){
+                    //     index = 11;
+                    // }
+                    // else if (id == "zipcodeInput"){
+                    //     index = 12;
+                    // }
 
                     for (let i = 0; i < tr.length; i++) {
                         td = tr[i].getElementsByTagName("td")[index];

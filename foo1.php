@@ -2,8 +2,9 @@
 <html>
 <!DOCTYPE html>
 <html lang = "en">
-<?php
 
+<?php
+    echo"here";
         if($connection = @mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;
             }

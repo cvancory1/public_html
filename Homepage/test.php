@@ -133,6 +133,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
                     var sel = document.getElementById("dropdown");
                     var index = sel.options[sel.selectedIndex].value;
+                    alert(index);
 
                     for (let i = 0; i < tr.length; i++) {
                         td = tr[i].getElementsByTagName("td")[index];
@@ -208,7 +209,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     $(show).removeClass('hide');
                 });
 
-                
+
             </script>
 
             <style>

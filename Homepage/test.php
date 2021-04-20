@@ -127,10 +127,10 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             <script type="text/javascript">
                 function filterTable(ele) {
                     var id = ele.id;
-                    let input = document.getElementById(id);
-                    let filter = input.value.toUpperCase();
-                    let table = document.getElementById("alumniTable");
-                    let tr = table.getElementsByTagName("tr");
+                    // let input = document.getElementById(id);
+                    // let filter = input.value.toUpperCase();
+                    // let table = document.getElementById("alumniTable");
+                    // let tr = table.getElementsByTagName("tr");
 
                     // var index= $('#dropdown option').length;
                     var e = document.getElementById(id);

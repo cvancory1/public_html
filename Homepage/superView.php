@@ -62,8 +62,6 @@
 
                 mysqli_close($connection);
         ?>
-     <input type="checkbox" id="car" name="username" value="car">
-    <label for="car">Car</label>
 </form>
 
 

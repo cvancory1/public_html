@@ -191,7 +191,7 @@ html {
     line-height: 1.5;
     color: #444;
 }
-body {
+.submitButton{
     position: relative;
     display: flex;
     flex-direction: column;

@@ -125,16 +125,14 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             <div id="main">
             <script type="text/javascript">
                 function filterTable(ele) {
-                    var id = ele.id;
-                    let input = document.getElementById(id);
+                    // var id = ele.id;
+                    // let input = document.getElementById(id);
                     let filter = input.value.toUpperCase();
                     let table = document.getElementById("alumniTable");
                     let tr = table.getElementsByTagName("tr");
 
                     var sel = document.getElementById("dropdown");
                     var index = sel.options[sel.selectedIndex].value;
-
-             
 
                     for (let i = 0; i < tr.length; i++) {
                         td = tr[i].getElementsByTagName("td")[index];
@@ -233,11 +231,11 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         echo "</div>"; // shows the pie chart
 
 
-        echo "<div id='deleteTable'  style='display:none; overflow:scroll' >";
+        echo "<div id='deleteTable'  style='display:none;  >";
         include 'deleteTable.php';
         echo "</div>"; // end of table shown for deleting  class
 
-        echo "<div id='superView'  style='display:none; overflow:scroll text-align:right'  >";
+        echo "<div id='superView'  style='display:none;  text-align:right'  >";
         include 'superView.php';
         echo "</div>"; // end of superview div
 

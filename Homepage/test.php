@@ -248,16 +248,16 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                     <tr>
                         <td>
                             <select class="inputTable" data-target=".tableSelect"  name="inputTable" id = 'dropdown'>
-                                <option value="alumniID" data-show=".alumniID" selected>Alumni ID</option>
-                                <option value="birthdate" data-show=".birthdate">Birthdate</option>
-                                <option value="status" data-show=".status">Status</option>
-                                <option value="email" data-show=".email">Email</option>
-                                <option value="phoneNumber" data-show=".phoneNumber">Phone Number</option>
-                                <option value="firstName" data-show=".firstName">First Name</option>
-                                <option value="middleName" data-show=".middleName">Middle Name</option>
-                                <option value="lastName" data-show=".lastName">Last Name</option>
-                                <option value="streetName" data-show=".streetName">Street Name</option>
-                                <option value="city" data-show=".city">City</option>
+                                <option value="1" data-show=".alumniID" selected>Alumni ID</option>
+                                <option value="2" data-show=".birthdate">Birthdate</option>
+                                <option value="3" data-show=".status">Status</option>
+                                <option value="4" data-show=".email">Email</option>
+                                <option value="5" data-show=".phoneNumber">Phone Number</option>
+                                <option value="6" data-show=".firstName">First Name</option>
+                                <option value="7" data-show=".middleName">Middle Name</option>
+                                <option value="8" data-show=".lastName">Last Name</option>
+                                <option value="9" data-show=".streetName">Street Name</option>
+                                <option value="10" data-show=".city">City</option>
                                 <option value="state" data-show=".state">State</option>
                                 <option value="countryRegion" data-show=".countryRegion">Country/Region</option>
                                 <option value="zipcode" data-show=".zipcode">Zipcode</option>

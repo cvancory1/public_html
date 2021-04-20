@@ -10,8 +10,9 @@
 
 
 <?php
+include 'searchAlumni.php';
+
 echo "<div id='mainTable'>";
-    include 'searchAlumni.php';
 
 
         if($connection=@mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){

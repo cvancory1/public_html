@@ -122,7 +122,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
                 </div>
                 <br> <br> <br> <br>";
         ?>
-            <div id="main">
+        
+    <div id="main">
          
           
 

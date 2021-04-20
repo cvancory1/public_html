@@ -14,7 +14,7 @@
 
     <form method='post' action='updatePrivilege.php'>
     <input type='submit'class= 'submitButton'  value='Update Privilege' name='submit_button'>
-    <input type="submit" value = "select All" id="checkAll" onclick = 'checkAll()'>
+    <input type="submit" value = "select All" id='checkAll' >
     
 
         <?php

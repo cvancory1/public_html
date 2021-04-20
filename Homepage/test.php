@@ -238,7 +238,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         include 'deleteTable.php';
         echo "</div>"; // end of table shown for deleting  class
 
-        echo "<div id='superView'  style='display:none;' >";
+        echo "<div id='superView'  style='display:none; overflow:scroll'  >";
         include 'superView.php';
         echo "</div>"; // end of superview div
 

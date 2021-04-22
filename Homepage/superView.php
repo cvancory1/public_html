@@ -44,15 +44,17 @@
                     echo "<td>" . $row['username'] . "</td>";
                     
                     if($row['privilege'] == 'viewUser'){
-                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser' selected>viewUser</option><option value='editUser'>editUser</option><option value='superUser'>superUser</option></select></td>";
+                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser' disabled selected>viewUser</option><option value='editUser'>editUser</option><option value='superUser'>superUser</option></select></td>";
+                    
                     }
                     else if($row['privilege'] == 'editUser'){
-                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser'>viewUser</option><option value='editUser' selected>editUser</option><option value='superUser'>superUser</option></select></td>";
+                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser'>viewUser</option><option value='editUser' disabled selected>editUser</option><option value='superUser'>superUser</option></select></td>";
                         
+                   
                     }
                     else if($row['privilege'] == 'superUser'){
-                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser'>viewUser</option><option value='editUser'>editUser</option><option value='superUser' selected>superUser</option></select></td>"; 
-                        
+                        echo "<td><select name='Privilege[]' class='form-control Privilege_list'><option value='viewUser'>viewUser</option><option value='editUser'>editUser</option><option value='superUser' disabled selected>superUser</option></select></td>"; 
+                   
                     }
                     echo "</tr>";
 

@@ -69,7 +69,7 @@ if(isset($_SESSION['LAST_ACTIVITY']) && ($time - $_SESSION['LAST_ACTIVITY']) > (
 }
 $_SESSION['LAST_ACTIVITY'] = $time;
 
-    print_r($_SESSION['privilege']) ;
+    // print_r($_SESSION['privilege']) ;
    
     echo "<div id='main'>";
 

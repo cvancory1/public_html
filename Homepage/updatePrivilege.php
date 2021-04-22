@@ -16,9 +16,9 @@
             $username = $_POST['username'][$i];
             $privilege = $_POST['Privilege'][$i];
 
-            $sql = " UPDATE Login SET privilege= '$privilege' WHERE username= '$username' ";
+            $sql = "UPDATE Login SET privilege= '$privilege' WHERE username= '$username' ";
             echo $sql;
-            $resuli = mysqli_query($connection, $sql);
+            mysqli_query($connection, $sql);
 
         }
     }

@@ -7,7 +7,7 @@
         print '<p>ERROR: connecting to MySQL.</p>';
     }
 
-    // echo " here";
+    echo " here";
     if(isset($_POST["submit_button"]) ) {
         $usersCount = count($_POST["username"]);
         // echo $usersCount;

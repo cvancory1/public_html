@@ -12,11 +12,13 @@
     </header>
 
 
-    <form method='post' action='delete.php'>
+    <form method='post' action='updatePrivilege.php'>
     <input type='submit'class= 'submitButton'  value='Update' name='submit_button'>
 
-       
+      
 </form>
+<!-- as -->
+
 
 
 </html>

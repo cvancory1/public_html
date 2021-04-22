@@ -17,14 +17,14 @@
             $privilege = $_POST['Privilege'][$i];
 
             $sql = "UPDATE Login SET privilege= '$privilege' WHERE username= '$username' ";
-            echo $sql;
+            // echo $sql;
             mysqli_query($connection, $sql);
 
         }
     }
 
     mysqli_close($connection);
-    header( "refresh:5;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
+    header( "refresh:1;url=https://lamp.salisbury.edu/~cvancory1/Homepage/test.php" );
 
 
 ?>

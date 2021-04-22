@@ -49,12 +49,17 @@
                     </tr>
                 </thead>";
 
+            $row=0;
             while($row=mysqli_fetch_array($r)){
                 echo "<tr>";
                 $id = $row['alumniID'];
                 $bday = $row['birthdate'];
+
                 echo "<td><input type='checkbox' name='delete[]' value='$id' ></td>";
                 echo "<input type='hidden' name='birthday[]' value= $bday >";
+                echo "<input type='hidden' name='row[]' value= $row >";
+                $row = $row +1;
+                echo $row;
  
                 echo "<td>" . $row['alumniID'] . "</td>";
                 echo "<td>" . $row['birthdate'] . "</td>";

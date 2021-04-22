@@ -162,9 +162,8 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     echo "<div id='totalMajors'   >";
 
     echo "<div style='width: 500px; height: 300px; margin-left: auto; margin-right: auto;'>";
-    include 'pie.php';
-
     echo"<style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class='embed-container''><small><a href='//salisburyu.maps.arcgis.com/apps/Embed/index.html?webmap=d23174a625144d8c8f9cdd31fe766b4a&extent=-84.7735,32.9276,-66.723,41.3703&home=true&zoom=true&scale=true&search=true&searchextent=true&details=true&legendlayers=true&active_panel=legend&disable_scroll=false&theme=light' style='color:#0000FF;text-align:left' target='_blank'>View larger map</a></small><br><iframe width='500' height='400' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' title='Alumni DB Demo' src='//salisburyu.maps.arcgis.com/apps/Embed/index.html?webmap=d23174a625144d8c8f9cdd31fe766b4a&extent=-84.7735,32.9276,-66.723,41.3703&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&details=true&legendlayers=true&active_panel=legend&disable_scroll=false&theme=light'></iframe></div>
+    include 'pie.php';
     </div>";
     echo "</div>"; // shows the pie chart
 
@@ -295,7 +294,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
         var x = document.getElementById("mainTable");
         var y = document.getElementById("deleteTable");
         var z = document.getElementById("superView");
-        var d= document.getElementById("totalMajors");
+        // var d= document.getElementById("totalMajors");
         var e= document.getElementById("emailTest");
         var f= document.getElementById("addTable");
 
@@ -305,7 +304,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             x.style.display = "none";
             y.style.display = "none";
             z.style.display = "block";
-            d.style.display = "none";
+            // d.style.display = "none";
             e.style.display = "none";
             f.style.display = "none";
 
@@ -314,7 +313,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
             x.style.display = "block";
             y.style.display = "none";
             z.style.display = "none";
-            d.style.display = "none";
+            // d.style.display = "none";
             e.style.display = "none";
             f.style.display = "none";
 
@@ -391,7 +390,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
     }
 
     $(document).ready(function() {
-    $("#totalMajors").hide();
+        $("#totalMajors").hide();
     });
 
  </script>

@@ -2,7 +2,7 @@
     - calls deleteTable.php if the superuser wants to delete Alumni 
     - is #included in other files  -->
 
-    <html>
+<html>
 <!DOCTYPE html>
 <html lang = "en">
 <header>
@@ -12,8 +12,8 @@
     </header>
 
  <form method='post' action ='delete.php'>
-    <input type='submit' class= 'submitButton'  name='but_delete'><br><br>
-    <!-- <input type='submit'  value='delete' name='but_delete'><br><br> -->
+    <input type='submit'   name='but_delete'><br><br>
+    <!-- <input type='submit'  value='delete'  name='but_delete'><br><br> -->
 
 <?php
 
@@ -57,9 +57,9 @@
 
                 echo "<td><input type='checkbox' name='delete[]' value='$id' ></td>";
                 echo "<input type='hidden' name='birthday[]' value= $bday >";
-                echo "<input type='hidden' name='row[]' value= $rowNum >";
+                echo "<input type='hidden' name='rowNum[]' value= $rowNum >";
                 $rowNum = $rowNum +1;
-                echo $rowNum;
+                // echo $rowNum;
  
                 echo "<td>" . $row['alumniID'] . "</td>";
                 echo "<td>" . $row['birthdate'] . "</td>";

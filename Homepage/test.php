@@ -159,7 +159,7 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     echo "</div>"; // end of webpage class
 
-    echo "<div id='totalMajors' style='display:none; text-align:center'  >";
+    echo "<div id='totalMajors' text-align:center'  >";
 
     echo "<div style='width: 500px; height: 300px; margin-left: auto; margin-right: auto;'>";
     include 'pie.php';
@@ -390,7 +390,9 @@ $_SESSION['LAST_ACTIVITY'] = $time;
 
     }
 
-   
+    $(document).ready(function() {
+    $("#totalMajors").hide();
+    });
 
  </script>
 </body> 

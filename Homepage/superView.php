@@ -13,7 +13,7 @@
 
 
     <form method='post' action='updatePrivilege.php'>
-    <input type='submit'class= 'submitButton'  value='Update Privilege' name='submit_button'>
+    <input type='submit'class= 'submitButton'  value='Update' name='submit_button'>
     <input type="checkbox" id="select-all"><label for="car">Select All</label>    
 
         <?php

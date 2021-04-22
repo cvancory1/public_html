@@ -1,21 +1,16 @@
 <!-- Holds the code which displays the Alumni table in the database 
     - calls deleteTable.php if the superuser wants to delete Alumni 
     - is #included in other files  -->
-
     <html>
 <!DOCTYPE html>
 <html lang = "en">
-<header>
-        <title> Alumni Database</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <link rel="stylesheet" href="dat.css" type="text/css" />
-    </header>
 
- <form method='post' action ='delete.php'>
-    <input type='submit' class= 'submitButton'  name='but_delete'><br><br>
-    <!-- <input type='submit'  value='delete' name='but_delete'><br><br> -->
 
-<?php
+  <form method='post' action ='delete.php'>
+     <!-- <input type='submit' class= 'submitButton' value='Delete' name='but_delete'><br><br> -->
+     <input type='submit'  value='delete' name='but_delete'><br><br>
+
+ <?php
 
         if($connection = @mysqli_connect('localhost', 'wlucas1', 'wlucas1', 'AlumniDB')){
                 ;
@@ -23,9 +18,7 @@
             else{
                 print '<p>ERROR: connecting to MySQL.</p>';
             }
-
             // echo"<form name='deleteRows' id='deleteRows' method='post'  action='delete.php' "; 
-
                 //Query to return contents of table Alumni here 
                 $query="SELECT * FROM Alumni";
                 $r=mysqli_query($connection, $query);
@@ -48,7 +41,6 @@
                         <th> Zipcode </th>
                     </tr>
                 </thead>";
-
             while($row=mysqli_fetch_array($r)){
                 echo "<tr>";
                 $id = $row['alumniID'];
@@ -71,14 +63,8 @@
                 echo "<td>" . $row['zipcode'] . "</td>";
                 echo "</tr>";
             }
-
             echo "</table>";
-
             mysqli_close($connection);
-
 ?>
-
 </form>
-
 </html>
-

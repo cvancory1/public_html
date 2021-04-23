@@ -1,12 +1,4 @@
 
-<html>
-<!DOCTYPE html>
-<html lang = "en">
-
-    <header>
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <link rel="stylesheet" href="dat.css" type="text/css" />
-    </header>
 
 <?php
 
